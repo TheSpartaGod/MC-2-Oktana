@@ -10,6 +10,14 @@
 		99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926DA266F4A4E006A210A /* WorkoutViewController.swift */; };
 		99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926DC266F7498006A210A /* MediumInfoCardView.swift */; };
 		99F926DF266F74BF006A210A /* MediumInfoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F926DE266F74BF006A210A /* MediumInfoCardView.xib */; };
+		B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B719039F266FDE3200D34212 /* Movement+CoreDataClass.swift */; };
+		B71903A6266FDE3200D34212 /* Movement+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903A0266FDE3200D34212 /* Movement+CoreDataProperties.swift */; };
+		B71903A7266FDE3200D34212 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903A1266FDE3200D34212 /* User+CoreDataClass.swift */; };
+		B71903A8266FDE3200D34212 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903A2266FDE3200D34212 /* User+CoreDataProperties.swift */; };
+		B71903A9266FDE3200D34212 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903A3266FDE3200D34212 /* Workout+CoreDataClass.swift */; };
+		B71903AA266FDE3200D34212 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903A4266FDE3200D34212 /* Workout+CoreDataProperties.swift */; };
+		B71903AC266FDE5000D34212 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903AB266FDE5000D34212 /* CoreDataManager.swift */; };
+		B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4BA7C266FA78200B0E6A0 /* Movement.swift */; };
 		B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14B266E7E38007DB473 /* AppDelegate.swift */; };
 		B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14D266E7E38007DB473 /* SceneDelegate.swift */; };
 		B7C7A156266E7E38007DB473 /* Oktana.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A154266E7E38007DB473 /* Oktana.xcdatamodeld */; };
@@ -25,6 +33,14 @@
 		99F926DA266F4A4E006A210A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		99F926DC266F7498006A210A /* MediumInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumInfoCardView.swift; sourceTree = "<group>"; };
 		99F926DE266F74BF006A210A /* MediumInfoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediumInfoCardView.xib; sourceTree = "<group>"; };
+		B719039F266FDE3200D34212 /* Movement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movement+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B71903A0266FDE3200D34212 /* Movement+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movement+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B71903A1266FDE3200D34212 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B71903A2266FDE3200D34212 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B71903A3266FDE3200D34212 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B71903A4266FDE3200D34212 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B71903AB266FDE5000D34212 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B7B4BA7C266FA78200B0E6A0 /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 		B7C7A148266E7E38007DB473 /* Oktana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oktana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C7A14B266E7E38007DB473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7C7A14D266E7E38007DB473 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +72,19 @@
 				99F926DE266F74BF006A210A /* MediumInfoCardView.xib */,
 			);
 			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
+		B719039E266FDD5A00D34212 /* Managed Object Subclass */ = {
+			isa = PBXGroup;
+			children = (
+				B719039F266FDE3200D34212 /* Movement+CoreDataClass.swift */,
+				B71903A0266FDE3200D34212 /* Movement+CoreDataProperties.swift */,
+				B71903A1266FDE3200D34212 /* User+CoreDataClass.swift */,
+				B71903A2266FDE3200D34212 /* User+CoreDataProperties.swift */,
+				B71903A3266FDE3200D34212 /* Workout+CoreDataClass.swift */,
+				B71903A4266FDE3200D34212 /* Workout+CoreDataProperties.swift */,
+			);
+			path = "Managed Object Subclass";
 			sourceTree = "<group>";
 		};
 		B7C7A13F266E7E38007DB473 = {
@@ -91,6 +120,7 @@
 		B7C7A163266E8029007DB473 /* Movement Model */ = {
 			isa = PBXGroup;
 			children = (
+				B7B4BA7C266FA78200B0E6A0 /* Movement.swift */,
 			);
 			path = "Movement Model";
 			sourceTree = "<group>";
@@ -168,7 +198,9 @@
 		B7C7A19B266E947B007DB473 /* Core Data Manager */ = {
 			isa = PBXGroup;
 			children = (
+				B719039E266FDD5A00D34212 /* Managed Object Subclass */,
 				B7C7A154266E7E38007DB473 /* Oktana.xcdatamodeld */,
+				B71903AB266FDE5000D34212 /* CoreDataManager.swift */,
 			);
 			path = "Core Data Manager";
 			sourceTree = "<group>";
@@ -249,9 +281,17 @@
 			files = (
 				99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */,
 				B7C7A156266E7E38007DB473 /* Oktana.xcdatamodeld in Sources */,
+				B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */,
+				B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */,
 				B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */,
+				B71903A7266FDE3200D34212 /* User+CoreDataClass.swift in Sources */,
+				B71903AA266FDE3200D34212 /* Workout+CoreDataProperties.swift in Sources */,
+				B71903AC266FDE5000D34212 /* CoreDataManager.swift in Sources */,
 				B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */,
+				B71903A6266FDE3200D34212 /* Movement+CoreDataProperties.swift in Sources */,
+				B71903A8266FDE3200D34212 /* User+CoreDataProperties.swift in Sources */,
 				99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */,
+				B71903A9266FDE3200D34212 /* Workout+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
