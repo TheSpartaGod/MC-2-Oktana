@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926DA266F4A4E006A210A /* WorkoutViewController.swift */; };
+		99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926DC266F7498006A210A /* MediumInfoCardView.swift */; };
+		99F926DF266F74BF006A210A /* MediumInfoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F926DE266F74BF006A210A /* MediumInfoCardView.xib */; };
 		B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14B266E7E38007DB473 /* AppDelegate.swift */; };
 		B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14D266E7E38007DB473 /* SceneDelegate.swift */; };
 		B7C7A156266E7E38007DB473 /* Oktana.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A154266E7E38007DB473 /* Oktana.xcdatamodeld */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99F926DA266F4A4E006A210A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		99F926DC266F7498006A210A /* MediumInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumInfoCardView.swift; sourceTree = "<group>"; };
+		99F926DE266F74BF006A210A /* MediumInfoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediumInfoCardView.xib; sourceTree = "<group>"; };
 		B7C7A148266E7E38007DB473 /* Oktana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oktana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C7A14B266E7E38007DB473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7C7A14D266E7E38007DB473 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99F926E4266F9199006A210A /* Reusable Components */ = {
+			isa = PBXGroup;
+			children = (
+				99F926DC266F7498006A210A /* MediumInfoCardView.swift */,
+				99F926DE266F74BF006A210A /* MediumInfoCardView.xib */,
+			);
+			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
 		B7C7A13F266E7E38007DB473 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +80,7 @@
 				B7C7A163266E8029007DB473 /* Movement Model */,
 				B7C7A164266E803C007DB473 /* App */,
 				B7C7A165266E8058007DB473 /* Module */,
+				99F926E4266F9199006A210A /* Reusable Components */,
 				B7C7A166266E8070007DB473 /* Manager */,
 				B7C7A167266E807D007DB473 /* Resources */,
 				B7C7A15C266E7E39007DB473 /* Info.plist */,
@@ -128,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C7A18E266E932F007DB473 /* Workout.storyboard */,
+				99F926DA266F4A4E006A210A /* WorkoutViewController.swift */,
 			);
 			path = "Workout Page";
 			sourceTree = "<group>";
@@ -213,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F926DF266F74BF006A210A /* MediumInfoCardView.xib in Resources */,
 				B7C7A18F266E932F007DB473 /* Workout.storyboard in Resources */,
 				B7C7A193266E9359007DB473 /* Skill Tree.storyboard in Resources */,
 				B7C7A180266E89D9007DB473 /* Root.storyboard in Resources */,
@@ -229,9 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */,
 				B7C7A156266E7E38007DB473 /* Oktana.xcdatamodeld in Sources */,
 				B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */,
 				B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */,
+				99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
