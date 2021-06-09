@@ -17,6 +17,8 @@
 		B71903A9266FDE3200D34212 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903A3266FDE3200D34212 /* Workout+CoreDataClass.swift */; };
 		B71903AA266FDE3200D34212 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903A4266FDE3200D34212 /* Workout+CoreDataProperties.swift */; };
 		B71903AC266FDE5000D34212 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903AB266FDE5000D34212 /* CoreDataManager.swift */; };
+		B737A1442670F25800DDD4A8 /* Fitness+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737A1422670F25800DDD4A8 /* Fitness+CoreDataClass.swift */; };
+		B737A1452670F25800DDD4A8 /* Fitness+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737A1432670F25800DDD4A8 /* Fitness+CoreDataProperties.swift */; };
 		B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4BA7C266FA78200B0E6A0 /* Movement.swift */; };
 		B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14B266E7E38007DB473 /* AppDelegate.swift */; };
 		B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14D266E7E38007DB473 /* SceneDelegate.swift */; };
@@ -40,6 +42,8 @@
 		B71903A3266FDE3200D34212 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B71903A4266FDE3200D34212 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B71903AB266FDE5000D34212 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B737A1422670F25800DDD4A8 /* Fitness+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fitness+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B737A1432670F25800DDD4A8 /* Fitness+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fitness+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B7B4BA7C266FA78200B0E6A0 /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 		B7C7A148266E7E38007DB473 /* Oktana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oktana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C7A14B266E7E38007DB473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		B719039E266FDD5A00D34212 /* Managed Object Subclass */ = {
 			isa = PBXGroup;
 			children = (
+				B737A1422670F25800DDD4A8 /* Fitness+CoreDataClass.swift */,
+				B737A1432670F25800DDD4A8 /* Fitness+CoreDataProperties.swift */,
 				B719039F266FDE3200D34212 /* Movement+CoreDataClass.swift */,
 				B71903A0266FDE3200D34212 /* Movement+CoreDataProperties.swift */,
 				B71903A1266FDE3200D34212 /* User+CoreDataClass.swift */,
@@ -289,6 +295,8 @@
 				B71903AC266FDE5000D34212 /* CoreDataManager.swift in Sources */,
 				B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */,
 				B71903A6266FDE3200D34212 /* Movement+CoreDataProperties.swift in Sources */,
+				B737A1442670F25800DDD4A8 /* Fitness+CoreDataClass.swift in Sources */,
+				B737A1452670F25800DDD4A8 /* Fitness+CoreDataProperties.swift in Sources */,
 				B71903A8266FDE3200D34212 /* User+CoreDataProperties.swift in Sources */,
 				99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */,
 				B71903A9266FDE3200D34212 /* Workout+CoreDataClass.swift in Sources */,
