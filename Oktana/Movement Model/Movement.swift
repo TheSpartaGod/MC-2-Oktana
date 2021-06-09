@@ -13,7 +13,7 @@ struct MovementGenerate {
     var animationMovementGenerate: [AnimationGenerate]
     var namaMovementGenerate: String
     var instructionsGenerate:[InstructionsGenerate]
-    var calorieBurnGenerat: Int
+    var calorieBurnGenerate: Int
     var costEPGenerate: Int
 }
 
@@ -39,7 +39,7 @@ struct Movements {
                                     InstructionsGenerate(instructions: ""),
                                     InstructionsGenerate(instructions: "")
                                  ],
-                                 calorieBurnGenerat: 0,
+                                 calorieBurnGenerate: 0,
                                  costEPGenerate: 0)
     ]
 }

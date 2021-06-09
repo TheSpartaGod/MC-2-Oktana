@@ -137,6 +137,8 @@ struct CoreDataManager {
         }
     }
     
+    
+    //Call this function when you need all the workout data
     func fetchAllWorkoutData() -> [Workout]? {
         let context = CoreDataManager.shared.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Workout")
@@ -151,6 +153,49 @@ struct CoreDataManager {
             return workoutData
         }catch {
             print("Could not fetch movement list \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
+    
+    //Call this function when the user completed fitness test to save fitness test data
+    func addFitnesstoUser(user: User, cardio: Int, upperStrength: Int, coreStrength: Int, lowerStrength: Int){
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        
+        guard let fitnessEntity = NSEntityDescription.entity(forEntityName: "Fitness", in: context) else {
+            return
+        }
+        
+        let fitnessEntityObject = NSManagedObject(entity: fitnessEntity, insertInto: context)
+        
+        fitnessEntityObject.setValue(cardio, forKey: "cardio")
+        fitnessEntityObject.setValue(coreStrength, forKey: "coreStrength")
+        fitnessEntityObject.setValue(lowerStrength, forKey: "lowerStrength")
+        fitnessEntityObject.setValue(upperStrength, forKey: "upperStrength")
+        
+        fitnessEntityObject.setValue(user, forKey: "user")
+        
+        do {
+            try context.save()
+        } catch {
+            fatalError()
+        }
+    }
+    
+    //Call this function to fetch all fitness test data
+    func fetchAllFitnessData() -> [Fitness]? {
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Fitness")
+        
+        do{
+            var fitnessData: [Fitness] = []
+            let fitnesses = try context.fetch(fetchRequest)
+            for fit in fitnesses as! [Fitness] {
+                fitnessData.append(fit)
+            }
+            return fitnessData
+        }catch {
+            print("Could not fetch fitness data \(error.localizedDescription)")
             return nil
         }
     }
