@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Avt-fV-wxN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uvO-gu-iY9">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0cn-5U-F6F">
+            <objects>
+                <navigationController id="uvO-gu-iY9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dmy-Db-yQA">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Avt-fV-wxN" kind="relationship" relationship="rootViewController" id="uki-mL-Z0m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emw-kG-2Bh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-243" y="-585"/>
+        </scene>
         <!--Workout-->
         <scene sceneID="KFA-c9-h4b">
             <objects>
@@ -121,6 +137,8 @@
                         <color key="backgroundColor" red="0.18034434320000001" green="0.17254796620000001" blue="0.1725491881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Workout" id="u1s-EF-QeH"/>
+                    <navigationItem key="navigationItem" id="kcD-ae-2Gn"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="baseView" destination="CA8-AZ-Ur3" id="zB3-yC-NvR"/>
                         <outlet property="calorieCardView" destination="Qjt-Dz-Ovw" id="azO-XA-eTi"/>
@@ -130,9 +148,10 @@
                         <outlet property="minutesLabel" destination="xsH-7D-iOK" id="Hq9-ek-ix5"/>
                         <outlet property="progressBarBase" destination="eV9-Jh-KIF" id="LVX-yg-orL"/>
                         <outlet property="progressBarFill" destination="jfF-UH-zXe" id="Gab-eC-ITL"/>
-                        <outlet property="startWorkoutButton" destination="zZW-TN-mYf" id="Pj7-6u-CrL"/>
+                        <outlet property="startWorkoutButton" destination="zZW-TN-mYf" id="SOc-68-bpQ"/>
                         <outlet property="streakCountLabel" destination="O3j-a9-Lwn" id="0g6-u0-WbS"/>
                         <outlet property="timeCardView" destination="MDT-qX-0da" id="dvT-kk-XCZ"/>
+                        <segue destination="oWg-fE-7Q6" kind="show" identifier="homeToDetail" id="6DY-3n-LYf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrH-r8-nJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -144,6 +163,16 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="815.38461538461536" y="-556.6350710900474"/>
+        </scene>
+        <!--MovementDetailView-->
+        <scene sceneID="cns-K8-uwt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MovementDetailView" id="oWg-fE-7Q6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zTd-qU-zHQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08f-tm-uJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1608" y="-621"/>
         </scene>
     </scenes>
     <resources>
