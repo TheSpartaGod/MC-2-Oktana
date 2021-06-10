@@ -25,20 +25,20 @@ class WorkoutCompleteViewController: UIViewController {
     
     func configElements(){
         timeCardView.cardTitleLabel.text = "Total Time"
-//        timeCardView.cardIcon.image = UIImage(systemName: "stopwatch")
+        timeCardView.cardIcon.image = UIImage(systemName: "stopwatch")
         timeCardView.cardValueLabel.text = "05:21"
         timeCardView.layer.cornerRadius = 8
         timeCardView.clipsToBounds = true
 
         heartCardView.cardTitleLabel.text = "Average Heart Rate"
-//        heartCardView.cardIcon.image = UIImage(systemName: "heart.fill")
+        heartCardView.cardIcon.image = UIImage(systemName: "heart.fill")
         heartCardView.cardValueLabel.text = "102"
         heartCardView.cardUnitLabel.text = "bpm"
         heartCardView.layer.cornerRadius = 8
         heartCardView.clipsToBounds = true
 
         caloriesCardView.cardTitleLabel.text = "Calories"
-//        caloriesCardView.cardIcon.image = UIImage(systemName: "flame")
+        caloriesCardView.cardIcon.image = UIImage(systemName: "flame")
         caloriesCardView.cardValueLabel.text = "48"
         caloriesCardView.cardUnitLabel.text = "kcal"
         caloriesCardView.layer.cornerRadius = 8
