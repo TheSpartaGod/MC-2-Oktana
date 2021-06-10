@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Fitness" representedClassName="Fitness" syncable="YES">
+        <attribute name="cardio" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="coreStrength" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lowerStrength" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="upperStrength" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="fitness" inverseEntity="User"/>
+    </entity>
     <entity name="Movement" representedClassName="Movement" syncable="YES">
         <attribute name="movementId" optional="YES" attributeType="String"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="movement" inverseEntity="User"/>
@@ -8,6 +15,7 @@
         <attribute name="energy_points" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="total_streaks" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="weekly_goals" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="fitness" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Fitness" inverseName="user" inverseEntity="Fitness"/>
         <relationship name="movement" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Movement" inverseName="user" inverseEntity="Movement"/>
         <relationship name="workout" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Workout" inverseName="user" inverseEntity="Workout"/>
     </entity>
@@ -19,8 +27,9 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="workout" inverseEntity="User"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="104"/>
-        <element name="Workout" positionX="-36" positionY="36" width="128" height="104"/>
         <element name="Movement" positionX="-9" positionY="45" width="128" height="59"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="Workout" positionX="-36" positionY="36" width="128" height="104"/>
+        <element name="Fitness" positionX="-36" positionY="54" width="128" height="104"/>
     </elements>
 </model>
