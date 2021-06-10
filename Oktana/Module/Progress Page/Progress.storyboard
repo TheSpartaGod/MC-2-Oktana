@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1dA-mH-uby">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OgM-vx-fMs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -11,23 +11,23 @@
         <!--Item 3-->
         <scene sceneID="0DB-kS-9lP">
             <objects>
-                <viewController id="OgM-vx-fMs" userLabel="Item 3" sceneMemberID="viewController">
+                <viewController id="OgM-vx-fMs" userLabel="Item 3" customClass="ProgressPageViewController" customModule="Oktana" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ce1-1y-Q4c">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Ud6-QF-dvR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Progress" id="ldO-ef-0da"/>
+                    <tabBarItem key="tabBarItem" title="Progress" image="chart.bar.xaxis" catalog="system" id="ldO-ef-0da"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ii1-uJ-fDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="848" y="919"/>
         </scene>
-        <!--Workout Complete View Controller-->
+        <!--Test Complete View Comtroller View Controller-->
         <scene sceneID="nKV-5w-92h">
             <objects>
-                <viewController id="1dA-mH-uby" customClass="WorkoutCompleteViewController" customModule="Oktana" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1dA-mH-uby" customClass="TestCompleteViewComtrollerViewController" customModule="Oktana" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OKW-lf-doO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,11 +65,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kF3-JQ-zzv" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="217" y="560" width="149" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tXI-s5-21a" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
                                 <rect key="frame" x="49" y="443" width="149" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -80,15 +75,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kF3-JQ-zzv" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
+                                <rect key="frame" x="217" y="560" width="149" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SRz-9I-mty"/>
                         <color key="backgroundColor" red="0.18039215689999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="caloriesCardView" destination="rUr-Qg-tvz" id="m8d-6a-zoI"/>
                         <outlet property="checklistImage" destination="4AC-SY-7qf" id="N24-jK-ShY"/>
                         <outlet property="doneButton" destination="CYo-eo-GiS" id="xXU-WY-dsn"/>
-                        <outlet property="heartCardView" destination="tXI-s5-21a" id="7BD-R6-C3V"/>
+                        <outlet property="jumpJackView" destination="tXI-s5-21a" id="eaw-8F-SHf"/>
+                        <outlet property="pushUpView" destination="rUr-Qg-tvz" id="2iJ-0B-ur6"/>
+                        <outlet property="sitUpView" destination="wRr-19-8fn" id="iVJ-Am-g0A"/>
+                        <outlet property="squatView" destination="kF3-JQ-zzv" id="szy-9S-UDA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnb-bv-XOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -97,6 +99,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

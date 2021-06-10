@@ -15,10 +15,24 @@
                     <view key="view" contentMode="scaleToFill" id="mxD-Zh-yzn" customClass="Core">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJo-XC-0Rp" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
+                                <rect key="frame" x="172" y="65" width="70" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="5lB-Q4-dvP"/>
+                                    <constraint firstAttribute="width" constant="70" id="Hyc-C1-6r8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UgN-rU-A8a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eJo-XC-0Rp" firstAttribute="centerX" secondItem="mxD-Zh-yzn" secondAttribute="centerX" id="W1n-fq-ske"/>
+                            <constraint firstItem="eJo-XC-0Rp" firstAttribute="top" secondItem="UgN-rU-A8a" secondAttribute="top" constant="21" id="ddl-bj-abe"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Skill Tree" id="439-os-81v"/>
+                    <tabBarItem key="tabBarItem" title="Skill Tree" image="scale.3d" catalog="system" id="439-os-81v"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nE5-St-Crj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,6 +40,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="scale.3d" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

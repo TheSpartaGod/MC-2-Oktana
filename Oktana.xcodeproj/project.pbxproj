@@ -16,6 +16,8 @@
 		99F926EE2670DB6B006A210A /* HowToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F926ED2670DB6B006A210A /* HowToDo.storyboard */; };
 		99F926F02670DE9E006A210A /* HowToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926EF2670DE9E006A210A /* HowToDoViewController.swift */; };
 		99F926F22670E25F006A210A /* HowToTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926F12670E25F006A210A /* HowToTableViewCell.swift */; };
+		B7052C922671E8A100616D2B /* SkillTreeCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7052C912671E8A100616D2B /* SkillTreeCustomView.xib */; };
+		B7052C94267208FC00616D2B /* SkillTreeCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7052C93267208FC00616D2B /* SkillTreeCustomView.swift */; };
 		B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B719039F266FDE3200D34212 /* Movement+CoreDataClass.swift */; };
 		B71903A6266FDE3200D34212 /* Movement+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903A0266FDE3200D34212 /* Movement+CoreDataProperties.swift */; };
 		B71903A7266FDE3200D34212 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903A1266FDE3200D34212 /* User+CoreDataClass.swift */; };
@@ -25,6 +27,9 @@
 		B71903AC266FDE5000D34212 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71903AB266FDE5000D34212 /* CoreDataManager.swift */; };
 		B737A1442670F25800DDD4A8 /* Fitness+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737A1422670F25800DDD4A8 /* Fitness+CoreDataClass.swift */; };
 		B737A1452670F25800DDD4A8 /* Fitness+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737A1432670F25800DDD4A8 /* Fitness+CoreDataProperties.swift */; };
+		B737A14B267118B400DDD4A8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B737A14A267118B400DDD4A8 /* HealthKit.framework */; };
+		B737A14D2671204F00DDD4A8 /* HealthKitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737A14C2671204F00DDD4A8 /* HealthKitStore.swift */; };
+		B73E1C362672121C00054685 /* ProgressPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E1C352672121C00054685 /* ProgressPageViewController.swift */; };
 		B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4BA7C266FA78200B0E6A0 /* Movement.swift */; };
 		B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14B266E7E38007DB473 /* AppDelegate.swift */; };
 		B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14D266E7E38007DB473 /* SceneDelegate.swift */; };
@@ -51,6 +56,8 @@
 		99F926ED2670DB6B006A210A /* HowToDo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HowToDo.storyboard; sourceTree = "<group>"; };
 		99F926EF2670DE9E006A210A /* HowToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToDoViewController.swift; sourceTree = "<group>"; };
 		99F926F12670E25F006A210A /* HowToTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToTableViewCell.swift; sourceTree = "<group>"; };
+		B7052C912671E8A100616D2B /* SkillTreeCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillTreeCustomView.xib; sourceTree = "<group>"; };
+		B7052C93267208FC00616D2B /* SkillTreeCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTreeCustomView.swift; sourceTree = "<group>"; };
 		B719039F266FDE3200D34212 /* Movement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movement+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B71903A0266FDE3200D34212 /* Movement+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movement+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B71903A1266FDE3200D34212 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -60,6 +67,10 @@
 		B71903AB266FDE5000D34212 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B737A1422670F25800DDD4A8 /* Fitness+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fitness+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B737A1432670F25800DDD4A8 /* Fitness+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fitness+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B737A148267118B400DDD4A8 /* OktanaDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OktanaDebug.entitlements; sourceTree = "<group>"; };
+		B737A14A267118B400DDD4A8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		B737A14C2671204F00DDD4A8 /* HealthKitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitStore.swift; sourceTree = "<group>"; };
+		B73E1C352672121C00054685 /* ProgressPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPageViewController.swift; sourceTree = "<group>"; };
 		B7B4BA7C266FA78200B0E6A0 /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 		B7C7A148266E7E38007DB473 /* Oktana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oktana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C7A14B266E7E38007DB473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B737A14B267118B400DDD4A8 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +104,22 @@
 		99F926E4266F9199006A210A /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
+				B7052C952672090100616D2B /* SkillTreeCustomView */,
 				99F926DC266F7498006A210A /* MediumInfoCardView.swift */,
 				99F926DE266F74BF006A210A /* MediumInfoCardView.xib */,
 				E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */,
 				E25617872670F37400B96384 /* LongMediumInfoCardView.swift */,
 			);
 			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
+		B7052C952672090100616D2B /* SkillTreeCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B7052C912671E8A100616D2B /* SkillTreeCustomView.xib */,
+				B7052C93267208FC00616D2B /* SkillTreeCustomView.swift */,
+			);
+			path = SkillTreeCustomView;
 			sourceTree = "<group>";
 		};
 		B719039E266FDD5A00D34212 /* Managed Object Subclass */ = {
@@ -115,11 +137,20 @@
 			path = "Managed Object Subclass";
 			sourceTree = "<group>";
 		};
+		B737A149267118B400DDD4A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B737A14A267118B400DDD4A8 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B7C7A13F266E7E38007DB473 = {
 			isa = PBXGroup;
 			children = (
 				B7C7A14A266E7E38007DB473 /* Oktana */,
 				B7C7A149266E7E38007DB473 /* Products */,
+				B737A149267118B400DDD4A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +165,7 @@
 		B7C7A14A266E7E38007DB473 /* Oktana */ = {
 			isa = PBXGroup;
 			children = (
+				B737A148267118B400DDD4A8 /* OktanaDebug.entitlements */,
 				B7C7A163266E8029007DB473 /* Movement Model */,
 				B7C7A164266E803C007DB473 /* App */,
 				B7C7A165266E8058007DB473 /* Module */,
@@ -149,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				B7B4BA7C266FA78200B0E6A0 /* Movement.swift */,
+				B737A14C2671204F00DDD4A8 /* HealthKitStore.swift */,
 			);
 			path = "Movement Model";
 			sourceTree = "<group>";
@@ -226,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C7A195266E937B007DB473 /* Progress.storyboard */,
+				B73E1C352672121C00054685 /* ProgressPageViewController.swift */,
 				E256178B267150A400B96384 /* TestCompleteViewComtrollerViewController.swift */,
 			);
 			path = "Progress Page";
@@ -299,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99F926EE2670DB6B006A210A /* HowToDo.storyboard in Resources */,
+				B7052C922671E8A100616D2B /* SkillTreeCustomView.xib in Resources */,
 				99F926DF266F74BF006A210A /* MediumInfoCardView.xib in Resources */,
 				B7C7A18F266E932F007DB473 /* Workout.storyboard in Resources */,
 				B7C7A193266E9359007DB473 /* Skill Tree.storyboard in Resources */,
@@ -322,11 +357,13 @@
 				99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */,
 				B7C7A156266E7E38007DB473 /* Oktana.xcdatamodeld in Sources */,
 				B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */,
+				B73E1C362672121C00054685 /* ProgressPageViewController.swift in Sources */,
 				B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */,
 				E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */,
 				B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */,
 				B71903A7266FDE3200D34212 /* User+CoreDataClass.swift in Sources */,
 				B71903AA266FDE3200D34212 /* Workout+CoreDataProperties.swift in Sources */,
+				B7052C94267208FC00616D2B /* SkillTreeCustomView.swift in Sources */,
 				B71903AC266FDE5000D34212 /* CoreDataManager.swift in Sources */,
 				99F926F02670DE9E006A210A /* HowToDoViewController.swift in Sources */,
 				B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */,
@@ -336,6 +373,7 @@
 				B737A1452670F25800DDD4A8 /* Fitness+CoreDataProperties.swift in Sources */,
 				B71903A8266FDE3200D34212 /* User+CoreDataProperties.swift in Sources */,
 				99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */,
+				B737A14D2671204F00DDD4A8 /* HealthKitStore.swift in Sources */,
 				99F926F22670E25F006A210A /* HowToTableViewCell.swift in Sources */,
 				B71903A9266FDE3200D34212 /* Workout+CoreDataClass.swift in Sources */,
 				99F926EC266FC811006A210A /* MovementDetailTableViewCell.swift in Sources */,
@@ -478,7 +516,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Oktana/OktanaDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Oktana/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -497,6 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Oktana/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

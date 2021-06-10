@@ -10,10 +10,10 @@ import UIKit
 class TestCompleteViewComtrollerViewController: UIViewController {
 
     @IBOutlet weak var checklistImage: UIView!
-    @IBOutlet weak var jumpJackView: LongMediumInfoCardView!
+    @IBOutlet weak var jumpJackView: MediumInfoCardView!
     @IBOutlet weak var pushUpView: MediumInfoCardView!
     @IBOutlet weak var sitUpView: MediumInfoCardView!
-    @IBOutlet weak var squatView: LongMediumInfoCardView!
+    @IBOutlet weak var squatView: MediumInfoCardView!
     @IBOutlet weak var doneButton: UIButton!
     
     override func viewDidLoad() {

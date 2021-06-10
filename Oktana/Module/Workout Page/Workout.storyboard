@@ -209,7 +209,7 @@
                         <viewLayoutGuide key="safeArea" id="32a-jX-kHs"/>
                         <color key="backgroundColor" red="0.18034434320000001" green="0.17254796620000001" blue="0.1725491881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Workout" id="u1s-EF-QeH"/>
+                    <tabBarItem key="tabBarItem" title="Workout" image="heart.text.square.fill" catalog="system" id="u1s-EF-QeH"/>
                     <navigationItem key="navigationItem" id="kcD-ae-2Gn"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
@@ -326,6 +326,7 @@
         <image name="bolt.fill" catalog="system" width="101" height="128"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="flame" catalog="system" width="108" height="128"/>
+        <image name="heart.text.square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
