@@ -32,7 +32,7 @@ class WorkoutViewController: UIViewController {
         timeCardView.cardIcon.image = UIImage(systemName: "stopwatch")
         
         timeCardView.cardUnitLabel.text = "min"
-        timeCardView.cardValueLabel.text = "15"
+        timeCardView.cardValueLabel.text = "105"
         timeCardView.layer.cornerRadius = 10
         timeCardView.clipsToBounds = true
         
@@ -40,8 +40,8 @@ class WorkoutViewController: UIViewController {
         calorieCardView.cardIcon.image = UIImage(systemName: "flame")
         calorieCardView.cardIcon.tintColor = UIColor(red: 1.00, green: 0.66, blue: 0.00, alpha: 1.00)
         
-        calorieCardView.cardUnitLabel.text = "cal"
-        calorieCardView.cardValueLabel.text = "72"
+        calorieCardView.cardUnitLabel.text = "kcal"
+        calorieCardView.cardValueLabel.text = "720"
         calorieCardView.layer.cornerRadius = 10
         calorieCardView.clipsToBounds = true
         //set color, corner radius, etc

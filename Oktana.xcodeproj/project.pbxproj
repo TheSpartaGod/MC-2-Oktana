@@ -27,6 +27,10 @@
 		B7C7A18F266E932F007DB473 /* Workout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C7A18E266E932F007DB473 /* Workout.storyboard */; };
 		B7C7A193266E9359007DB473 /* Skill Tree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C7A192266E9359007DB473 /* Skill Tree.storyboard */; };
 		B7C7A196266E937B007DB473 /* Progress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C7A195266E937B007DB473 /* Progress.storyboard */; };
+		E2561780267065BE00B96384 /* WorkoutCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256177F267065BE00B96384 /* WorkoutCompleteViewController.swift */; };
+		E25617862670F31B00B96384 /* LongMediumInfoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */; };
+		E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25617872670F37400B96384 /* LongMediumInfoCardView.swift */; };
+		E256178C267150A400B96384 /* TestCompleteViewComtrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256178B267150A400B96384 /* TestCompleteViewComtrollerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		B7C7A18E266E932F007DB473 /* Workout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Workout.storyboard; sourceTree = "<group>"; };
 		B7C7A192266E9359007DB473 /* Skill Tree.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Skill Tree.storyboard"; sourceTree = "<group>"; };
 		B7C7A195266E937B007DB473 /* Progress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Progress.storyboard; sourceTree = "<group>"; };
+		E256177F267065BE00B96384 /* WorkoutCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewController.swift; sourceTree = "<group>"; };
+		E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LongMediumInfoCardView.xib; sourceTree = "<group>"; };
+		E25617872670F37400B96384 /* LongMediumInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongMediumInfoCardView.swift; sourceTree = "<group>"; };
+		E256178B267150A400B96384 /* TestCompleteViewComtrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompleteViewComtrollerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,8 @@
 			children = (
 				99F926DC266F7498006A210A /* MediumInfoCardView.swift */,
 				99F926DE266F74BF006A210A /* MediumInfoCardView.xib */,
+				E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */,
+				E25617872670F37400B96384 /* LongMediumInfoCardView.swift */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -175,6 +185,7 @@
 			children = (
 				B7C7A18E266E932F007DB473 /* Workout.storyboard */,
 				99F926DA266F4A4E006A210A /* WorkoutViewController.swift */,
+				E256177F267065BE00B96384 /* WorkoutCompleteViewController.swift */,
 			);
 			path = "Workout Page";
 			sourceTree = "<group>";
@@ -191,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C7A195266E937B007DB473 /* Progress.storyboard */,
+				E256178B267150A400B96384 /* TestCompleteViewComtrollerViewController.swift */,
 			);
 			path = "Progress Page";
 			sourceTree = "<group>";
@@ -267,6 +279,7 @@
 				B7C7A193266E9359007DB473 /* Skill Tree.storyboard in Resources */,
 				B7C7A180266E89D9007DB473 /* Root.storyboard in Resources */,
 				B7C7A196266E937B007DB473 /* Progress.storyboard in Resources */,
+				E25617862670F31B00B96384 /* LongMediumInfoCardView.xib in Resources */,
 				B7C7A15B266E7E39007DB473 /* LaunchScreen.storyboard in Resources */,
 				B7C7A158266E7E39007DB473 /* Assets.xcassets in Resources */,
 			);
@@ -283,15 +296,18 @@
 				B7C7A156266E7E38007DB473 /* Oktana.xcdatamodeld in Sources */,
 				B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */,
 				B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */,
+				E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */,
 				B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */,
 				B71903A7266FDE3200D34212 /* User+CoreDataClass.swift in Sources */,
 				B71903AA266FDE3200D34212 /* Workout+CoreDataProperties.swift in Sources */,
 				B71903AC266FDE5000D34212 /* CoreDataManager.swift in Sources */,
 				B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */,
+				E2561780267065BE00B96384 /* WorkoutCompleteViewController.swift in Sources */,
 				B71903A6266FDE3200D34212 /* Movement+CoreDataProperties.swift in Sources */,
 				B71903A8266FDE3200D34212 /* User+CoreDataProperties.swift in Sources */,
 				99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */,
 				B71903A9266FDE3200D34212 /* Workout+CoreDataClass.swift in Sources */,
+				E256178C267150A400B96384 /* TestCompleteViewComtrollerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
