@@ -4,45 +4,113 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Skill Tree-->
         <scene sceneID="bg3-wt-yeK">
             <objects>
-                <viewController id="uWD-p4-TdC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mxD-Zh-yzn" customClass="Core">
+                <viewController id="uWD-p4-TdC" customClass="SkillTreeViewController" customModule="Oktana" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mxD-Zh-yzn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJo-XC-0Rp" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="172" y="65" width="70" height="80"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHK-dp-pbF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1o-P5-9K8">
+                                        <rect key="frame" x="184" y="394" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="show:" destination="uWD-p4-TdC" eventType="touchUpInside" id="ucz-48-2RV"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJo-XC-0Rp" userLabel="01" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
+                                        <rect key="frame" x="152" y="10" width="110" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95" id="dfV-eA-lde"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wJ-7x-uam" userLabel="02" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
+                                        <rect key="frame" x="152" y="125" width="110" height="95"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7Y-hH-qbj" userLabel="03" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="240" width="110" height="95"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuQ-d2-Lja" userLabel="04" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
+                                        <rect key="frame" x="284" y="248" width="110" height="95"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Www-Al-0MA" userLabel="06" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
+                                        <rect key="frame" x="284" y="363" width="110" height="95"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8I-6h-ns7" userLabel="07" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
+                                        <rect key="frame" x="152" y="470" width="110" height="95"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1B-ac-x4C" userLabel="08" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
+                                        <rect key="frame" x="152" y="585" width="110" height="95"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6VC-qM-iLR" userLabel="05" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
+                                        <rect key="frame" x="33" y="343" width="110" height="95"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1803379655" green="0.17255061860000001" blue="0.1725490391" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="5lB-Q4-dvP"/>
-                                    <constraint firstAttribute="width" constant="70" id="Hyc-C1-6r8"/>
+                                    <constraint firstItem="6VC-qM-iLR" firstAttribute="top" secondItem="l7Y-hH-qbj" secondAttribute="bottom" constant="20" id="4Bt-FU-6a9"/>
+                                    <constraint firstItem="u8I-6h-ns7" firstAttribute="top" secondItem="6VC-qM-iLR" secondAttribute="bottom" constant="20" id="5o9-4U-UsG"/>
+                                    <constraint firstItem="Www-Al-0MA" firstAttribute="height" secondItem="tuQ-d2-Lja" secondAttribute="height" id="AGn-cs-LNv"/>
+                                    <constraint firstItem="eJo-XC-0Rp" firstAttribute="top" secondItem="CHK-dp-pbF" secondAttribute="top" constant="10" id="AdW-4h-35e"/>
+                                    <constraint firstItem="u8I-6h-ns7" firstAttribute="centerX" secondItem="7wJ-7x-uam" secondAttribute="centerX" id="CFQ-4d-W3s"/>
+                                    <constraint firstItem="Www-Al-0MA" firstAttribute="top" secondItem="tuQ-d2-Lja" secondAttribute="bottom" constant="20" id="CJ7-CQ-kff"/>
+                                    <constraint firstItem="tuQ-d2-Lja" firstAttribute="height" secondItem="7wJ-7x-uam" secondAttribute="height" id="DeI-S3-LTm"/>
+                                    <constraint firstItem="u8I-6h-ns7" firstAttribute="height" secondItem="6VC-qM-iLR" secondAttribute="height" id="E5b-YG-F5D"/>
+                                    <constraint firstItem="l7Y-hH-qbj" firstAttribute="height" secondItem="7wJ-7x-uam" secondAttribute="height" id="FEe-nw-4Pk"/>
+                                    <constraint firstItem="l7Y-hH-qbj" firstAttribute="width" secondItem="7wJ-7x-uam" secondAttribute="width" id="GfG-bg-J6t"/>
+                                    <constraint firstItem="6VC-qM-iLR" firstAttribute="height" secondItem="l7Y-hH-qbj" secondAttribute="height" id="HOb-0V-n3K"/>
+                                    <constraint firstItem="Www-Al-0MA" firstAttribute="width" secondItem="tuQ-d2-Lja" secondAttribute="width" id="L7Q-uM-xwW"/>
+                                    <constraint firstItem="eJo-XC-0Rp" firstAttribute="leading" secondItem="CHK-dp-pbF" secondAttribute="leading" constant="152" id="Mvd-Gt-eKd"/>
+                                    <constraint firstItem="7wJ-7x-uam" firstAttribute="height" secondItem="eJo-XC-0Rp" secondAttribute="height" id="NVz-2U-ujt"/>
+                                    <constraint firstItem="7wJ-7x-uam" firstAttribute="centerX" secondItem="eJo-XC-0Rp" secondAttribute="centerX" id="QX2-M2-dxt"/>
+                                    <constraint firstItem="6VC-qM-iLR" firstAttribute="leading" secondItem="l7Y-hH-qbj" secondAttribute="leading" id="TRv-Pg-Pwe"/>
+                                    <constraint firstAttribute="trailing" secondItem="eJo-XC-0Rp" secondAttribute="trailing" constant="152" id="TYm-It-06d"/>
+                                    <constraint firstAttribute="trailing" secondItem="tuQ-d2-Lja" secondAttribute="trailing" constant="20" symbolic="YES" id="WJK-06-Qb6"/>
+                                    <constraint firstItem="tuQ-d2-Lja" firstAttribute="width" secondItem="7wJ-7x-uam" secondAttribute="width" id="Yde-JY-wVF"/>
+                                    <constraint firstItem="l7Y-hH-qbj" firstAttribute="top" secondItem="7wJ-7x-uam" secondAttribute="bottom" constant="20" id="aLi-Ow-YS4"/>
+                                    <constraint firstItem="u8I-6h-ns7" firstAttribute="width" secondItem="6VC-qM-iLR" secondAttribute="width" id="b4Z-YD-Icf"/>
+                                    <constraint firstItem="o1B-ac-x4C" firstAttribute="top" secondItem="u8I-6h-ns7" secondAttribute="bottom" constant="20" id="dwf-wK-XsO"/>
+                                    <constraint firstItem="eJo-XC-0Rp" firstAttribute="centerX" secondItem="CHK-dp-pbF" secondAttribute="centerX" id="eaU-1a-JD5"/>
+                                    <constraint firstItem="7wJ-7x-uam" firstAttribute="top" secondItem="eJo-XC-0Rp" secondAttribute="bottom" constant="20" id="es9-Rr-IAA"/>
+                                    <constraint firstItem="o1B-ac-x4C" firstAttribute="height" secondItem="u8I-6h-ns7" secondAttribute="height" id="hf5-Df-PIh"/>
+                                    <constraint firstItem="o1B-ac-x4C" firstAttribute="width" secondItem="u8I-6h-ns7" secondAttribute="width" id="kuU-XN-0QX"/>
+                                    <constraint firstItem="Www-Al-0MA" firstAttribute="trailing" secondItem="tuQ-d2-Lja" secondAttribute="trailing" id="myq-gl-Tbf"/>
+                                    <constraint firstItem="l7Y-hH-qbj" firstAttribute="leading" secondItem="CHK-dp-pbF" secondAttribute="leading" constant="20" symbolic="YES" id="ouL-j4-KB4"/>
+                                    <constraint firstItem="7wJ-7x-uam" firstAttribute="width" secondItem="eJo-XC-0Rp" secondAttribute="width" id="qTj-t4-ICH"/>
+                                    <constraint firstItem="o1B-ac-x4C" firstAttribute="centerX" secondItem="u8I-6h-ns7" secondAttribute="centerX" id="sy7-JY-a21"/>
+                                    <constraint firstItem="6VC-qM-iLR" firstAttribute="width" secondItem="l7Y-hH-qbj" secondAttribute="width" id="ttP-sP-Xal"/>
+                                    <constraint firstItem="tuQ-d2-Lja" firstAttribute="top" secondItem="7wJ-7x-uam" secondAttribute="bottom" constant="28" id="zZI-dT-Zqe"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UgN-rU-A8a"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1803379655" green="0.17255061860000001" blue="0.1725490391" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="eJo-XC-0Rp" firstAttribute="centerX" secondItem="mxD-Zh-yzn" secondAttribute="centerX" id="W1n-fq-ske"/>
-                            <constraint firstItem="eJo-XC-0Rp" firstAttribute="top" secondItem="UgN-rU-A8a" secondAttribute="top" constant="21" id="ddl-bj-abe"/>
+                            <constraint firstItem="CHK-dp-pbF" firstAttribute="leading" secondItem="UgN-rU-A8a" secondAttribute="leading" id="KeK-fC-Tzp"/>
+                            <constraint firstItem="UgN-rU-A8a" firstAttribute="trailing" secondItem="CHK-dp-pbF" secondAttribute="trailing" id="LUp-oM-8fX"/>
+                            <constraint firstItem="CHK-dp-pbF" firstAttribute="top" secondItem="UgN-rU-A8a" secondAttribute="top" id="cBq-Gd-tcd"/>
+                            <constraint firstItem="UgN-rU-A8a" firstAttribute="bottom" secondItem="CHK-dp-pbF" secondAttribute="bottom" id="zdy-1M-RjZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Skill Tree" image="scale.3d" catalog="system" id="439-os-81v"/>
+                    <connections>
+                        <outlet property="skill01" destination="eJo-XC-0Rp" id="cb7-4A-y3P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nE5-St-Crj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847.82608695652175" y="193.52678571428569"/>
+            <point key="canvasLocation" x="837.68115942028987" y="193.52678571428569"/>
         </scene>
     </scenes>
     <resources>
         <image name="scale.3d" catalog="system" width="128" height="112"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

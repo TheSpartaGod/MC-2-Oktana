@@ -30,6 +30,11 @@
 		B737A14B267118B400DDD4A8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B737A14A267118B400DDD4A8 /* HealthKit.framework */; };
 		B737A14D2671204F00DDD4A8 /* HealthKitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737A14C2671204F00DDD4A8 /* HealthKitStore.swift */; };
 		B73E1C362672121C00054685 /* ProgressPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E1C352672121C00054685 /* ProgressPageViewController.swift */; };
+		B73E1C382672539B00054685 /* SkillTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E1C372672539B00054685 /* SkillTreeViewController.swift */; };
+		B73E1C3A2672614600054685 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73E1C392672614600054685 /* View.xib */; };
+		B73E1C3E2672902400054685 /* AlertUnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E1C3C2672902400054685 /* AlertUnlockViewController.swift */; };
+		B73E1C3F2672902400054685 /* AlertUnlockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73E1C3D2672902400054685 /* AlertUnlockViewController.xib */; };
+		B73E1C41267293ED00054685 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E1C40267293ED00054685 /* CustomButton.swift */; };
 		B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4BA7C266FA78200B0E6A0 /* Movement.swift */; };
 		B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14B266E7E38007DB473 /* AppDelegate.swift */; };
 		B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14D266E7E38007DB473 /* SceneDelegate.swift */; };
@@ -40,6 +45,10 @@
 		B7C7A18F266E932F007DB473 /* Workout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C7A18E266E932F007DB473 /* Workout.storyboard */; };
 		B7C7A193266E9359007DB473 /* Skill Tree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C7A192266E9359007DB473 /* Skill Tree.storyboard */; };
 		B7C7A196266E937B007DB473 /* Progress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C7A195266E937B007DB473 /* Progress.storyboard */; };
+		B7DB80D02673725A00977D24 /* AlertStandardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB80CE2673725A00977D24 /* AlertStandardViewController.swift */; };
+		B7DB80D12673725A00977D24 /* AlertStandardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7DB80CF2673725A00977D24 /* AlertStandardViewController.xib */; };
+		B7DB80D726737C0300977D24 /* AlertTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB80D526737C0300977D24 /* AlertTestViewController.swift */; };
+		B7DB80D826737C0300977D24 /* AlertTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7DB80D626737C0300977D24 /* AlertTestViewController.xib */; };
 		E2561780267065BE00B96384 /* WorkoutCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256177F267065BE00B96384 /* WorkoutCompleteViewController.swift */; };
 		E25617862670F31B00B96384 /* LongMediumInfoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */; };
 		E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25617872670F37400B96384 /* LongMediumInfoCardView.swift */; };
@@ -71,6 +80,11 @@
 		B737A14A267118B400DDD4A8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B737A14C2671204F00DDD4A8 /* HealthKitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitStore.swift; sourceTree = "<group>"; };
 		B73E1C352672121C00054685 /* ProgressPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPageViewController.swift; sourceTree = "<group>"; };
+		B73E1C372672539B00054685 /* SkillTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTreeViewController.swift; sourceTree = "<group>"; };
+		B73E1C392672614600054685 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		B73E1C3C2672902400054685 /* AlertUnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUnlockViewController.swift; sourceTree = "<group>"; };
+		B73E1C3D2672902400054685 /* AlertUnlockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertUnlockViewController.xib; sourceTree = "<group>"; };
+		B73E1C40267293ED00054685 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B7B4BA7C266FA78200B0E6A0 /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 		B7C7A148266E7E38007DB473 /* Oktana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oktana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C7A14B266E7E38007DB473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +97,10 @@
 		B7C7A18E266E932F007DB473 /* Workout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Workout.storyboard; sourceTree = "<group>"; };
 		B7C7A192266E9359007DB473 /* Skill Tree.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Skill Tree.storyboard"; sourceTree = "<group>"; };
 		B7C7A195266E937B007DB473 /* Progress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Progress.storyboard; sourceTree = "<group>"; };
+		B7DB80CE2673725A00977D24 /* AlertStandardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStandardViewController.swift; sourceTree = "<group>"; };
+		B7DB80CF2673725A00977D24 /* AlertStandardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertStandardViewController.xib; sourceTree = "<group>"; };
+		B7DB80D526737C0300977D24 /* AlertTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTestViewController.swift; sourceTree = "<group>"; };
+		B7DB80D626737C0300977D24 /* AlertTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertTestViewController.xib; sourceTree = "<group>"; };
 		E256177F267065BE00B96384 /* WorkoutCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewController.swift; sourceTree = "<group>"; };
 		E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LongMediumInfoCardView.xib; sourceTree = "<group>"; };
 		E25617872670F37400B96384 /* LongMediumInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongMediumInfoCardView.swift; sourceTree = "<group>"; };
@@ -104,6 +122,8 @@
 		99F926E4266F9199006A210A /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
+				B73E1C42267293F700054685 /* Button */,
+				B73E1C3B2672900D00054685 /* AlertViewController */,
 				B7052C952672090100616D2B /* SkillTreeCustomView */,
 				99F926DC266F7498006A210A /* MediumInfoCardView.swift */,
 				99F926DE266F74BF006A210A /* MediumInfoCardView.xib */,
@@ -118,6 +138,7 @@
 			children = (
 				B7052C912671E8A100616D2B /* SkillTreeCustomView.xib */,
 				B7052C93267208FC00616D2B /* SkillTreeCustomView.swift */,
+				B73E1C392672614600054685 /* View.xib */,
 			);
 			path = SkillTreeCustomView;
 			sourceTree = "<group>";
@@ -143,6 +164,22 @@
 				B737A14A267118B400DDD4A8 /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B73E1C3B2672900D00054685 /* AlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B7DB80CC2673715F00977D24 /* Alert  */,
+			);
+			path = AlertViewController;
+			sourceTree = "<group>";
+		};
+		B73E1C42267293F700054685 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				B73E1C40267293ED00054685 /* CustomButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		B7C7A13F266E7E38007DB473 = {
@@ -251,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				B7C7A192266E9359007DB473 /* Skill Tree.storyboard */,
+				B73E1C372672539B00054685 /* SkillTreeViewController.swift */,
 			);
 			path = "Skill Tree Page";
 			sourceTree = "<group>";
@@ -273,6 +311,43 @@
 				B71903AB266FDE5000D34212 /* CoreDataManager.swift */,
 			);
 			path = "Core Data Manager";
+			sourceTree = "<group>";
+		};
+		B7DB80CB2673714E00977D24 /* AlertUnlock */ = {
+			isa = PBXGroup;
+			children = (
+				B73E1C3D2672902400054685 /* AlertUnlockViewController.xib */,
+				B73E1C3C2672902400054685 /* AlertUnlockViewController.swift */,
+			);
+			path = AlertUnlock;
+			sourceTree = "<group>";
+		};
+		B7DB80CC2673715F00977D24 /* Alert  */ = {
+			isa = PBXGroup;
+			children = (
+				B7DB80D226737BD000977D24 /* AlertTest */,
+				B7DB80CD2673723300977D24 /* AlertStandard */,
+				B7DB80CB2673714E00977D24 /* AlertUnlock */,
+			);
+			path = "Alert ";
+			sourceTree = "<group>";
+		};
+		B7DB80CD2673723300977D24 /* AlertStandard */ = {
+			isa = PBXGroup;
+			children = (
+				B7DB80CE2673725A00977D24 /* AlertStandardViewController.swift */,
+				B7DB80CF2673725A00977D24 /* AlertStandardViewController.xib */,
+			);
+			path = AlertStandard;
+			sourceTree = "<group>";
+		};
+		B7DB80D226737BD000977D24 /* AlertTest */ = {
+			isa = PBXGroup;
+			children = (
+				B7DB80D526737C0300977D24 /* AlertTestViewController.swift */,
+				B7DB80D626737C0300977D24 /* AlertTestViewController.xib */,
+			);
+			path = AlertTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,9 +409,13 @@
 			files = (
 				99F926EE2670DB6B006A210A /* HowToDo.storyboard in Resources */,
 				B7052C922671E8A100616D2B /* SkillTreeCustomView.xib in Resources */,
+				B7DB80D12673725A00977D24 /* AlertStandardViewController.xib in Resources */,
 				99F926DF266F74BF006A210A /* MediumInfoCardView.xib in Resources */,
 				B7C7A18F266E932F007DB473 /* Workout.storyboard in Resources */,
+				B73E1C3A2672614600054685 /* View.xib in Resources */,
 				B7C7A193266E9359007DB473 /* Skill Tree.storyboard in Resources */,
+				B7DB80D826737C0300977D24 /* AlertTestViewController.xib in Resources */,
+				B73E1C3F2672902400054685 /* AlertUnlockViewController.xib in Resources */,
 				B7C7A180266E89D9007DB473 /* Root.storyboard in Resources */,
 				B7C7A196266E937B007DB473 /* Progress.storyboard in Resources */,
 				99F926E6266FBA83006A210A /* MovementDetailView.storyboard in Resources */,
@@ -354,15 +433,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				99F926E8266FC0AE006A210A /* MovementDetailViewController.swift in Sources */,
+				B7DB80D726737C0300977D24 /* AlertTestViewController.swift in Sources */,
 				99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */,
 				B7C7A156266E7E38007DB473 /* Oktana.xcdatamodeld in Sources */,
+				B7DB80D02673725A00977D24 /* AlertStandardViewController.swift in Sources */,
 				B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */,
+				B73E1C41267293ED00054685 /* CustomButton.swift in Sources */,
 				B73E1C362672121C00054685 /* ProgressPageViewController.swift in Sources */,
 				B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */,
 				E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */,
 				B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */,
 				B71903A7266FDE3200D34212 /* User+CoreDataClass.swift in Sources */,
 				B71903AA266FDE3200D34212 /* Workout+CoreDataProperties.swift in Sources */,
+				B73E1C382672539B00054685 /* SkillTreeViewController.swift in Sources */,
 				B7052C94267208FC00616D2B /* SkillTreeCustomView.swift in Sources */,
 				B71903AC266FDE5000D34212 /* CoreDataManager.swift in Sources */,
 				99F926F02670DE9E006A210A /* HowToDoViewController.swift in Sources */,
@@ -374,6 +457,7 @@
 				B71903A8266FDE3200D34212 /* User+CoreDataProperties.swift in Sources */,
 				99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */,
 				B737A14D2671204F00DDD4A8 /* HealthKitStore.swift in Sources */,
+				B73E1C3E2672902400054685 /* AlertUnlockViewController.swift in Sources */,
 				99F926F22670E25F006A210A /* HowToTableViewCell.swift in Sources */,
 				B71903A9266FDE3200D34212 /* Workout+CoreDataClass.swift in Sources */,
 				99F926EC266FC811006A210A /* MovementDetailTableViewCell.swift in Sources */,
