@@ -60,13 +60,4 @@ extension AlertTestViewController{
         viewController.navigationController?.modalPresentationStyle = .overCurrentContext
         viewController.present(controller, animated: true, completion: nil)
     }
-    
-    func getReps() -> Int?{
-        guard let totalReps = totalRepetition.text else {
-            print("no data in text field")
-            return 0
-        }
-        
-        return Int(totalReps)
-    }
 }
