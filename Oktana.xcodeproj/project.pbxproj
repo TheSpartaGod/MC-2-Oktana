@@ -34,7 +34,10 @@
 		B73E1C3A2672614600054685 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73E1C392672614600054685 /* View.xib */; };
 		B73E1C3E2672902400054685 /* AlertUnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E1C3C2672902400054685 /* AlertUnlockViewController.swift */; };
 		B73E1C3F2672902400054685 /* AlertUnlockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73E1C3D2672902400054685 /* AlertUnlockViewController.xib */; };
-		B73E1C41267293ED00054685 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E1C40267293ED00054685 /* CustomButton.swift */; };
+		B7597281267659F500A36236 /* StreakPointView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7597280267659F500A36236 /* StreakPointView.xib */; };
+		B759728326765A0D00A36236 /* StreakPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B759728226765A0D00A36236 /* StreakPointView.swift */; };
+		B759728526766CAB00A36236 /* Boarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B759728426766CAB00A36236 /* Boarding.storyboard */; };
+		B759728726768AA900A36236 /* BoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B759728626768AA900A36236 /* BoardingPageViewController.swift */; };
 		B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4BA7C266FA78200B0E6A0 /* Movement.swift */; };
 		B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14B266E7E38007DB473 /* AppDelegate.swift */; };
 		B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C7A14D266E7E38007DB473 /* SceneDelegate.swift */; };
@@ -84,7 +87,10 @@
 		B73E1C392672614600054685 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		B73E1C3C2672902400054685 /* AlertUnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUnlockViewController.swift; sourceTree = "<group>"; };
 		B73E1C3D2672902400054685 /* AlertUnlockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertUnlockViewController.xib; sourceTree = "<group>"; };
-		B73E1C40267293ED00054685 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		B7597280267659F500A36236 /* StreakPointView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreakPointView.xib; sourceTree = "<group>"; };
+		B759728226765A0D00A36236 /* StreakPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakPointView.swift; sourceTree = "<group>"; };
+		B759728426766CAB00A36236 /* Boarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Boarding.storyboard; sourceTree = "<group>"; };
+		B759728626768AA900A36236 /* BoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingPageViewController.swift; sourceTree = "<group>"; };
 		B7B4BA7C266FA78200B0E6A0 /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 		B7C7A148266E7E38007DB473 /* Oktana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oktana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C7A14B266E7E38007DB473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 		99F926E4266F9199006A210A /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
+				B759727F2676599D00A36236 /* Streak & Point View */,
 				B73E1C42267293F700054685 /* Button */,
 				B73E1C3B2672900D00054685 /* AlertViewController */,
 				B7052C952672090100616D2B /* SkillTreeCustomView */,
@@ -177,9 +184,17 @@
 		B73E1C42267293F700054685 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				B73E1C40267293ED00054685 /* CustomButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		B759727F2676599D00A36236 /* Streak & Point View */ = {
+			isa = PBXGroup;
+			children = (
+				B7597280267659F500A36236 /* StreakPointView.xib */,
+				B759728226765A0D00A36236 /* StreakPointView.swift */,
+			);
+			path = "Streak & Point View";
 			sourceTree = "<group>";
 		};
 		B7C7A13F266E7E38007DB473 = {
@@ -263,7 +278,9 @@
 		B7C7A16D266E81D7007DB473 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				B759728426766CAB00A36236 /* Boarding.storyboard */,
 				B7C7A159266E7E39007DB473 /* LaunchScreen.storyboard */,
+				B759728626768AA900A36236 /* BoardingPageViewController.swift */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -306,8 +323,8 @@
 		B7C7A19B266E947B007DB473 /* Core Data Manager */ = {
 			isa = PBXGroup;
 			children = (
-				B719039E266FDD5A00D34212 /* Managed Object Subclass */,
 				B7C7A154266E7E38007DB473 /* Oktana.xcdatamodeld */,
+				B719039E266FDD5A00D34212 /* Managed Object Subclass */,
 				B71903AB266FDE5000D34212 /* CoreDataManager.swift */,
 			);
 			path = "Core Data Manager";
@@ -316,8 +333,8 @@
 		B7DB80CB2673714E00977D24 /* AlertUnlock */ = {
 			isa = PBXGroup;
 			children = (
-				B73E1C3D2672902400054685 /* AlertUnlockViewController.xib */,
 				B73E1C3C2672902400054685 /* AlertUnlockViewController.swift */,
+				B73E1C3D2672902400054685 /* AlertUnlockViewController.xib */,
 			);
 			path = AlertUnlock;
 			sourceTree = "<group>";
@@ -410,8 +427,10 @@
 				99F926EE2670DB6B006A210A /* HowToDo.storyboard in Resources */,
 				B7052C922671E8A100616D2B /* SkillTreeCustomView.xib in Resources */,
 				B7DB80D12673725A00977D24 /* AlertStandardViewController.xib in Resources */,
+				B7597281267659F500A36236 /* StreakPointView.xib in Resources */,
 				99F926DF266F74BF006A210A /* MediumInfoCardView.xib in Resources */,
 				B7C7A18F266E932F007DB473 /* Workout.storyboard in Resources */,
+				B759728526766CAB00A36236 /* Boarding.storyboard in Resources */,
 				B73E1C3A2672614600054685 /* View.xib in Resources */,
 				B7C7A193266E9359007DB473 /* Skill Tree.storyboard in Resources */,
 				B7DB80D826737C0300977D24 /* AlertTestViewController.xib in Resources */,
@@ -438,11 +457,11 @@
 				B7C7A156266E7E38007DB473 /* Oktana.xcdatamodeld in Sources */,
 				B7DB80D02673725A00977D24 /* AlertStandardViewController.swift in Sources */,
 				B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */,
-				B73E1C41267293ED00054685 /* CustomButton.swift in Sources */,
 				B73E1C362672121C00054685 /* ProgressPageViewController.swift in Sources */,
 				B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */,
 				E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */,
 				B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */,
+				B759728726768AA900A36236 /* BoardingPageViewController.swift in Sources */,
 				B71903A7266FDE3200D34212 /* User+CoreDataClass.swift in Sources */,
 				B71903AA266FDE3200D34212 /* Workout+CoreDataProperties.swift in Sources */,
 				B73E1C382672539B00054685 /* SkillTreeViewController.swift in Sources */,
@@ -462,6 +481,7 @@
 				B71903A9266FDE3200D34212 /* Workout+CoreDataClass.swift in Sources */,
 				99F926EC266FC811006A210A /* MovementDetailTableViewCell.swift in Sources */,
 				E256178C267150A400B96384 /* TestCompleteViewComtrollerViewController.swift in Sources */,
+				B759728326765A0D00A36236 /* StreakPointView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

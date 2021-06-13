@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol SkillTreeCustomViewDelegate {
+    func didUnlock(name: String, icon: UIImage)
+}
+
 class SkillTreeCustomView: UIView {
+    
+    var delegate: SkillTreeCustomViewDelegate?
+    
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var polygon: UIImageView!
     @IBOutlet weak var movementIcon: UIImageView!
     @IBOutlet weak var movementName: UILabel!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,17 +35,31 @@ class SkillTreeCustomView: UIView {
     private func commonInit() {
         Bundle.main.loadNibNamed("SkillTreeCustomView", owner: self, options: nil)
         
+        contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapView(_:))))
+        
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         contentView.frame = self.bounds
         addSubview(contentView)
         
     }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    @objc private func didTapView(_ sender: UITapGestureRecognizer){
+        print("view tapped")
+        guard let nameData = movementName.text, let iconData = movementIcon.image else {
+            print("no-data on the view")
+            return
+        }
+        delegate?.didUnlock(name: nameData, icon: iconData)
+
     }
-    */
+    
+    func setData(data: MovementGenerate, color: UIColor){
+        
+        if let icon = UIImage(named: data.iconMovementGenerate){
+            movementIcon.image = icon
+        }
+        movementName.text = data.namaMovementGenerate
+        polygon.tintColor = color
+    }
 
 }

@@ -49,7 +49,6 @@ extension AlertStandardViewController{
         titleLabel.text = titleText
         messageLabel.text = messageText
         positiveButton.setTitle(positiveText, for: .normal)
-        negativeButton.setTitle(negativeText, for: .normal)
         
         
         contentView.layer.cornerRadius = 10
@@ -57,15 +56,13 @@ extension AlertStandardViewController{
         negativeButton.layer.cornerRadius = 10
     }
     
-    static func showAlert(from viewController: UIViewController, title: String, message: String, positiveMessage: String? = nil, negativeMessage: String? = nil, positiveAction: (() -> Void)? = nil, negativeAction: (() -> Void)? = nil){
+    static func showAlert(from viewController: UIViewController, title: String, message: String, positiveMessage: String? = nil, positiveAction: (() -> Void)? = nil){
         let controller = AlertStandardViewController.init(nibName: "AlertStandardViewController", bundle: nil)
         
         controller.titleText = title
         controller.messageText = message
         controller.positiveText = positiveMessage
-        controller.negativeText = negativeMessage
         controller.positiveCompletion = positiveAction
-        controller.negativeCompletion = negativeAction
         controller.modalPresentationStyle = .overCurrentContext
         controller.modalTransitionStyle = .crossDissolve
         controller.hidesBottomBarWhenPushed = true
