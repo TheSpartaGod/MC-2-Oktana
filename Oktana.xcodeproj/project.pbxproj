@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		999468742672FC0B00302000 /* FocusedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999468732672FC0B00302000 /* FocusedView.xib */; };
+		999468762672FE7100302000 /* FocusedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999468752672FE7100302000 /* FocusedView.swift */; };
 		99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926DA266F4A4E006A210A /* WorkoutViewController.swift */; };
 		99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926DC266F7498006A210A /* MediumInfoCardView.swift */; };
 		99F926DF266F74BF006A210A /* MediumInfoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F926DE266F74BF006A210A /* MediumInfoCardView.xib */; };
@@ -16,6 +18,9 @@
 		99F926EE2670DB6B006A210A /* HowToDo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F926ED2670DB6B006A210A /* HowToDo.storyboard */; };
 		99F926F02670DE9E006A210A /* HowToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926EF2670DE9E006A210A /* HowToDoViewController.swift */; };
 		99F926F22670E25F006A210A /* HowToTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926F12670E25F006A210A /* HowToTableViewCell.swift */; };
+		99F926F426710B3F006A210A /* WorkoutMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99F926F326710B3F006A210A /* WorkoutMode.storyboard */; };
+		99F926F826710FE2006A210A /* WorkoutModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926F726710FE2006A210A /* WorkoutModeViewController.swift */; };
+		99F926FA26711A7B006A210A /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926F926711A7B006A210A /* CircularProgressBarView.swift */; };
 		B7052C922671E8A100616D2B /* SkillTreeCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7052C912671E8A100616D2B /* SkillTreeCustomView.xib */; };
 		B7052C94267208FC00616D2B /* SkillTreeCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7052C93267208FC00616D2B /* SkillTreeCustomView.swift */; };
 		B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B719039F266FDE3200D34212 /* Movement+CoreDataClass.swift */; };
@@ -56,6 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		999468732672FC0B00302000 /* FocusedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusedView.xib; sourceTree = "<group>"; };
+		999468752672FE7100302000 /* FocusedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedView.swift; sourceTree = "<group>"; };
 		99F926DA266F4A4E006A210A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		99F926DC266F7498006A210A /* MediumInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumInfoCardView.swift; sourceTree = "<group>"; };
 		99F926DE266F74BF006A210A /* MediumInfoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediumInfoCardView.xib; sourceTree = "<group>"; };
@@ -65,6 +72,9 @@
 		99F926ED2670DB6B006A210A /* HowToDo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HowToDo.storyboard; sourceTree = "<group>"; };
 		99F926EF2670DE9E006A210A /* HowToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToDoViewController.swift; sourceTree = "<group>"; };
 		99F926F12670E25F006A210A /* HowToTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToTableViewCell.swift; sourceTree = "<group>"; };
+		99F926F326710B3F006A210A /* WorkoutMode.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutMode.storyboard; sourceTree = "<group>"; };
+		99F926F726710FE2006A210A /* WorkoutModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModeViewController.swift; sourceTree = "<group>"; };
+		99F926F926711A7B006A210A /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 		B7052C912671E8A100616D2B /* SkillTreeCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillTreeCustomView.xib; sourceTree = "<group>"; };
 		B7052C93267208FC00616D2B /* SkillTreeCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTreeCustomView.swift; sourceTree = "<group>"; };
 		B719039F266FDE3200D34212 /* Movement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movement+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -124,11 +134,16 @@
 			children = (
 				B73E1C42267293F700054685 /* Button */,
 				B73E1C3B2672900D00054685 /* AlertViewController */,
+				99F926F926711A7B006A210A /* CircularProgressBarView.swift */,
+				99F926F926711A7B006A210A /* CircularProgressBarView.swift */,
+				99F926F926711A7B006A210A /* CircularProgressBarView.swift */,
 				B7052C952672090100616D2B /* SkillTreeCustomView */,
 				99F926DC266F7498006A210A /* MediumInfoCardView.swift */,
 				99F926DE266F74BF006A210A /* MediumInfoCardView.xib */,
 				E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */,
 				E25617872670F37400B96384 /* LongMediumInfoCardView.swift */,
+				999468732672FC0B00302000 /* FocusedView.xib */,
+				999468752672FE7100302000 /* FocusedView.swift */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -280,6 +295,8 @@
 				99F926ED2670DB6B006A210A /* HowToDo.storyboard */,
 				99F926EF2670DE9E006A210A /* HowToDoViewController.swift */,
 				99F926F12670E25F006A210A /* HowToTableViewCell.swift */,
+				99F926F326710B3F006A210A /* WorkoutMode.storyboard */,
+				99F926F726710FE2006A210A /* WorkoutModeViewController.swift */,
 			);
 			path = "Workout Page";
 			sourceTree = "<group>";
@@ -407,7 +424,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				999468742672FC0B00302000 /* FocusedView.xib in Resources */,
 				99F926EE2670DB6B006A210A /* HowToDo.storyboard in Resources */,
+				99F926F426710B3F006A210A /* WorkoutMode.storyboard in Resources */,
 				B7052C922671E8A100616D2B /* SkillTreeCustomView.xib in Resources */,
 				B7DB80D12673725A00977D24 /* AlertStandardViewController.xib in Resources */,
 				99F926DF266F74BF006A210A /* MediumInfoCardView.xib in Resources */,
@@ -439,11 +458,15 @@
 				B7DB80D02673725A00977D24 /* AlertStandardViewController.swift in Sources */,
 				B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */,
 				B73E1C41267293ED00054685 /* CustomButton.swift in Sources */,
+				999468762672FE7100302000 /* FocusedView.swift in Sources */,
+				999468762672FE7100302000 /* FocusedView.swift in Sources */,
+				999468762672FE7100302000 /* FocusedView.swift in Sources */,
 				B73E1C362672121C00054685 /* ProgressPageViewController.swift in Sources */,
 				B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */,
 				E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */,
 				B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */,
 				B71903A7266FDE3200D34212 /* User+CoreDataClass.swift in Sources */,
+				99F926FA26711A7B006A210A /* CircularProgressBarView.swift in Sources */,
 				B71903AA266FDE3200D34212 /* Workout+CoreDataProperties.swift in Sources */,
 				B73E1C382672539B00054685 /* SkillTreeViewController.swift in Sources */,
 				B7052C94267208FC00616D2B /* SkillTreeCustomView.swift in Sources */,
@@ -453,6 +476,7 @@
 				E2561780267065BE00B96384 /* WorkoutCompleteViewController.swift in Sources */,
 				B71903A6266FDE3200D34212 /* Movement+CoreDataProperties.swift in Sources */,
 				B737A1442670F25800DDD4A8 /* Fitness+CoreDataClass.swift in Sources */,
+				99F926F826710FE2006A210A /* WorkoutModeViewController.swift in Sources */,
 				B737A1452670F25800DDD4A8 /* Fitness+CoreDataProperties.swift in Sources */,
 				B71903A8266FDE3200D34212 /* User+CoreDataProperties.swift in Sources */,
 				99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */,
