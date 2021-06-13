@@ -26,9 +26,11 @@ class SkillTreeCustomView: UIView {
     
     private func commonInit() {
         Bundle.main.loadNibNamed("SkillTreeCustomView", owner: self, options: nil)
-        contentView.frame = self.bounds
+        
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.frame = self.bounds
         addSubview(contentView)
+        
     }
     /*
     // Only override draw() if you perform custom drawing.

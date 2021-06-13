@@ -104,11 +104,22 @@
                         <outlet property="movementDetailTableView" destination="3a7-Ki-asA" id="Kz0-qn-JgS"/>
                         <outlet property="readyWorkoutButton" destination="goI-Ny-27J" id="dfx-d4-0r8"/>
                         <segue destination="piQ-Ch-Y47" kind="show" identifier="showHowTo" id="kLP-Az-LwU"/>
+                        <segue destination="38E-vb-tyF" kind="show" identifier="startWorkoutMode" id="M1p-Ct-5oI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.76923076923077" y="113.74407582938387"/>
+        </scene>
+        <!--WorkoutMode-->
+        <scene sceneID="QBw-sU-f2i">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WorkoutMode" id="38E-vb-tyF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Tgf-uj-OfX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2a-hm-dvc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="306"/>
         </scene>
         <!--HowToDo-->
         <scene sceneID="otQ-mp-iT0">

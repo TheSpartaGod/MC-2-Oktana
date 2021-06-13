@@ -79,6 +79,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="howToImage" destination="maq-yp-Fkc" id="c4u-aD-sLN"/>
                         <outlet property="howToStepsTableView" destination="1zx-1z-lHY" id="jca-vR-wui"/>
                     </connections>
                 </viewController>

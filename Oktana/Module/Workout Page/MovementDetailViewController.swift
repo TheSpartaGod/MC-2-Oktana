@@ -14,8 +14,7 @@ class MovementDetailViewController: UIViewController ,UITableViewDelegate, UITab
     @IBOutlet weak var readyWorkoutButton: UIView!
     
     @objc func didTapView(_ sender: UITapGestureRecognizer){//MOVE TO WORKOUT VIEW
-        //performSegue(withIdentifier: "homeToDetail", sender: nil)
-        print("poggers")
+        performSegue(withIdentifier: "startWorkoutMode", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -33,10 +32,12 @@ class MovementDetailViewController: UIViewController ,UITableViewDelegate, UITab
         
         // Do any additional setup after loading the view.
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
-        
+        self.navigationController?.tabBarController?.tabBar.isHidden = false
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2 //EDIT THIS BASED ON NUMBER OF ROWS IN EACH SECTOIN
     }
@@ -44,7 +45,7 @@ class MovementDetailViewController: UIViewController ,UITableViewDelegate, UITab
         return 4//EDIT THIS BASED ON NUMBER OF SECTIONS IN THE TABLEVIEW
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {//For custom header (black background, white text)
         let view = UIView()
         view.backgroundColor = UIColor(red: 0.14, green: 0.14, blue: 0.14, alpha: 1.00)
         let headerTitle = UILabel()
@@ -55,7 +56,6 @@ class MovementDetailViewController: UIViewController ,UITableViewDelegate, UITab
     
         return view
     }
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = movementDetailTableView.dequeueReusableCell(withIdentifier: "MovementCell") as! MovementDetailTableViewCell
