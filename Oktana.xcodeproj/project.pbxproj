@@ -54,8 +54,6 @@
 		B7DB80D12673725A00977D24 /* AlertStandardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7DB80CF2673725A00977D24 /* AlertStandardViewController.xib */; };
 		B7DB80D726737C0300977D24 /* AlertTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB80D526737C0300977D24 /* AlertTestViewController.swift */; };
 		B7DB80D826737C0300977D24 /* AlertTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7DB80D626737C0300977D24 /* AlertTestViewController.xib */; };
-		E24CA7722672843D00D35810 /* x.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24CA7712672843D00D35810 /* x.xib */; };
-		E24CA774267284AD00D35810 /* x.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CA773267284AD00D35810 /* x.swift */; };
 		E24CA7962673134600D35810 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CA7952673134600D35810 /* ProgressViewController.swift */; };
 		E2561780267065BE00B96384 /* WorkoutCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256177F267065BE00B96384 /* WorkoutCompleteViewController.swift */; };
 		E25617862670F31B00B96384 /* LongMediumInfoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */; };
@@ -119,8 +117,6 @@
 		B7DB80CF2673725A00977D24 /* AlertStandardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertStandardViewController.xib; sourceTree = "<group>"; };
 		B7DB80D526737C0300977D24 /* AlertTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTestViewController.swift; sourceTree = "<group>"; };
 		B7DB80D626737C0300977D24 /* AlertTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertTestViewController.xib; sourceTree = "<group>"; };
-		E24CA7712672843D00D35810 /* x.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = x.xib; sourceTree = "<group>"; };
-		E24CA773267284AD00D35810 /* x.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x.swift; sourceTree = "<group>"; };
 		E24CA7952673134600D35810 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		E256177F267065BE00B96384 /* WorkoutCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewController.swift; sourceTree = "<group>"; };
 		E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LongMediumInfoCardView.xib; sourceTree = "<group>"; };
@@ -151,8 +147,6 @@
 				B73E1C42267293F700054685 /* Button */,
 				B73E1C3B2672900D00054685 /* AlertViewController */,
 				99F926F926711A7B006A210A /* CircularProgressBarView.swift */,
-				99F926F926711A7B006A210A /* CircularProgressBarView.swift */,
-				99F926F926711A7B006A210A /* CircularProgressBarView.swift */,
 				B7052C952672090100616D2B /* SkillTreeCustomView */,
 				99F926DC266F7498006A210A /* MediumInfoCardView.swift */,
 				99F926DE266F74BF006A210A /* MediumInfoCardView.xib */,
@@ -160,8 +154,6 @@
 				E25617872670F37400B96384 /* LongMediumInfoCardView.swift */,
 				999468732672FC0B00302000 /* FocusedView.xib */,
 				999468752672FE7100302000 /* FocusedView.swift */,
-				E24CA7712672843D00D35810 /* x.xib */,
-				E24CA773267284AD00D35810 /* x.swift */,
 				E25EAEA426769E42001B270D /* MediumProgressCardViewCell.swift */,
 				E25EAEA526769E42001B270D /* MediumProgressCardViewCell.xib */,
 				E25EAEA82676DAE5001B270D /* LargeProgressCardViewCell.swift */,
@@ -466,7 +458,6 @@
 				99F926E6266FBA83006A210A /* MovementDetailView.storyboard in Resources */,
 				E25617862670F31B00B96384 /* LongMediumInfoCardView.xib in Resources */,
 				E25EAEAB2676DAE5001B270D /* LargeProgressCardViewCell.xib in Resources */,
-				E24CA7722672843D00D35810 /* x.xib in Resources */,
 				B7C7A15B266E7E39007DB473 /* LaunchScreen.storyboard in Resources */,
 				B7C7A158266E7E39007DB473 /* Assets.xcassets in Resources */,
 			);
@@ -501,7 +492,6 @@
 				B73E1C382672539B00054685 /* SkillTreeViewController.swift in Sources */,
 				B7052C94267208FC00616D2B /* SkillTreeCustomView.swift in Sources */,
 				B71903AC266FDE5000D34212 /* CoreDataManager.swift in Sources */,
-				E24CA774267284AD00D35810 /* x.swift in Sources */,
 				99F926F02670DE9E006A210A /* HowToDoViewController.swift in Sources */,
 				B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */,
 				E2561780267065BE00B96384 /* WorkoutCompleteViewController.swift in Sources */,
