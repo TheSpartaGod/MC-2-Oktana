@@ -35,10 +35,18 @@
 		B7C7A18F266E932F007DB473 /* Workout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C7A18E266E932F007DB473 /* Workout.storyboard */; };
 		B7C7A193266E9359007DB473 /* Skill Tree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C7A192266E9359007DB473 /* Skill Tree.storyboard */; };
 		B7C7A196266E937B007DB473 /* Progress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C7A195266E937B007DB473 /* Progress.storyboard */; };
+		E24CA7722672843D00D35810 /* x.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24CA7712672843D00D35810 /* x.xib */; };
+		E24CA774267284AD00D35810 /* x.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CA773267284AD00D35810 /* x.swift */; };
+		E24CA7962673134600D35810 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CA7952673134600D35810 /* ProgressViewController.swift */; };
 		E2561780267065BE00B96384 /* WorkoutCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256177F267065BE00B96384 /* WorkoutCompleteViewController.swift */; };
 		E25617862670F31B00B96384 /* LongMediumInfoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */; };
 		E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25617872670F37400B96384 /* LongMediumInfoCardView.swift */; };
 		E256178C267150A400B96384 /* TestCompleteViewComtrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256178B267150A400B96384 /* TestCompleteViewComtrollerViewController.swift */; };
+		E25EAEA626769E42001B270D /* MediumProgressCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EAEA426769E42001B270D /* MediumProgressCardViewCell.swift */; };
+		E25EAEA726769E42001B270D /* MediumProgressCardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25EAEA526769E42001B270D /* MediumProgressCardViewCell.xib */; };
+		E25EAEAA2676DAE5001B270D /* LargeProgressCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EAEA82676DAE5001B270D /* LargeProgressCardViewCell.swift */; };
+		E25EAEAB2676DAE5001B270D /* LargeProgressCardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25EAEA92676DAE5001B270D /* LargeProgressCardViewCell.xib */; };
+		E25EAEAD2676E569001B270D /* TestCompleteView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25EAEAC2676E569001B270D /* TestCompleteView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,10 +80,18 @@
 		B7C7A18E266E932F007DB473 /* Workout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Workout.storyboard; sourceTree = "<group>"; };
 		B7C7A192266E9359007DB473 /* Skill Tree.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Skill Tree.storyboard"; sourceTree = "<group>"; };
 		B7C7A195266E937B007DB473 /* Progress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Progress.storyboard; sourceTree = "<group>"; };
+		E24CA7712672843D00D35810 /* x.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = x.xib; sourceTree = "<group>"; };
+		E24CA773267284AD00D35810 /* x.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = x.swift; sourceTree = "<group>"; };
+		E24CA7952673134600D35810 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		E256177F267065BE00B96384 /* WorkoutCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCompleteViewController.swift; sourceTree = "<group>"; };
 		E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LongMediumInfoCardView.xib; sourceTree = "<group>"; };
 		E25617872670F37400B96384 /* LongMediumInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongMediumInfoCardView.swift; sourceTree = "<group>"; };
 		E256178B267150A400B96384 /* TestCompleteViewComtrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompleteViewComtrollerViewController.swift; sourceTree = "<group>"; };
+		E25EAEA426769E42001B270D /* MediumProgressCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumProgressCardViewCell.swift; sourceTree = "<group>"; };
+		E25EAEA526769E42001B270D /* MediumProgressCardViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediumProgressCardViewCell.xib; sourceTree = "<group>"; };
+		E25EAEA82676DAE5001B270D /* LargeProgressCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeProgressCardViewCell.swift; sourceTree = "<group>"; };
+		E25EAEA92676DAE5001B270D /* LargeProgressCardViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LargeProgressCardViewCell.xib; sourceTree = "<group>"; };
+		E25EAEAC2676E569001B270D /* TestCompleteView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestCompleteView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +112,12 @@
 				99F926DE266F74BF006A210A /* MediumInfoCardView.xib */,
 				E25617852670F31B00B96384 /* LongMediumInfoCardView.xib */,
 				E25617872670F37400B96384 /* LongMediumInfoCardView.swift */,
+				E24CA7712672843D00D35810 /* x.xib */,
+				E24CA773267284AD00D35810 /* x.swift */,
+				E25EAEA426769E42001B270D /* MediumProgressCardViewCell.swift */,
+				E25EAEA526769E42001B270D /* MediumProgressCardViewCell.xib */,
+				E25EAEA82676DAE5001B270D /* LargeProgressCardViewCell.swift */,
+				E25EAEA92676DAE5001B270D /* LargeProgressCardViewCell.xib */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -226,7 +248,9 @@
 			isa = PBXGroup;
 			children = (
 				B7C7A195266E937B007DB473 /* Progress.storyboard */,
+				E25EAEAC2676E569001B270D /* TestCompleteView.storyboard */,
 				E256178B267150A400B96384 /* TestCompleteViewComtrollerViewController.swift */,
+				E24CA7952673134600D35810 /* ProgressViewController.swift */,
 			);
 			path = "Progress Page";
 			sourceTree = "<group>";
@@ -303,9 +327,13 @@
 				B7C7A18F266E932F007DB473 /* Workout.storyboard in Resources */,
 				B7C7A193266E9359007DB473 /* Skill Tree.storyboard in Resources */,
 				B7C7A180266E89D9007DB473 /* Root.storyboard in Resources */,
+				E25EAEAD2676E569001B270D /* TestCompleteView.storyboard in Resources */,
 				B7C7A196266E937B007DB473 /* Progress.storyboard in Resources */,
+				E25EAEA726769E42001B270D /* MediumProgressCardViewCell.xib in Resources */,
 				99F926E6266FBA83006A210A /* MovementDetailView.storyboard in Resources */,
 				E25617862670F31B00B96384 /* LongMediumInfoCardView.xib in Resources */,
+				E25EAEAB2676DAE5001B270D /* LargeProgressCardViewCell.xib in Resources */,
+				E24CA7722672843D00D35810 /* x.xib in Resources */,
 				B7C7A15B266E7E39007DB473 /* LaunchScreen.storyboard in Resources */,
 				B7C7A158266E7E39007DB473 /* Assets.xcassets in Resources */,
 			);
@@ -321,6 +349,8 @@
 				99F926E8266FC0AE006A210A /* MovementDetailViewController.swift in Sources */,
 				99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */,
 				B7C7A156266E7E38007DB473 /* Oktana.xcdatamodeld in Sources */,
+				E25EAEA626769E42001B270D /* MediumProgressCardViewCell.swift in Sources */,
+				E24CA7962673134600D35810 /* ProgressViewController.swift in Sources */,
 				B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */,
 				B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */,
 				E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */,
@@ -328,6 +358,7 @@
 				B71903A7266FDE3200D34212 /* User+CoreDataClass.swift in Sources */,
 				B71903AA266FDE3200D34212 /* Workout+CoreDataProperties.swift in Sources */,
 				B71903AC266FDE5000D34212 /* CoreDataManager.swift in Sources */,
+				E24CA774267284AD00D35810 /* x.swift in Sources */,
 				99F926F02670DE9E006A210A /* HowToDoViewController.swift in Sources */,
 				B7C7A14E266E7E38007DB473 /* SceneDelegate.swift in Sources */,
 				E2561780267065BE00B96384 /* WorkoutCompleteViewController.swift in Sources */,
@@ -338,6 +369,7 @@
 				99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */,
 				99F926F22670E25F006A210A /* HowToTableViewCell.swift in Sources */,
 				B71903A9266FDE3200D34212 /* Workout+CoreDataClass.swift in Sources */,
+				E25EAEAA2676DAE5001B270D /* LargeProgressCardViewCell.swift in Sources */,
 				99F926EC266FC811006A210A /* MovementDetailTableViewCell.swift in Sources */,
 				E256178C267150A400B96384 /* TestCompleteViewComtrollerViewController.swift in Sources */,
 			);
