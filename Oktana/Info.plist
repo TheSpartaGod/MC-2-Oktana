@@ -45,6 +45,10 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Root</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Oktana watns to access your health data in order to your helath</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Oktana watns to access your health data in order to your helath</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

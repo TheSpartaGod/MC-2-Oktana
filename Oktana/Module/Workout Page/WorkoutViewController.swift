@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class WorkoutViewController: UIViewController {
     
@@ -33,6 +34,8 @@ class WorkoutViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func configElements(){
+
+        
         timeCardView.cardTitleLabel.text = "Time"
         timeCardView.cardIcon.image = UIImage(systemName: "stopwatch")
         
@@ -69,6 +72,7 @@ class WorkoutViewController: UIViewController {
       //ubah menjadi lingkaran
     
     }
+    
     
 
     /*

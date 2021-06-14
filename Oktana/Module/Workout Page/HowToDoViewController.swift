@@ -11,6 +11,7 @@ class HowToDoViewController: UIViewController, UITableViewDelegate, UITableViewD
   
 
     @IBOutlet weak var howToStepsTableView: UITableView!
+    @IBOutlet weak var howToImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
      
