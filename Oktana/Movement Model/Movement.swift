@@ -28,14 +28,50 @@ struct AnimationGenerate {
 }
 
 /*
- 1. Jab & Straight
- 2. Hook & Uppercut
- 3. Roundhouse Kick
- 4. Knee
- 5. Side Kick
- 6. Front Kick
- 7. Elbow
- 8. Superman Punch
+ Skill
+ 1. Jab & Cross -> self, situp jab cross
+ 2. Hook & Uppercut -> alternating hook, alternating uppercut, jab cross hook uppercut, situp alternating hook
+ 3. Roundhouse Kick -> alternating roundhouse kick
+ 4. Knee -> alternating knee
+ 5. Side Kick -> self, squat side kick
+ 6. Front Kick -> alternating front kick(self)
+ 7. Elbow -> alternating elbow(self)
+ 8. Superman Punch -> self
+ 
+ Core
+ 
+ 9. Jumping Jack
+ 10. Mountain Climber
+ 11. Burpees
+ 
+ Upper Body Exercise
+ 12. Pushup
+ 13. Inchworm
+ 14. Plank Pushup
+ 
+ (unlock)
+ 15. Alternating Hook
+ 16. Alternating Uppercut
+ 17. Jab Cross Hook Uppercut
+
+ Core
+ 18. Situp Jab Straight
+ 19. Leg Raise
+ 20. Flutter Kick
+ 21. Scissors
+ 
+ (unlock)
+ 22. Situp Alternating Hook
+ 
+ Lower Body Exercise
+ 23. Squat
+ 24. Lunges
+ 25. Jump Squat
+ 
+ (unlock)
+ 26. Squat Roundhouse Kick
+ 27. Back Lunges front kick
+ 28. Squat Side Kick
  */
 struct Movements {
     var data = [
@@ -176,7 +212,7 @@ struct Movements {
                                 calorieBurnGenerate: 0,
                                 costEPGenerate: 200),
                 MovementGenerate(
-                                movementIDGenerate: 9,
+                                movementIDGenerate: 13,
                                 category: 2,
                                 iconMovementGenerate: "",
                                 animationMovementGenerate: [
@@ -189,6 +225,56 @@ struct Movements {
                                     InstructionsGenerate(instructions: "2. Straighten your arms and legs."),
                                     InstructionsGenerate(instructions: "3. Lower your body until your chest nearly touches the floor."),
                                     InstructionsGenerate(instructions: "4. Push youself back up.")
+                                ],
+                                calorieBurnGenerate: 0,
+                                costEPGenerate: 200),
+                MovementGenerate(
+                                movementIDGenerate: 14,
+                                category: 2,
+                                iconMovementGenerate: "",
+                                animationMovementGenerate: [
+                                    AnimationGenerate(animationFrame: ""),
+                                    AnimationGenerate(animationFrame: "")
+                                ],
+                                namaMovementGenerate: "Inchworm",
+                                instructionsGenerate: [
+                                    InstructionsGenerate(instructions: "1. Stand tall then reach your hands toward the floor in front of your feet. Allow your knees to bend slightly as needed."),
+                                    InstructionsGenerate(instructions: "2. Place your hands on the floor and walk your hand forward, one at a time until a full plank position. Keep your legs relatively straight."),
+                                    InstructionsGenerate(instructions: "3. Return to standing by walk your hand back.")
+                                ],
+                                calorieBurnGenerate: 0,
+                                costEPGenerate: 200),
+                MovementGenerate(
+                                movementIDGenerate: 15,
+                                category: 2,
+                                iconMovementGenerate: "",
+                                animationMovementGenerate: [
+                                    AnimationGenerate(animationFrame: ""),
+                                    AnimationGenerate(animationFrame: "")
+                                ],
+                                namaMovementGenerate: "Plank Push Up",
+                                instructionsGenerate: [
+                                    InstructionsGenerate(instructions: "1. Start in a plank position"),
+                                    InstructionsGenerate(instructions: "2. Place down one hand at a time to lift up into a pushup position."),
+                                    InstructionsGenerate(instructions: "3. Keep back straight and core tight"),
+                                    InstructionsGenerate(instructions: "4. Move one arm at a time back into the plank position.")
+
+                                ],
+                                calorieBurnGenerate: 0,
+                                costEPGenerate: 200),
+                MovementGenerate(
+                                movementIDGenerate: 12,
+                                category: 2,
+                                iconMovementGenerate: "",
+                                animationMovementGenerate: [
+                                    AnimationGenerate(animationFrame: ""),
+                                    AnimationGenerate(animationFrame: "")
+                                ],
+                                namaMovementGenerate: "Inchworm",
+                                instructionsGenerate: [
+                                    InstructionsGenerate(instructions: ""),
+                                    InstructionsGenerate(instructions: ""),
+                                    InstructionsGenerate(instructions: "")
                                 ],
                                 calorieBurnGenerate: 0,
                                 costEPGenerate: 200),
@@ -208,5 +294,5 @@ struct Movements {
                                 ],
                                 calorieBurnGenerate: 0,
                                 costEPGenerate: 200),
-    ]
+            ]
 }
