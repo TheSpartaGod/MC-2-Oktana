@@ -8,7 +8,7 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="fitness" inverseEntity="User"/>
     </entity>
     <entity name="Movement" representedClassName="Movement" syncable="YES">
-        <attribute name="movementId" optional="YES" attributeType="String"/>
+        <attribute name="movementId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="movement" inverseEntity="User"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
@@ -27,9 +27,9 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="workout" inverseEntity="User"/>
     </entity>
     <elements>
+        <element name="Fitness" positionX="-36" positionY="54" width="128" height="104"/>
         <element name="Movement" positionX="-9" positionY="45" width="128" height="59"/>
         <element name="User" positionX="-63" positionY="-18" width="128" height="119"/>
         <element name="Workout" positionX="-36" positionY="36" width="128" height="104"/>
-        <element name="Fitness" positionX="-36" positionY="54" width="128" height="104"/>
     </elements>
 </model>

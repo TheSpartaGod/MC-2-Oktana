@@ -16,6 +16,7 @@ struct MovementGenerate {
     var instructionsGenerate:[InstructionsGenerate]
     var calorieBurnGenerate: Int
     var costEPGenerate: Int
+ 
 }
 
 struct InstructionsGenerate {
@@ -37,7 +38,8 @@ struct AnimationGenerate {
  8. Superman Punch
  */
 struct Movements {
-    var data = [MovementGenerate(
+    var data = [
+                MovementGenerate(
                                 movementIDGenerate: 1,
                                 category: 2,
                                 iconMovementGenerate: "",

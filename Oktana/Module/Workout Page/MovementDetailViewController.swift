@@ -12,6 +12,7 @@ class MovementDetailViewController: UIViewController ,UITableViewDelegate, UITab
 
     @IBOutlet weak var movementDetailTableView: UITableView!
     @IBOutlet weak var readyWorkoutButton: UIView!
+    var selectedRow = 0
     
     @objc func didTapView(_ sender: UITapGestureRecognizer){//MOVE TO WORKOUT VIEW
         performSegue(withIdentifier: "startWorkoutMode", sender: nil)
@@ -37,9 +38,14 @@ class MovementDetailViewController: UIViewController ,UITableViewDelegate, UITab
         self.navigationController?.isNavigationBarHidden = true
         self.navigationController?.tabBarController?.tabBar.isHidden = false
     }
+    override func viewWillAppear(_ animated: Bool) {
+        //create a movement list from MovementQueue class
+        MovementQueue.queueMovementList()
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2 //EDIT THIS BASED ON NUMBER OF ROWS IN EACH SECTOIN
+        return MovementQueue.selectedMoves[section].count //EDIT THIS BASED ON NUMBER OF ROWS IN EACH SECTOIN
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4//EDIT THIS BASED ON NUMBER OF SECTIONS IN THE TABLEVIEW
@@ -58,13 +64,28 @@ class MovementDetailViewController: UIViewController ,UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = movementDetailTableView.dequeueReusableCell(withIdentifier: "MovementCell") as! MovementDetailTableViewCell
+      
+        cell.moveNameLabel.text = MovementQueue.data[MovementQueue.selectedMoves[indexPath.section][indexPath.row]].namaMovementGenerate
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showHowTo", sender: nil)
+        
+        selectedRow = MovementQueue.data[MovementQueue.selectedMoves[indexPath.section][indexPath.row]].movementIDGenerate
+       performSegue(withIdentifier: "showHowTo", sender: nil)
         print(indexPath)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showHowTo"{
+        let destinationController = segue.destination as! HowToDoViewController
+        destinationController.selectedRow = selectedRow
+        }
+        else if segue.identifier == "startWorkoutMode"{
+            let destinationController = segue.destination as! WorkoutModeViewController
+        }
+            }
+    
     
     
 

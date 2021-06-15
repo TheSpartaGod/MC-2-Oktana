@@ -44,7 +44,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skill-tree-icon" translatesAutoresizingMaskIntoConstraints="NO" id="gSt-xD-3sk">
                                         <rect key="frame" x="128" y="62" width="64" height="64"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxx-FL-Lyk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to unlock this movement for 30⚡️?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxx-FL-Lyk">
                                         <rect key="frame" x="30" y="198" width="260" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="Qi6-KO-dpc"/>
@@ -69,7 +69,7 @@
                                             <constraint firstAttribute="height" constant="35" id="FZA-Ij-81m"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="positive button">
+                                        <state key="normal" title="Unlock">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -83,7 +83,7 @@
                                             <constraint firstAttribute="height" constant="35" id="3cC-wZ-Zgb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="negative button">
+                                        <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>

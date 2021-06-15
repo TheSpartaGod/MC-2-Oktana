@@ -23,7 +23,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ActivityTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9q-cW-Pl7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ActivityTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9q-cW-Pl7">
                                 <rect key="frame" x="106" y="521" width="178" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
@@ -147,12 +147,24 @@
                         <outlet property="skipForwardButton" destination="TfS-LF-U8H" id="H6e-KA-jAn"/>
                         <outlet property="totalTimerLabel" destination="vuc-EC-Gcv" id="nv8-gi-eSG"/>
                         <outlet property="workoutImage" destination="xRp-wE-kga" id="7eY-kI-K6c"/>
-                        <segue destination="yDa-yp-37r" kind="show" identifier="toNextMove" id="rIh-xk-qZ1"/>
+                        <segue destination="yDa-yp-37r" kind="show" identifier="toNextMove" animates="NO" id="rIh-xk-qZ1"/>
+                        <segue destination="fPQ-ZI-dFL" kind="show" identifier="toWorkoutComplete" id="BeH-Vw-tyK"/>
+                        <segue destination="89D-64-2zg" kind="show" identifier="toHome" animates="NO" id="UKe-o5-BPG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12.307692307692307" y="86.018957345971558"/>
+        </scene>
+        <!--Workout-->
+        <scene sceneID="MUV-Y0-IAM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Workout" id="89D-64-2zg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aAb-j1-pop"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ktM-2K-XKh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="0.0"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="XPE-IR-dP2">
@@ -163,6 +175,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wW2-Jy-vSb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="773" y="151"/>
+        </scene>
+        <!--WorkoutComplete-->
+        <scene sceneID="fGS-7W-lhY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WorkoutComplete" id="fPQ-ZI-dFL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gFV-jp-qzI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBQ-XI-osV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="353"/>
         </scene>
     </scenes>
     <resources>

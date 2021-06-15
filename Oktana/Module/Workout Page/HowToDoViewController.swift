@@ -12,9 +12,11 @@ class HowToDoViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var howToStepsTableView: UITableView!
     @IBOutlet weak var howToImage: UIImageView!
+    @IBOutlet weak var movementTitle: UILabel!
+    var selectedRow : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        movementTitle.text = MovementQueue.data[selectedRow].namaMovementGenerate
         howToStepsTableView.delegate = self
         howToStepsTableView.dataSource = self
 
@@ -22,16 +24,22 @@ class HowToDoViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return MovementQueue.data[selectedRow].instructionsGenerate.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = howToStepsTableView.dequeueReusableCell(withIdentifier: "HowToTableViewCell") as? HowToTableViewCell ?? UITableViewCell()
+        let cell = howToStepsTableView.dequeueReusableCell(withIdentifier: "HowToTableViewCell") as! HowToTableViewCell
+        cell.stepDescription.text = MovementQueue.data[selectedRow].instructionsGenerate[indexPath.row].instructions
+        cell.stepNumber.text = "Step " + String(indexPath.row + 1)
+    
         return cell
+        
     }
+ 
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = true
     }
     
 

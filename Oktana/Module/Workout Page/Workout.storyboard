@@ -8,80 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Workout Complete View Controller-->
-        <scene sceneID="SXi-eQ-Zqd">
-            <objects>
-                <viewController id="zsr-P7-n7B" customClass="WorkoutCompleteViewController" customModule="Oktana" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r2S-Sf-fVO">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v9v-78-db4">
-                                <rect key="frame" x="80" y="104" width="230" height="230"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:tmX-1P-DQy:image" translatesAutoresizingMaskIntoConstraints="NO" id="tmX-1P-DQy">
-                                        <rect key="frame" x="41" y="41.333333333333485" width="149" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="0.6588235294" green="0.86666666670000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.18034434320000001" green="0.17254796620000001" blue="0.1725491881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCD-Mf-K9c">
-                                <rect key="frame" x="91" y="378" width="209" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MYK-gc-pCX" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="37" y="510" width="149" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e70-Tg-Cki" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="205" y="510" width="149" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ySl-kh-nMn" customClass="LongMediumInfoCardView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="37" y="436" width="317" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKf-EN-v03" customClass="LongMediumInfoCardView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="37" y="623" width="317" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPM-W6-UYG">
-                                <rect key="frame" x="122" y="728" width="147" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.70047718290000005" green="0.86009114980000001" blue="0.38812610510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="5mj-oF-AK6"/>
-                        <color key="backgroundColor" red="0.1803921568627451" green="0.17254901960784313" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="pVo-hT-LAX"/>
-                    <connections>
-                        <outlet property="caloriesCardView" destination="e70-Tg-Cki" id="xmf-qT-ctl"/>
-                        <outlet property="checklistImage" destination="v9v-78-db4" id="7NQ-AT-y8u"/>
-                        <outlet property="doneButton" destination="hPM-W6-UYG" id="Odv-Qn-soY"/>
-                        <outlet property="energyCardView" destination="nKf-EN-v03" id="9Bt-GK-pGj"/>
-                        <outlet property="heartCardView" destination="MYK-gc-pCX" id="ZyV-vQ-aQN"/>
-                        <outlet property="timeCardView" destination="ySl-kh-nMn" id="NcJ-11-W8x"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bpw-UQ-bgu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="528" y="-1319"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="0cn-5U-F6F">
             <objects>
@@ -226,7 +152,6 @@
                         <outlet property="streakCountLabel" destination="O3j-a9-Lwn" id="0g6-u0-WbS"/>
                         <outlet property="timeCardView" destination="MDT-qX-0da" id="dvT-kk-XCZ"/>
                         <segue destination="oWg-fE-7Q6" kind="show" identifier="homeToDetail" id="6DY-3n-LYf"/>
-                        <segue destination="zsr-P7-n7B" kind="show" identifier="tempToComplete" id="J5v-SX-VoD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrH-r8-nJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -255,10 +180,6 @@
         <image name="bolt.fill" catalog="system" width="101" height="128"/>
         <image name="flame" catalog="system" width="108" height="128"/>
         <image name="heart.text.square.fill" catalog="system" width="128" height="114"/>
-        <image name="imageView:tmX-1P-DQy:image" width="128" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
