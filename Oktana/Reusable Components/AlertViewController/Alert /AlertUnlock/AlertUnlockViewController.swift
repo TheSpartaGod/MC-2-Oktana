@@ -20,6 +20,7 @@ class AlertUnlockViewController: UIViewController {
     
     var titleText: String = ""
     var messageText: String = ""
+    var requiredEP: Int = 0
     var icon: UIImage? = nil
     var positiveText: String? = ""
     var negativeText: String? = ""
@@ -48,9 +49,7 @@ class AlertUnlockViewController: UIViewController {
 extension AlertUnlockViewController {
     func bindView() {
         alertTitle.text = titleText
-        alertMessage.text = messageText
-        positiveButton.setTitle(positiveText, for: .normal)
-        negativeButton.setTitle(negativeText, for: .normal)
+        alertMessage.text = "Do you want to unlock this movement for \(requiredEP)⚡️"
         
         if let icon = icon {
             movementIcon.image = icon
@@ -62,15 +61,13 @@ extension AlertUnlockViewController {
         
     }
     
-    static func showAlert(from viewController: UIViewController, title: String, message: String, image: UIImage? = nil, positiveMessage: String? = nil, negativeMessage: String? = nil, positiveAction: (() -> Void)? = nil, negativeAction: (() -> Void)? = nil){
+    static func showAlert(from viewController: UIViewController, title: String, reqEP: Int, image: UIImage? = nil, positiveAction: (() -> Void)? = nil){
         let controller = AlertUnlockViewController.init(nibName: "AlertUnlockViewController", bundle: nil)
         
         controller.titleText = title
-        controller.messageText = message
+        controller.requiredEP = reqEP
         controller.icon = image
-        controller.positiveText = positiveMessage
         controller.positiveCompletion = positiveAction
-        controller.negativeCompletion = negativeAction
         controller.modalPresentationStyle = .overCurrentContext
         controller.modalTransitionStyle = .crossDissolve
         controller.hidesBottomBarWhenPushed = true

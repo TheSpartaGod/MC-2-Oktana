@@ -18,51 +18,61 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHK-dp-pbF">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1o-P5-9K8">
-                                        <rect key="frame" x="184" y="394" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="show:" destination="uWD-p4-TdC" eventType="touchUpInside" id="ucz-48-2RV"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Evs-Os-tnx" customClass="StreakPointView" customModule="Oktana" customModuleProvider="target">
+                                        <rect key="frame" x="217" y="12" width="177" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="177" id="0D3-ET-pr2"/>
+                                            <constraint firstAttribute="height" constant="35" id="Dv7-Xt-MF8"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJo-XC-0Rp" userLabel="01" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
-                                        <rect key="frame" x="152" y="10" width="110" height="95"/>
+                                        <rect key="frame" x="152" y="60" width="110" height="95"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="95" id="dfV-eA-lde"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wJ-7x-uam" userLabel="02" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
-                                        <rect key="frame" x="152" y="125" width="110" height="95"/>
+                                        <rect key="frame" x="152" y="170" width="110" height="95"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7Y-hH-qbj" userLabel="03" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="240" width="110" height="95"/>
+                                        <rect key="frame" x="20" y="285" width="110" height="95"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuQ-d2-Lja" userLabel="04" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
-                                        <rect key="frame" x="284" y="248" width="110" height="95"/>
+                                        <rect key="frame" x="284" y="293" width="110" height="95"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VC-qM-iLR" userLabel="05" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="400" width="110" height="95"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Www-Al-0MA" userLabel="06" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
-                                        <rect key="frame" x="284" y="363" width="110" height="95"/>
+                                        <rect key="frame" x="284" y="408" width="110" height="95"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8I-6h-ns7" userLabel="07" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
-                                        <rect key="frame" x="152" y="470" width="110" height="95"/>
+                                        <rect key="frame" x="152" y="515" width="110" height="95"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1B-ac-x4C" userLabel="08" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
-                                        <rect key="frame" x="152" y="585" width="110" height="95"/>
+                                        <rect key="frame" x="152" y="630" width="110" height="95"/>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6VC-qM-iLR" userLabel="05" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
-                                        <rect key="frame" x="33" y="343" width="110" height="95"/>
-                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skill Tree" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esy-Yc-RHE">
+                                        <rect key="frame" x="20" y="8" width="143" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="143" id="oZx-69-6gj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <color key="textColor" red="0.70047718290000005" green="0.86009114980000001" blue="0.38812610510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1803379655" green="0.17255061860000001" blue="0.1725490391" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="6VC-qM-iLR" firstAttribute="top" secondItem="l7Y-hH-qbj" secondAttribute="bottom" constant="20" id="4Bt-FU-6a9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Evs-Os-tnx" secondAttribute="trailing" constant="20" symbolic="YES" id="5C0-3x-jXU"/>
                                     <constraint firstItem="u8I-6h-ns7" firstAttribute="top" secondItem="6VC-qM-iLR" secondAttribute="bottom" constant="20" id="5o9-4U-UsG"/>
                                     <constraint firstItem="Www-Al-0MA" firstAttribute="height" secondItem="tuQ-d2-Lja" secondAttribute="height" id="AGn-cs-LNv"/>
-                                    <constraint firstItem="eJo-XC-0Rp" firstAttribute="top" secondItem="CHK-dp-pbF" secondAttribute="top" constant="10" id="AdW-4h-35e"/>
+                                    <constraint firstItem="eJo-XC-0Rp" firstAttribute="top" secondItem="CHK-dp-pbF" secondAttribute="top" constant="60" id="AdW-4h-35e"/>
                                     <constraint firstItem="u8I-6h-ns7" firstAttribute="centerX" secondItem="7wJ-7x-uam" secondAttribute="centerX" id="CFQ-4d-W3s"/>
                                     <constraint firstItem="Www-Al-0MA" firstAttribute="top" secondItem="tuQ-d2-Lja" secondAttribute="bottom" constant="20" id="CJ7-CQ-kff"/>
                                     <constraint firstItem="tuQ-d2-Lja" firstAttribute="height" secondItem="7wJ-7x-uam" secondAttribute="height" id="DeI-S3-LTm"/>
+                                    <constraint firstItem="esy-Yc-RHE" firstAttribute="leading" secondItem="CHK-dp-pbF" secondAttribute="leading" constant="20" symbolic="YES" id="DgK-Az-cFK"/>
                                     <constraint firstItem="u8I-6h-ns7" firstAttribute="height" secondItem="6VC-qM-iLR" secondAttribute="height" id="E5b-YG-F5D"/>
                                     <constraint firstItem="l7Y-hH-qbj" firstAttribute="height" secondItem="7wJ-7x-uam" secondAttribute="height" id="FEe-nw-4Pk"/>
                                     <constraint firstItem="l7Y-hH-qbj" firstAttribute="width" secondItem="7wJ-7x-uam" secondAttribute="width" id="GfG-bg-J6t"/>
@@ -71,6 +81,8 @@
                                     <constraint firstItem="eJo-XC-0Rp" firstAttribute="leading" secondItem="CHK-dp-pbF" secondAttribute="leading" constant="152" id="Mvd-Gt-eKd"/>
                                     <constraint firstItem="7wJ-7x-uam" firstAttribute="height" secondItem="eJo-XC-0Rp" secondAttribute="height" id="NVz-2U-ujt"/>
                                     <constraint firstItem="7wJ-7x-uam" firstAttribute="centerX" secondItem="eJo-XC-0Rp" secondAttribute="centerX" id="QX2-M2-dxt"/>
+                                    <constraint firstItem="Evs-Os-tnx" firstAttribute="top" secondItem="CHK-dp-pbF" secondAttribute="top" constant="12" id="Sgb-g1-pdj"/>
+                                    <constraint firstItem="esy-Yc-RHE" firstAttribute="top" secondItem="CHK-dp-pbF" secondAttribute="top" constant="8" id="T3m-PE-BFg"/>
                                     <constraint firstItem="6VC-qM-iLR" firstAttribute="leading" secondItem="l7Y-hH-qbj" secondAttribute="leading" id="TRv-Pg-Pwe"/>
                                     <constraint firstAttribute="trailing" secondItem="eJo-XC-0Rp" secondAttribute="trailing" constant="152" id="TYm-It-06d"/>
                                     <constraint firstAttribute="trailing" secondItem="tuQ-d2-Lja" secondAttribute="trailing" constant="20" symbolic="YES" id="WJK-06-Qb6"/>
@@ -79,7 +91,7 @@
                                     <constraint firstItem="u8I-6h-ns7" firstAttribute="width" secondItem="6VC-qM-iLR" secondAttribute="width" id="b4Z-YD-Icf"/>
                                     <constraint firstItem="o1B-ac-x4C" firstAttribute="top" secondItem="u8I-6h-ns7" secondAttribute="bottom" constant="20" id="dwf-wK-XsO"/>
                                     <constraint firstItem="eJo-XC-0Rp" firstAttribute="centerX" secondItem="CHK-dp-pbF" secondAttribute="centerX" id="eaU-1a-JD5"/>
-                                    <constraint firstItem="7wJ-7x-uam" firstAttribute="top" secondItem="eJo-XC-0Rp" secondAttribute="bottom" constant="20" id="es9-Rr-IAA"/>
+                                    <constraint firstItem="7wJ-7x-uam" firstAttribute="top" secondItem="eJo-XC-0Rp" secondAttribute="bottom" constant="15" id="es9-Rr-IAA"/>
                                     <constraint firstItem="o1B-ac-x4C" firstAttribute="height" secondItem="u8I-6h-ns7" secondAttribute="height" id="hf5-Df-PIh"/>
                                     <constraint firstItem="o1B-ac-x4C" firstAttribute="width" secondItem="u8I-6h-ns7" secondAttribute="width" id="kuU-XN-0QX"/>
                                     <constraint firstItem="Www-Al-0MA" firstAttribute="trailing" secondItem="tuQ-d2-Lja" secondAttribute="trailing" id="myq-gl-Tbf"/>
@@ -102,6 +114,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Skill Tree" image="scale.3d" catalog="system" id="439-os-81v"/>
                     <connections>
+                        <outlet property="move01" destination="eJo-XC-0Rp" id="wYj-oL-ii1"/>
+                        <outlet property="move02" destination="7wJ-7x-uam" id="ZdR-5p-kad"/>
+                        <outlet property="move03" destination="l7Y-hH-qbj" id="STz-ug-w9Z"/>
+                        <outlet property="move04" destination="tuQ-d2-Lja" id="cUN-to-4UZ"/>
+                        <outlet property="move05" destination="6VC-qM-iLR" id="vHw-Dq-9fd"/>
+                        <outlet property="move06" destination="Www-Al-0MA" id="68Y-ls-0bk"/>
+                        <outlet property="move07" destination="u8I-6h-ns7" id="fh4-qS-sFy"/>
+                        <outlet property="move08" destination="o1B-ac-x4C" id="VkT-Xt-bb1"/>
                         <outlet property="skill01" destination="eJo-XC-0Rp" id="cb7-4A-y3P"/>
                     </connections>
                 </viewController>

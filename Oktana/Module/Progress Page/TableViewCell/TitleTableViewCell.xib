@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="titleCell" rowHeight="44" id="KGk-i7-Jjw" customClass="TitleTableViewCell" customModule="Oktana" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7f4-oh-fb1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Fitness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThG-oK-dR2">
+                                <rect key="frame" x="8" y="3.5" width="200" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="xgW-4o-7lE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="31"/>
+                                <color key="textColor" red="0.70422822240000005" green="0.86077779529999998" blue="0.38812410829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A99-ai-n4o">
+                                <rect key="frame" x="220" y="10" width="90" height="24"/>
+                                <color key="backgroundColor" red="0.70422822240000005" green="0.86077779529999998" blue="0.38812410829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="KDs-6Z-quk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Take test">
+                                    <color key="titleColor" red="0.180365473" green="0.17647004129999999" blue="0.17647066710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.180365473" green="0.17647004129999999" blue="0.17647066710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ThG-oK-dR2" firstAttribute="centerY" secondItem="7f4-oh-fb1" secondAttribute="centerY" id="2JR-Z4-mK6"/>
+                            <constraint firstItem="ThG-oK-dR2" firstAttribute="leading" secondItem="7f4-oh-fb1" secondAttribute="leading" constant="8" id="8SA-z9-6pU"/>
+                            <constraint firstAttribute="trailing" secondItem="A99-ai-n4o" secondAttribute="trailing" constant="10" id="YQx-Nd-xl9"/>
+                            <constraint firstItem="A99-ai-n4o" firstAttribute="centerY" secondItem="7f4-oh-fb1" secondAttribute="centerY" id="fyI-q0-C3S"/>
+                            <constraint firstAttribute="bottom" secondItem="A99-ai-n4o" secondAttribute="bottom" constant="10" id="rtl-kA-5sG"/>
+                            <constraint firstItem="A99-ai-n4o" firstAttribute="top" secondItem="7f4-oh-fb1" secondAttribute="top" constant="10" id="tYt-8g-Ni0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7f4-oh-fb1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gg9-ww-vDs"/>
+                    <constraint firstAttribute="bottom" secondItem="7f4-oh-fb1" secondAttribute="bottom" id="VTO-6s-C96"/>
+                    <constraint firstAttribute="trailing" secondItem="7f4-oh-fb1" secondAttribute="trailing" id="WqH-1k-vr4"/>
+                    <constraint firstItem="7f4-oh-fb1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="X23-ld-PUY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="takeTestButton" destination="A99-ai-n4o" id="Ihu-8q-9ln"/>
+                <outlet property="titleLabel" destination="ThG-oK-dR2" id="JSa-hi-gcq"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="172.76785714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

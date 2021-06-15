@@ -1,111 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OgM-vx-fMs">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Item 3-->
         <scene sceneID="0DB-kS-9lP">
             <objects>
-                <viewController id="OgM-vx-fMs" userLabel="Item 3" customClass="ProgressPageViewController" customModule="Oktana" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OgM-vx-fMs" userLabel="Item 3" customClass="ProgressViewController" customModule="Oktana" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ce1-1y-Q4c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c9R-ZR-spu">
+                                <rect key="frame" x="7" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" red="0.1803379655" green="0.17255061860000001" blue="0.1725490391" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.1803379655" green="0.17255061860000001" blue="0.1725490391" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="105" id="a0m-zW-Ibd">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a0m-zW-Ibd" id="lca-Zv-91R">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OgM-vx-fMs" id="soJ-6s-pGx"/>
+                                    <outlet property="delegate" destination="OgM-vx-fMs" id="oQQ-yJ-KBG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ud6-QF-dvR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.18034434320000001" green="0.17254796620000001" blue="0.1725491881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Ud6-QF-dvR" firstAttribute="trailing" secondItem="c9R-ZR-spu" secondAttribute="trailing" id="8qx-6f-R1k"/>
+                            <constraint firstItem="c9R-ZR-spu" firstAttribute="leading" secondItem="Ud6-QF-dvR" secondAttribute="leading" id="cN9-jR-12b"/>
+                            <constraint firstItem="Ud6-QF-dvR" firstAttribute="bottom" secondItem="c9R-ZR-spu" secondAttribute="bottom" id="mdL-Mn-Eey"/>
+                            <constraint firstItem="c9R-ZR-spu" firstAttribute="top" secondItem="Ud6-QF-dvR" secondAttribute="top" id="oBk-eR-hxG"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Progress" image="chart.bar.xaxis" catalog="system" id="ldO-ef-0da"/>
+                    <tabBarItem key="tabBarItem" title="Progress" id="ldO-ef-0da"/>
+                    <connections>
+                        <outlet property="progressTableView" destination="c9R-ZR-spu" id="ZS5-G0-z3g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ii1-uJ-fDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="919"/>
-        </scene>
-        <!--Test Complete View Comtroller View Controller-->
-        <scene sceneID="nKV-5w-92h">
-            <objects>
-                <viewController id="1dA-mH-uby" customClass="TestCompleteViewComtrollerViewController" customModule="Oktana" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OKW-lf-doO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4AC-SY-7qf">
-                                <rect key="frame" x="80" y="104" width="230" height="230"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iGl-zz-2y6">
-                                        <rect key="frame" x="41" y="41.333333333333485" width="149" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="0.6588235294" green="0.86666666670000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.18034434320000001" green="0.17254796620000001" blue="0.1725491881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test Complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uec-iU-WKD">
-                                <rect key="frame" x="126" y="378" width="162" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYo-eo-GiS">
-                                <rect key="frame" x="122" y="728" width="147" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.70047718290000005" green="0.86009114980000001" blue="0.38812610510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wRr-19-8fn" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="49" y="560" width="149" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tXI-s5-21a" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="49" y="443" width="149" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rUr-Qg-tvz" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="217" y="443" width="149" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kF3-JQ-zzv" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="217" y="560" width="149" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="SRz-9I-mty"/>
-                        <color key="backgroundColor" red="0.18039215689999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </view>
-                    <connections>
-                        <outlet property="checklistImage" destination="4AC-SY-7qf" id="N24-jK-ShY"/>
-                        <outlet property="doneButton" destination="CYo-eo-GiS" id="xXU-WY-dsn"/>
-                        <outlet property="jumpJackView" destination="tXI-s5-21a" id="eaw-8F-SHf"/>
-                        <outlet property="pushUpView" destination="rUr-Qg-tvz" id="2iJ-0B-ur6"/>
-                        <outlet property="sitUpView" destination="wRr-19-8fn" id="iVJ-Am-g0A"/>
-                        <outlet property="squatView" destination="kF3-JQ-zzv" id="szy-9S-UDA"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jnb-bv-XOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1786" y="258"/>
+            <point key="canvasLocation" x="847.69230769230762" y="918.48341232227483"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
