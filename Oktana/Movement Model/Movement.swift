@@ -377,7 +377,94 @@ struct Movements {
                                     InstructionsGenerate(instructions: "4. Repeat the movement")
                                 ],
                                 calorieBurnGenerate: 0,
-                                costEPGenerate: 0)
+                                costEPGenerate: 0),
+        MovementGenerate(
+                        movementIDGenerate: 24,
+                        category: 4,
+                        iconMovementGenerate: "",
+                        animationMovementGenerate: [
+                            AnimationGenerate(animationFrame: ""),
+                            AnimationGenerate(animationFrame: "")
+                        ],
+                        namaMovementGenerate: "Lunges",
+                        instructionsGenerate: [
+                            InstructionsGenerate(instructions: "1. Stand with your feet hip-width apart, keep your back straight, your shoulders back, and your abs tight. "),
+                            InstructionsGenerate(instructions: "2. Take a step forward and slowly bend both knees, until your back knee is just above the floor. "),
+                            InstructionsGenerate(instructions: "3. Stand back up and repeat the movement."),
+                            InstructionsGenerate(instructions: "4. Alternate legs until the set is complete.")
+                        ],
+                        calorieBurnGenerate: 0,
+                        costEPGenerate: 0),
+        MovementGenerate(
+                                        movementIDGenerate: 25,
+                                        category: 4,
+                                        iconMovementGenerate: "",
+                                        animationMovementGenerate: [
+                                            AnimationGenerate(animationFrame: ""),
+                                            AnimationGenerate(animationFrame: "")
+                                        ],
+                                        namaMovementGenerate: "Jump Squat",
+                                        instructionsGenerate: [
+                                                InstructionsGenerate(instructions: "1. Stand tall with your feet hip-width apart"),
+                                                InstructionsGenerate(instructions: "2. Hinge at the hips to push your butt back and lower down until your thighs are parallel to the floor. Then press your feet down to explode off the floor and jump as high as you can."),
+                                                InstructionsGenerate(instructions: "3. Allow your knees to bend 45 degrees when you land, and then immediately drop back down into a squat, and jump again")
+                                            ],
+                                        calorieBurnGenerate: 0,
+                                        costEPGenerate: 0),
+                
+                            MovementGenerate(
+                                        movementIDGenerate: 26,
+                                        category: 4,
+                                        iconMovementGenerate: "",
+                                        animationMovementGenerate: [
+                                            AnimationGenerate(animationFrame: ""),
+                                            AnimationGenerate(animationFrame: "")
+                                ],
+                                namaMovementGenerate: "Squat Roundhouse Kick",
+                                instructionsGenerate: [
+                                    InstructionsGenerate(instructions: "1. Stand with your feet shoulder width apart and your arms in front of your chest"),
+                                        InstructionsGenerate(instructions: "2. Do a squat, and when you come up, kick your left leg to the side"),
+                                        InstructionsGenerate(instructions: "3. Keep your core tight, your knees should be extended in the same direction as your toes"),
+                                        InstructionsGenerate(instructions: "4.  Squeeze your glutes when you go up and your knees should not go over your toes")
+                                    ],
+                                calorieBurnGenerate: 0,
+                                costEPGenerate: 0),
+
+                            MovementGenerate(
+                                        movementIDGenerate: 27,
+                                        category: 4,
+                                        iconMovementGenerate: "",
+                                    animationMovementGenerate: [
+                                        AnimationGenerate(animationFrame: ""),
+                                        AnimationGenerate(animationFrame: "")
+                                        ],
+                                        namaMovementGenerate: "Back Lunges Front Kick",
+                                    instructionsGenerate: [
+                                        InstructionsGenerate(instructions: "1. Start with feet together"),
+                                        InstructionsGenerate(instructions: "2. Step back with one foot to complete a lunge"),
+                                        InstructionsGenerate(instructions: "3. Step back toward starting position, swinging your leg through to complete a kick"),
+                                        InstructionsGenerate(instructions: "4. Return to starting position and repeat")
+                                    ],
+                                calorieBurnGenerate: 0,
+                                costEPGenerate: 0),
+
+                            MovementGenerate(
+                                        movementIDGenerate: 28,
+                                        category: 4,
+                                        iconMovementGenerate: "",
+                                    animationMovementGenerate: [
+                                        AnimationGenerate(animationFrame: ""),
+                                        AnimationGenerate(animationFrame: "")
+                                        ],
+                                        namaMovementGenerate: "Squat Side Kick",
+                                        instructionsGenerate: [
+                                        InstructionsGenerate(instructions: "1. Stand with your feet shoulder-width distance apart, feet parallel. Hold your hands out in front of you for balance. Bend your knees, lowering your hips deeply into a squat, keeping weight back in your heels."),
+                                        InstructionsGenerate(instructions: "2. Then rise back up, straightening the legs completely and lifting the right leg out to the side, squeezing the outer glute."),
+                                        InstructionsGenerate(instructions: "3. As you step the foot back into shoulder-width distance position, squat down again. Then stand up and do a side leg lift on the left side. Lower the leg back to the starting position."),
+                                        InstructionsGenerate(instructions: "4. Repeat this pattern for one minute.")
+                                        ],
+                                    calorieBurnGenerate: 0,
+                                    costEPGenerate: 0),
                     ]
 }
 // ini perubahan
