@@ -22,7 +22,7 @@ class SkillTreeViewController: UIViewController {
     
     
     
-    var dummyData: [MovementGenerate] = [MovementGenerate(movementIDGenerate: 4, iconMovementGenerate: "skill-tree-icon", animationMovementGenerate: [AnimationGenerate(animationFrame: "")], namaMovementGenerate: "jumping jack", instructionsGenerate: [InstructionsGenerate(instructions: "")], calorieBurnGenerate: 200, costEPGenerate: 20)
+    var dummyData: [MovementGenerate] = [MovementGenerate(movementIDGenerate: 4, category: 1, iconMovementGenerate: "skill-tree-icon", animationMovementGenerate: [AnimationGenerate(animationFrame: "")], namaMovementGenerate: "jumping jack", instructionsGenerate: [InstructionsGenerate(instructions: "")], calorieBurnGenerate: 200, costEPGenerate: 20)
     ]
 
     @IBOutlet weak var skill01: SkillTreeCustomView!
