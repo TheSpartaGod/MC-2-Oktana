@@ -72,6 +72,9 @@ class WorkoutViewController: UIViewController {
       //ubah menjadi lingkaran
     
     }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.tabBarController?.tabBar.isHidden = false
+    }
     
     
 

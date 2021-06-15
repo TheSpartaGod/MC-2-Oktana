@@ -8,13 +8,14 @@
 import Foundation
  
 struct MovementGenerate {
-    var movementIDGenerate: String
+    var movementIDGenerate: Int
     var iconMovementGenerate: String
     var animationMovementGenerate: [AnimationGenerate]
     var namaMovementGenerate: String
     var instructionsGenerate:[InstructionsGenerate]
     var calorieBurnGenerate: Int
     var costEPGenerate: Int
+    var category: Int
 }
 
 struct InstructionsGenerate {
@@ -28,7 +29,7 @@ struct AnimationGenerate {
 
 struct Movements {
     var data = [MovementGenerate(
-                    movementIDGenerate: "01",
+                    movementIDGenerate: 1,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -40,6 +41,7 @@ struct Movements {
                                     InstructionsGenerate(instructions: "")
                                  ],
                                  calorieBurnGenerate: 0,
-                                 costEPGenerate: 0)
+                                 costEPGenerate: 0,
+                                category: 0)
     ]
 }

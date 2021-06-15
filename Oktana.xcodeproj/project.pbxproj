@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990A06FA26764C20002B0ACF /* MovementQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A06F926764C20002B0ACF /* MovementQueue.swift */; };
+		990A06FC26776E15002B0ACF /* WorkoutComplete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990A06FB26776E15002B0ACF /* WorkoutComplete.storyboard */; };
+		990A06FE26778AD6002B0ACF /* customLeftSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A06FD26778AD6002B0ACF /* customLeftSegue.swift */; };
 		999468742672FC0B00302000 /* FocusedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999468732672FC0B00302000 /* FocusedView.xib */; };
 		999468762672FE7100302000 /* FocusedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999468752672FE7100302000 /* FocusedView.swift */; };
 		99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926DA266F4A4E006A210A /* WorkoutViewController.swift */; };
@@ -61,6 +64,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		990A06F926764C20002B0ACF /* MovementQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementQueue.swift; sourceTree = "<group>"; };
+		990A06FB26776E15002B0ACF /* WorkoutComplete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutComplete.storyboard; sourceTree = "<group>"; };
+		990A06FD26778AD6002B0ACF /* customLeftSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customLeftSegue.swift; sourceTree = "<group>"; };
 		999468732672FC0B00302000 /* FocusedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusedView.xib; sourceTree = "<group>"; };
 		999468752672FE7100302000 /* FocusedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedView.swift; sourceTree = "<group>"; };
 		99F926DA266F4A4E006A210A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
@@ -135,8 +141,6 @@
 				B73E1C42267293F700054685 /* Button */,
 				B73E1C3B2672900D00054685 /* AlertViewController */,
 				99F926F926711A7B006A210A /* CircularProgressBarView.swift */,
-				99F926F926711A7B006A210A /* CircularProgressBarView.swift */,
-				99F926F926711A7B006A210A /* CircularProgressBarView.swift */,
 				B7052C952672090100616D2B /* SkillTreeCustomView */,
 				99F926DC266F7498006A210A /* MediumInfoCardView.swift */,
 				99F926DE266F74BF006A210A /* MediumInfoCardView.xib */,
@@ -144,6 +148,7 @@
 				E25617872670F37400B96384 /* LongMediumInfoCardView.swift */,
 				999468732672FC0B00302000 /* FocusedView.xib */,
 				999468752672FE7100302000 /* FocusedView.swift */,
+				990A06FD26778AD6002B0ACF /* customLeftSegue.swift */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			children = (
 				B7B4BA7C266FA78200B0E6A0 /* Movement.swift */,
 				B737A14C2671204F00DDD4A8 /* HealthKitStore.swift */,
+				990A06F926764C20002B0ACF /* MovementQueue.swift */,
 			);
 			path = "Movement Model";
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 				99F926F12670E25F006A210A /* HowToTableViewCell.swift */,
 				99F926F326710B3F006A210A /* WorkoutMode.storyboard */,
 				99F926F726710FE2006A210A /* WorkoutModeViewController.swift */,
+				990A06FB26776E15002B0ACF /* WorkoutComplete.storyboard */,
 			);
 			path = "Workout Page";
 			sourceTree = "<group>";
@@ -435,6 +442,7 @@
 				B7C7A193266E9359007DB473 /* Skill Tree.storyboard in Resources */,
 				B7DB80D826737C0300977D24 /* AlertTestViewController.xib in Resources */,
 				B73E1C3F2672902400054685 /* AlertUnlockViewController.xib in Resources */,
+				990A06FC26776E15002B0ACF /* WorkoutComplete.storyboard in Resources */,
 				B7C7A180266E89D9007DB473 /* Root.storyboard in Resources */,
 				B7C7A196266E937B007DB473 /* Progress.storyboard in Resources */,
 				99F926E6266FBA83006A210A /* MovementDetailView.storyboard in Resources */,
@@ -462,6 +470,7 @@
 				999468762672FE7100302000 /* FocusedView.swift in Sources */,
 				999468762672FE7100302000 /* FocusedView.swift in Sources */,
 				B73E1C362672121C00054685 /* ProgressPageViewController.swift in Sources */,
+				990A06FE26778AD6002B0ACF /* customLeftSegue.swift in Sources */,
 				B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */,
 				E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */,
 				B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */,
@@ -485,6 +494,7 @@
 				99F926F22670E25F006A210A /* HowToTableViewCell.swift in Sources */,
 				B71903A9266FDE3200D34212 /* Workout+CoreDataClass.swift in Sources */,
 				99F926EC266FC811006A210A /* MovementDetailTableViewCell.swift in Sources */,
+				990A06FA26764C20002B0ACF /* MovementQueue.swift in Sources */,
 				E256178C267150A400B96384 /* TestCompleteViewComtrollerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
