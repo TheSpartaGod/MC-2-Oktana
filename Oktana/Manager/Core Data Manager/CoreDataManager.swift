@@ -73,7 +73,7 @@ struct CoreDataManager {
     }
     
     // Call this function when user unlocked a movement to add movement on the list
-    func addMovementtoUser(user: User, movementID: String){
+    func addMovementtoUser(user: User, movementID: Int){
         let context = CoreDataManager.shared.persistentContainer.viewContext
         
         guard let movementEntity = NSEntityDescription.entity(forEntityName: "Movement", in: context) else {

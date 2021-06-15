@@ -8,7 +8,7 @@
 import Foundation
  
 struct MovementGenerate {
-    var movementIDGenerate: String
+    var movementIDGenerate: Int
     var iconMovementGenerate: String
     var animationMovementGenerate: [AnimationGenerate]
     var namaMovementGenerate: String
@@ -28,7 +28,7 @@ struct AnimationGenerate {
 
 struct Movements {
     var data = [MovementGenerate(
-                    movementIDGenerate: "01",
+                    movementIDGenerate: 0,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -42,7 +42,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "02",
+                    movementIDGenerate: 1,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -56,7 +56,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "03",
+                    movementIDGenerate: 2,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -70,7 +70,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "04",
+                    movementIDGenerate: 3,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -84,7 +84,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "05",
+                    movementIDGenerate: 4,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -98,7 +98,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "06",
+                    movementIDGenerate: 5,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -112,7 +112,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "07",
+                    movementIDGenerate: 6,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -126,7 +126,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "08",
+                    movementIDGenerate: 7,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -140,7 +140,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "09",
+                    movementIDGenerate: 8,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -154,7 +154,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "10",
+                    movementIDGenerate: 9,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -168,7 +168,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "11",
+                    movementIDGenerate: 10,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -182,7 +182,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "12",
+                    movementIDGenerate: 11,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -196,7 +196,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "13",
+                    movementIDGenerate: 12,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -210,7 +210,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "14",
+                    movementIDGenerate: 13,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -224,7 +224,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "15",
+                    movementIDGenerate: 14,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -238,7 +238,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "16",
+                    movementIDGenerate: 15,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -252,7 +252,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "17",
+                    movementIDGenerate: 16,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -266,7 +266,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "18",
+                    movementIDGenerate: 17,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -280,7 +280,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "19",
+                    movementIDGenerate: 18,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -294,7 +294,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "20",
+                    movementIDGenerate: 19,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -308,7 +308,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "21",
+                    movementIDGenerate: 20,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -322,7 +322,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "22",
+                    movementIDGenerate: 21,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -336,7 +336,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "23",
+                    movementIDGenerate: 22,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -350,7 +350,7 @@ struct Movements {
                                  calorieBurnGenerate: 0,
                                  costEPGenerate: 0),
                 MovementGenerate(
-                    movementIDGenerate: "24",
+                    movementIDGenerate: 23,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
