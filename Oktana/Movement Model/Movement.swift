@@ -142,7 +142,7 @@ struct Movements {
                                 costEPGenerate: 150),
                 MovementGenerate(
                                 movementIDGenerate: 7,
-                                category: 1,
+                                category: 2,
                                 iconMovementGenerate: "",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -169,7 +169,40 @@ struct Movements {
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Start in fight stance"),
                                     InstructionsGenerate(instructions: "2. Lift up your leg like you want to do a front kick"),
-                                    InstructionsGenerate(instructions: "3. Throw a punch while slide in to the front")
+                                    InstructionsGenerate(instructions: "3. Throw a punch while slide to the front")
+                                ],
+                                calorieBurnGenerate: 0,
+                                costEPGenerate: 200),
+                MovementGenerate(
+                                movementIDGenerate: 9,
+                                category: 2,
+                                iconMovementGenerate: "",
+                                animationMovementGenerate: [
+                                    AnimationGenerate(animationFrame: ""),
+                                    AnimationGenerate(animationFrame: "")
+                                ],
+                                namaMovementGenerate: "Push Up",
+                                instructionsGenerate: [
+                                    InstructionsGenerate(instructions: "1. Get down on all fours, placing your hands slightly wider than your shoulders."),
+                                    InstructionsGenerate(instructions: "2. Straighten your arms and legs."),
+                                    InstructionsGenerate(instructions: "3. Lower your body until your chest nearly touches the floor."),
+                                    InstructionsGenerate(instructions: "4. Push youself back up.")
+                                ],
+                                calorieBurnGenerate: 0,
+                                costEPGenerate: 200),
+                MovementGenerate(
+                                movementIDGenerate: 10,
+                                category: 2,
+                                iconMovementGenerate: "",
+                                animationMovementGenerate: [
+                                    AnimationGenerate(animationFrame: ""),
+                                    AnimationGenerate(animationFrame: "")
+                                ],
+                                namaMovementGenerate: "Inchworm",
+                                instructionsGenerate: [
+                                    InstructionsGenerate(instructions: ""),
+                                    InstructionsGenerate(instructions: ""),
+                                    InstructionsGenerate(instructions: "")
                                 ],
                                 calorieBurnGenerate: 0,
                                 costEPGenerate: 200),
