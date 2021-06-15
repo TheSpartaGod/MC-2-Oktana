@@ -82,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     func checkInitializeUserData(){
-        let context = persistentContainer.viewContext
+        //let context = persistentContainer.viewContext
   
         var userIsMade : Bool = false
     
@@ -98,6 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else{
             MovementQueue.currentUserInitialized = true
         }
+        print(userIsMade)
     }
 
 }

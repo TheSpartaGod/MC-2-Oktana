@@ -42,13 +42,21 @@ class WorkoutViewController: UIViewController {
         
     func configElements(){
         //MARK: ENERGY STREAK VIEW
-        do{
-            newUser = try context.fetch(User.fetchRequest()).first as! User
-        }catch{
+        streakCountLabel.text = "0"
+        energyPointLabel.text = "0"
+        if MovementQueue.currentUserInitialized == true{
+    
+            let opUser = CoreDataManager.shared.fetchUser()
+            if opUser == nil{
+                print("nil")
+            }else{
+                streakCountLabel.text = String(opUser!.total_streaks)
+                energyPointLabel.text = String(opUser!.energy_points)
+            }
             
         }
-        streakCountLabel.text = String(newUser.total_streaks)
-        energyPointLabel.text = String(newUser.energy_points)
+       
+        
         energyStreakView.layer.cornerRadius = 5
         energyStreakView.layer.masksToBounds = true
         energyStreakView.backgroundColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1.00)
@@ -77,7 +85,7 @@ class WorkoutViewController: UIViewController {
                 lastWorkout = try  context.fetch(Workout.fetchRequest()).last as! Workout
                 timeCardView.cardValueLabel.text = String(lastWorkout.totalTime/60)
             }
-            newUser = try context.fetch(User.fetchRequest()).first as! User
+          
            
             }
         catch{
