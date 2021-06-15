@@ -66,15 +66,13 @@ class MovementDetailViewController: UIViewController ,UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = movementDetailTableView.dequeueReusableCell(withIdentifier: "MovementCell") as! MovementDetailTableViewCell
-        let movementList = Movements()
-        cell.moveNameLabel.text =
-         
-        movementList.data[MovementQueue.selectedMoves[indexPath.section][indexPath.row]-1].namaMovementGenerate
+      
+        cell.moveNameLabel.text = MovementQueue.data[MovementQueue.selectedMoves[indexPath.section][indexPath.row]].namaMovementGenerate
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        selectedRow = MovementQueue.MovementList.data[MovementQueue.selectedMoves[indexPath.section][indexPath.row]-1].movementIDGenerate
+        selectedRow = MovementQueue.data[MovementQueue.selectedMoves[indexPath.section][indexPath.row]].movementIDGenerate
        performSegue(withIdentifier: "showHowTo", sender: nil)
         print(indexPath)
     }

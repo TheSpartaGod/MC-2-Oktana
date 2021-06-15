@@ -24,14 +24,6 @@
             </objects>
             <point key="canvasLocation" x="-243" y="-585"/>
         </scene>
-        <!--Boarding-->
-        <scene sceneID="vAA-fn-Gn4">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Boarding" id="eXm-Y9-JJ1" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FSx-56-dnO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1608" y="-948"/>
-        </scene>
         <!--Workout-->
         <scene sceneID="KFA-c9-h4b">
             <objects>
@@ -160,7 +152,6 @@
                         <outlet property="streakCountLabel" destination="O3j-a9-Lwn" id="0g6-u0-WbS"/>
                         <outlet property="timeCardView" destination="MDT-qX-0da" id="dvT-kk-XCZ"/>
                         <segue destination="oWg-fE-7Q6" kind="show" identifier="homeToDetail" id="6DY-3n-LYf"/>
-                        <segue destination="eXm-Y9-JJ1" kind="presentation" identifier="showOnboarding" id="KxU-5w-9Nz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrH-r8-nJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
