@@ -150,7 +150,7 @@ struct CoreDataManager {
             for work in workouts as! [Workout] {
                 workoutData.append(work)
             }
-            return workoutData
+            return workoutData.count == 0 ? nil : workoutData
         }catch {
             print("Could not fetch movement list \(error.localizedDescription)")
             return nil
