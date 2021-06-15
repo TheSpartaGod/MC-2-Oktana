@@ -29,18 +29,15 @@ class WorkoutCompleteViewController: UIViewController {
     }
     func saveWorkout(){
         //create new workout object
-        let newWorkout = Workout(context: self.context)
-        //set workout object attribute
-        do{
-            newWorkout.date = Date()
-            newWorkout.totalTime = Int64(MovementQueue.currentTotalTime)
-            newWorkout.totalCalories = 150      //TODO: CALCULATE CALORIES, ONLY TEMP VALUE
-            newWorkout.avgHeartRate = 150
-            newWorkout.user = try context.fetch(User.fetchRequest()).first
-            try self.context.save()
-        } catch{
-            
+        
+        if let user = CoreDataManager.shared.fetchUser() {
+            let newWorkout = CoreDataManager.shared.addWorkouttoUser(user: user, time: Int(MovementQueue.currentTotalTime), heart_rate: 150, calories: 150, date: Date())
+        } else {
+            print("error in saving workout")
+            return
         }
+      
+        //set workout object attribute
         
         
   

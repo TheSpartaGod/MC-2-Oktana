@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-      
-        checkInitializeUserData()
+        
+       
         return true
     }
     
@@ -81,25 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    func checkInitializeUserData(){
-        //let context = persistentContainer.viewContext
-  
-        var userIsMade : Bool = false
     
-        do{
-           userIsMade = try context.fetch(User.fetchRequest()).count > 0
-    
-        } catch{
-            
-        }
-        if userIsMade == false{
-            MovementQueue.currentUserInitialized = false
-        }
-        else{
-            MovementQueue.currentUserInitialized = true
-        }
-        print(userIsMade)
-    }
 
 }
 

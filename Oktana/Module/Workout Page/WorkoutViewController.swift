@@ -21,7 +21,7 @@ class WorkoutViewController: UIViewController {
     @IBOutlet weak var energyPointLabel: UILabel!
     @IBOutlet weak var timeCardView: MediumInfoCardView!
     @IBOutlet weak var calorieCardView: MediumInfoCardView!
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+  //  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var newUser = User()
     var lastWorkout = Workout()
     @objc func didTapView(_ sender: UITapGestureRecognizer){//add gesture recognizer untuk button biar move ke workout detail
@@ -30,7 +30,7 @@ class WorkoutViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if MovementQueue.currentUserInitialized == false{
+        if CoreDataManager.shared.fetchUser() == nil{
             performSegue(withIdentifier: "showOnboarding", sender: self)
         }
         self.navigationController?.isNavigationBarHidden = true
@@ -44,7 +44,7 @@ class WorkoutViewController: UIViewController {
         //MARK: ENERGY STREAK VIEW
         streakCountLabel.text = "0"
         energyPointLabel.text = "0"
-        if MovementQueue.currentUserInitialized == true{
+       
     
             let opUser = CoreDataManager.shared.fetchUser()
             if opUser == nil{
@@ -54,7 +54,7 @@ class WorkoutViewController: UIViewController {
                 energyPointLabel.text = String(opUser!.energy_points)
             }
             
-        }
+        
        
         
         energyStreakView.layer.cornerRadius = 5
@@ -77,24 +77,20 @@ class WorkoutViewController: UIViewController {
         
         //MARK: BOTTOM CARD
         configBottomCard()
-        var hasDoneWorkouts : Bool// check apakah user pernah ngelakuin workout
-        do{
-            hasDoneWorkouts = try context.fetch(Workout.fetchRequest()).count > 0
-            if hasDoneWorkouts == true{
-                
-                lastWorkout = try  context.fetch(Workout.fetchRequest()).last as! Workout
-                timeCardView.cardValueLabel.text = String(lastWorkout.totalTime/60)
-            }
-          
-           
-            }
-        catch{
-            
-        }
-       
+        checkWorkout()
+        // check apakah user pernah ngelakuin workout
+               
       
       //ubah menjadi lingkaran
     
+    }
+    func checkWorkout(){
+        var hasDoneWorkouts : Bool
+        if let workouts = CoreDataManager.shared.fetchAllWorkoutData(){
+            timeCardView.cardValueLabel.text = String(workouts[workouts.count-1].totalTime)
+            calorieCardView.cardValueLabel.text = String(workouts[workouts.count-1].totalCalories)
+        }
+        
     }
     func configBottomCard(){
         timeCardView.cardTitleLabel.text = "Time"
