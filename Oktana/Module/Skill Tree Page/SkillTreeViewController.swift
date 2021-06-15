@@ -56,7 +56,6 @@ class SkillTreeViewController: UIViewController {
 extension SkillTreeViewController: SkillTreeCustomViewDelegate{
     func didUnlock(name: String, icon: UIImage) {
         AlertUnlockViewController.showAlert(from: self, title: "movementname", reqEP: 30)
-
     }
     
     
