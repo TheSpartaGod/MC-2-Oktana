@@ -15,7 +15,10 @@ class WorkoutCompleteViewController: UIViewController {
     @IBOutlet weak var caloriesCardView: MediumInfoCardView!
     @IBOutlet weak var energyCardView: LongMediumInfoCardView!
     @IBOutlet weak var doneButton: UIButton!
-    
+   
+    @IBAction func onDoneButtonClick(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,9 +27,10 @@ class WorkoutCompleteViewController: UIViewController {
     }
     
     func configElements(){
+        let (m,s) = MovementQueue.secondsToMinutesSeconds(seconds: MovementQueue.currentTotalTime)
         timeCardView.cardTitleLabel.text = "Total Time"
         timeCardView.cardIcon.image = UIImage(systemName: "stopwatch")
-        timeCardView.cardValueLabel.text = "05:21"
+        timeCardView.cardValueLabel.text = String(format: "%0.2d:%0.2d", m, s)
         timeCardView.layer.cornerRadius = 8
         timeCardView.clipsToBounds = true
 

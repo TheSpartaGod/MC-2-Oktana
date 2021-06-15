@@ -60,6 +60,20 @@ class CircularProgressBarView: UIView {
         circleLayer.add(circularProgressAnimation, forKey: "progressAnim")
         
     }
+    func pauseAnimation() {
+        let pausedTime = layer.convertTime(CACurrentMediaTime(), from: nil)
+        layer.speed = 0
+        layer.timeOffset = pausedTime
+    }
+
+    func resumeAnimation() {
+        let pausedTime = layer.timeOffset
+        layer.speed = 1
+        layer.timeOffset = 0
+        layer.beginTime = 0
+        let timeSincePause = layer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
+        layer.beginTime = timeSincePause
+    }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
