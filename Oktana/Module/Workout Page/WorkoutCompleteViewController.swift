@@ -15,7 +15,7 @@ class WorkoutCompleteViewController: UIViewController {
     @IBOutlet weak var caloriesCardView: MediumInfoCardView!
     @IBOutlet weak var energyCardView: LongMediumInfoCardView!
     @IBOutlet weak var doneButton: UIButton!
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+   
     @IBAction func onDoneButtonClick(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
@@ -23,8 +23,6 @@ class WorkoutCompleteViewController: UIViewController {
         super.viewDidLoad()
 
         configElements()
-        saveWorkout()
-        MovementQueue.dequeueMovementList()
         // Do any additional setup after loading the view.
     }
     func saveWorkout(){
@@ -67,7 +65,7 @@ class WorkoutCompleteViewController: UIViewController {
 
         energyCardView.cardTitleLabel.text = "Energy Point"
         energyCardView.cardIcon.image = UIImage(systemName: "bolt")
-        energyCardView.cardValueLabel.text = "+\(MovementQueue.calculateEnergy())"
+        energyCardView.cardValueLabel.text = "+30"
         energyCardView.layer.cornerRadius = 8
         energyCardView.clipsToBounds = true
 

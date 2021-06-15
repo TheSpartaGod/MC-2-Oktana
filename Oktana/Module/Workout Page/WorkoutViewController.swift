@@ -21,9 +21,6 @@ class WorkoutViewController: UIViewController {
     @IBOutlet weak var energyPointLabel: UILabel!
     @IBOutlet weak var timeCardView: MediumInfoCardView!
     @IBOutlet weak var calorieCardView: MediumInfoCardView!
-  //  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var newUser = User()
-    var lastWorkout = Workout()
     @objc func didTapView(_ sender: UITapGestureRecognizer){//add gesture recognizer untuk button biar move ke workout detail
         performSegue(withIdentifier: "homeToDetail", sender: nil)
     }
@@ -34,12 +31,11 @@ class WorkoutViewController: UIViewController {
             performSegue(withIdentifier: "showOnboarding", sender: self)
         }
         self.navigationController?.isNavigationBarHidden = true
-            configElements()
-            
+        configElements()
+        
+
         // Do any additional setup after loading the view.
     }
-    
-        
     func configElements(){
         //MARK: ENERGY STREAK VIEW
         streakCountLabel.text = "0"
@@ -95,22 +91,39 @@ class WorkoutViewController: UIViewController {
     func configBottomCard(){
         timeCardView.cardTitleLabel.text = "Time"
         timeCardView.cardIcon.image = UIImage(systemName: "stopwatch")
-        timeCardView.cardValueLabel.text = "0"
         
         timeCardView.cardUnitLabel.text = "min"
-        
+        timeCardView.cardValueLabel.text = "105"
         timeCardView.layer.cornerRadius = 10
         timeCardView.clipsToBounds = true
-  
         
         calorieCardView.cardTitleLabel.text = "Calories"
         calorieCardView.cardIcon.image = UIImage(systemName: "flame")
         calorieCardView.cardIcon.tintColor = UIColor(red: 1.00, green: 0.66, blue: 0.00, alpha: 1.00)
-
+        
         calorieCardView.cardUnitLabel.text = "kcal"
         calorieCardView.cardValueLabel.text = "720"
         calorieCardView.layer.cornerRadius = 10
         calorieCardView.clipsToBounds = true
+        //set color, corner radius, etc
+        
+        baseView.backgroundColor = UIColor(red: 0.18, green: 0.17, blue: 0.17, alpha: 1.00)
+        
+        mainWorkoutLabel.textColor = UIColor(red: 0.66, green: 0.87, blue: 0.30, alpha: 1.00)
+        energyStreakView.backgroundColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1.00)
+        
+        energyStreakView.layer.cornerRadius = 5
+        energyStreakView.layer.masksToBounds = true
+        
+        progressBarBase.layer.cornerRadius = 5
+        progressBarFill.layer.cornerRadius = 5
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
+        
+        startWorkoutButton.layer.cornerRadius = startWorkoutButton.frame.size.width/2
+        startWorkoutButton.addGestureRecognizer(tapGestureRecognizer)
+      //ubah menjadi lingkaran
+    
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.tabBarController?.tabBar.isHidden = false
