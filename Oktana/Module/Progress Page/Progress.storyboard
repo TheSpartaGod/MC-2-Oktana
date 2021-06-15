@@ -44,7 +44,7 @@
                             <constraint firstItem="c9R-ZR-spu" firstAttribute="top" secondItem="Ud6-QF-dvR" secondAttribute="top" id="oBk-eR-hxG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Progress" id="ldO-ef-0da"/>
+                    <tabBarItem key="tabBarItem" title="Progress" image="chart.bar.xaxis" catalog="system" id="ldO-ef-0da"/>
                     <connections>
                         <outlet property="progressTableView" destination="c9R-ZR-spu" id="ZS5-G0-z3g"/>
                     </connections>
@@ -54,4 +54,7 @@
             <point key="canvasLocation" x="847.69230769230762" y="918.48341232227483"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
+    </resources>
 </document>

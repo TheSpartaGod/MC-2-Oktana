@@ -43,7 +43,8 @@
 		B7597281267659F500A36236 /* StreakPointView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7597280267659F500A36236 /* StreakPointView.xib */; };
 		B759728326765A0D00A36236 /* StreakPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B759728226765A0D00A36236 /* StreakPointView.swift */; };
 		B759728526766CAB00A36236 /* Boarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B759728426766CAB00A36236 /* Boarding.storyboard */; };
-		B759728726768AA900A36236 /* BoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B759728626768AA900A36236 /* BoardingPageViewController.swift */; };
+		B762ECC226788E8A00020938 /* BoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762ECC126788E8A00020938 /* BoardingViewController.swift */; };
+		B762ECC42678A98600020938 /* LastBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762ECC32678A98600020938 /* LastBoardingPageViewController.swift */; };
 		B7B4BA7D266FA78200B0E6A0 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4BA7C266FA78200B0E6A0 /* Movement.swift */; };
 		B7B5F6162676FF9700AE431C /* Movement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5F6142676FF9700AE431C /* Movement+CoreDataClass.swift */; };
 		B7B5F6172676FF9700AE431C /* Movement+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5F6152676FF9700AE431C /* Movement+CoreDataProperties.swift */; };
@@ -118,7 +119,8 @@
 		B7597280267659F500A36236 /* StreakPointView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreakPointView.xib; sourceTree = "<group>"; };
 		B759728226765A0D00A36236 /* StreakPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakPointView.swift; sourceTree = "<group>"; };
 		B759728426766CAB00A36236 /* Boarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Boarding.storyboard; sourceTree = "<group>"; };
-		B759728626768AA900A36236 /* BoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingPageViewController.swift; sourceTree = "<group>"; };
+		B762ECC126788E8A00020938 /* BoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingViewController.swift; sourceTree = "<group>"; };
+		B762ECC32678A98600020938 /* LastBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastBoardingPageViewController.swift; sourceTree = "<group>"; };
 		B7B4BA7C266FA78200B0E6A0 /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 		B7B5F6142676FF9700AE431C /* Movement+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Movement+CoreDataClass.swift"; path = "../../../../Movement+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B7B5F6152676FF9700AE431C /* Movement+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Movement+CoreDataProperties.swift"; path = "../../../../Movement+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -355,7 +357,8 @@
 			children = (
 				B759728426766CAB00A36236 /* Boarding.storyboard */,
 				B7C7A159266E7E39007DB473 /* LaunchScreen.storyboard */,
-				B759728626768AA900A36236 /* BoardingPageViewController.swift */,
+				B762ECC126788E8A00020938 /* BoardingViewController.swift */,
+				B762ECC32678A98600020938 /* LastBoardingPageViewController.swift */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				B7B5F61B26770BD400AE431C /* TitleTableViewCell.swift in Sources */,
 				99F926E8266FC0AE006A210A /* MovementDetailViewController.swift in Sources */,
 				B7DB80D726737C0300977D24 /* AlertTestViewController.swift in Sources */,
+				B762ECC42678A98600020938 /* LastBoardingPageViewController.swift in Sources */,
 				99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */,
 				B7C7A156266E7E38007DB473 /* Oktana.xcdatamodeld in Sources */,
 				B7DB80D02673725A00977D24 /* AlertStandardViewController.swift in Sources */,
@@ -558,10 +562,8 @@
 				999468762672FE7100302000 /* FocusedView.swift in Sources */,
 				B73E1C362672121C00054685 /* ProgressPageViewController.swift in Sources */,
 				990A06FE26778AD6002B0ACF /* customLeftSegue.swift in Sources */,
-				B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */,
 				E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */,
 				B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */,
-				B759728726768AA900A36236 /* BoardingPageViewController.swift in Sources */,
 				B71903A7266FDE3200D34212 /* User+CoreDataClass.swift in Sources */,
 				99F926FA26711A7B006A210A /* CircularProgressBarView.swift in Sources */,
 				B71903AA266FDE3200D34212 /* Workout+CoreDataProperties.swift in Sources */,
@@ -575,6 +577,7 @@
 				B737A1442670F25800DDD4A8 /* Fitness+CoreDataClass.swift in Sources */,
 				99F926F826710FE2006A210A /* WorkoutModeViewController.swift in Sources */,
 				B737A1452670F25800DDD4A8 /* Fitness+CoreDataProperties.swift in Sources */,
+				B762ECC226788E8A00020938 /* BoardingViewController.swift in Sources */,
 				B71903A8266FDE3200D34212 /* User+CoreDataProperties.swift in Sources */,
 				B7B5F6172676FF9700AE431C /* Movement+CoreDataProperties.swift in Sources */,
 				99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */,
