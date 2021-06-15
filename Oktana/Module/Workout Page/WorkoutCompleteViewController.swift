@@ -23,6 +23,7 @@ class WorkoutCompleteViewController: UIViewController {
         super.viewDidLoad()
 
         configElements()
+        MovementQueue.dequeueMovementList()
         // Do any additional setup after loading the view.
     }
     
@@ -50,7 +51,7 @@ class WorkoutCompleteViewController: UIViewController {
 
         energyCardView.cardTitleLabel.text = "Energy Point"
         energyCardView.cardIcon.image = UIImage(systemName: "bolt")
-        energyCardView.cardValueLabel.text = "+30"
+        energyCardView.cardValueLabel.text = "+\(MovementQueue.calculateEnergy())"
         energyCardView.layer.cornerRadius = 8
         energyCardView.clipsToBounds = true
 

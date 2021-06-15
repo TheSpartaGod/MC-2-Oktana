@@ -82,41 +82,44 @@ struct MovementQueue{
     static var currentWorkoutPosition : Int = 0
     static var totalTimerActive: Bool = false
     static var currentTotalTime : Int = 0
+    static var MovementList  = Movements()
+    static var isBreak : Bool = false
     static func secondsToMinutesSeconds (seconds : Int) -> (Int, Int) {
       return ((seconds % 3600) / 60, (seconds % 3600) % 60)
+    }
+    static func calculateEnergy() -> Int{
+        let (m,s) = MovementQueue.secondsToMinutesSeconds(seconds: MovementQueue.currentTotalTime)
+        let energyPoint : Int = m * 2
+        return energyPoint
+        
+    }
+    static func dequeueMovementList(){// only call this when u are sure the workout is done
+        MovementQueue.selectedMoves = [[],[],[],[]]
+        MovementQueue.selectedMovesList = []
+        MovementQueue.totalTimerActive = false
+        MovementQueue.currentWorkoutPosition = 0
+        MovementQueue.isBreak = false
+        MovementQueue.currentTotalTime = 0
+        
     }
     static func queueMovementList(){
         //Set as static var biar cuman 1x doang ke generate dan ga berubah.
         //edit MovementQueue variable utk set ke core data
-        for i in MovementQueue.data{
-            for j in 0...3{//input selected moves ke per category
-                if i.category == j && !MovementQueue.selectedMoves[j].contains(i.movementIDGenerate){
-                    selectedMoves[j].append(i.movementIDGenerate)
+        for i in MovementList.data{
+            for j in 1...4{//input selected moves ke per category
+                if i.category == j && !MovementQueue.selectedMoves[j-1].contains(i.movementIDGenerate){
+                    selectedMoves[j-1].append(i.movementIDGenerate)
                     selectedMovesList.append(i.movementIDGenerate)
-                  
                     
                 }
-                selectedMoves[j].sort()
+                
+                
+                selectedMoves[j-1].sort()
             }
         
         }
         selectedMovesList.sort()
-        /*
-        for i in 0...3{
-            for j in 0..<MovementQueue.data.count{
-                let selectedMoveID = Int.random(in: 0..<MovementQueue.data.count)
-               
-                    if !MovementQueue.selectedMoves[i].contains(selectedMoveID) && MovementQueue.data[j].category == i {
-                        MovementQueue.selectedMoves[i].append(selectedMoveID)
-                    }
-               
-               
-            }
-                selectedMoves[i].sort(by: <)
-            }*/
-       
-      
-        
+  
         print(MovementQueue.selectedMoves)
         print(MovementQueue.selectedMovesList)
         
