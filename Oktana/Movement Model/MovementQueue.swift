@@ -10,6 +10,7 @@ import Foundation
 struct MovementQueue{
    static var data = [MovementGenerate(
                     movementIDGenerate: 0,
+                    category: 0,
                                  iconMovementGenerate: "",
                                  animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
@@ -21,12 +22,13 @@ struct MovementQueue{
                                     InstructionsGenerate(instructions: "sidejab2")
                                  ],
                                  calorieBurnGenerate: 80,
-                                 costEPGenerate: 120,
-                                category: 0),
+                                 costEPGenerate: 120
+                                ),
                         
                                 
                 MovementGenerate(
                                 movementIDGenerate: 1,
+                    category: 1,
                                              iconMovementGenerate: "",
                                              animationMovementGenerate: [
                                                 AnimationGenerate(animationFrame: ""),
@@ -38,10 +40,11 @@ struct MovementQueue{
                                                 InstructionsGenerate(instructions: "do squat2 ")
                                              ],
                                              calorieBurnGenerate: 80,
-                                             costEPGenerate: 140,
-                                            category: 1),
+                                             costEPGenerate: 140
+                                            ),
                 MovementGenerate(
                                 movementIDGenerate: 2,
+                    category: 3,
                                              iconMovementGenerate: "",
                                              animationMovementGenerate: [
                                                 AnimationGenerate(animationFrame: ""),
@@ -53,10 +56,11 @@ struct MovementQueue{
                                                 InstructionsGenerate(instructions: "do pushup2 ")
                                              ],
                                              calorieBurnGenerate: 80,
-                                             costEPGenerate: 140,
-                                            category: 3),
+                                             costEPGenerate: 140
+                                            ),
                 MovementGenerate(
                                 movementIDGenerate: 3,
+                    category: 3,
                                              iconMovementGenerate: "",
                                              animationMovementGenerate: [
                                                 AnimationGenerate(animationFrame: ""),
@@ -68,8 +72,8 @@ struct MovementQueue{
                                                 InstructionsGenerate(instructions: "do kick2 ")
                                              ],
                                              calorieBurnGenerate: 80,
-                                             costEPGenerate: 140,
-                                            category: 3)
+                                             costEPGenerate: 140
+                                            )
 
                 
     ]

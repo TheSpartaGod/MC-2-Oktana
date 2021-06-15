@@ -16,7 +16,7 @@ struct MovementGenerate {
     var instructionsGenerate:[InstructionsGenerate]
     var calorieBurnGenerate: Int
     var costEPGenerate: Int
-    var category: Int
+ 
 }
 
 struct InstructionsGenerate {
