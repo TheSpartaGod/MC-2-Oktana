@@ -1,13 +1,13 @@
 //
-//  BoardingPageViewController.swift
+//  LastBoardingPageViewController.swift
 //  Oktana
 //
-//  Created by Gratianus Martin on 14/06/21.
+//  Created by Gratianus Martin on 15/06/21.
 //
 
 import UIKit
 
-class BoardingPageViewController: UIViewController {
+class LastBoardingPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,11 @@ class BoardingPageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func startButton(_ sender: Any) {
+        CoreDataManager.shared.saveUser()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
