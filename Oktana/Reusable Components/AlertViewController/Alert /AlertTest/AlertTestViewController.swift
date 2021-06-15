@@ -31,7 +31,7 @@ class AlertTestViewController: UIViewController {
     @IBAction func positiveActionHandler(_ sender: Any) {
         dismiss(animated: true) {
             [weak self] in
-            self?.positiveCompletion?(self?.totalRepetition.text ?? "")
+            self?.positiveCompletion?(self?.totalRepetition.text ?? "no repetition data")
         }
     }
 }
@@ -39,19 +39,16 @@ class AlertTestViewController: UIViewController {
 extension AlertTestViewController{
     func bindView() {
         movementTitleLabel.text = titleText
-        positiveButton.setTitle(positiveText, for: .normal)
-        
+        iconImage.image = icon
         contentView.layer.cornerRadius = 10
         positiveButton.layer.cornerRadius = 10
     }
     
-    static func showAlert(from viewController: UIViewController, movementTitle: String, image: UIImage? = nil, positiveMessage: String? = nil, positiveAction: ((_ text: String) -> Void)? = nil){
+    static func showAlert(from viewController: UIViewController, movementTitle: String, image: UIImage? = nil, positiveAction: ((_ text: String) -> Void)? = nil){
         let controller = AlertTestViewController.init(nibName: "AlertTestViewController", bundle: nil)
         
         controller.titleText = movementTitle
         controller.icon = image
-        
-        controller.positiveText = positiveMessage
         controller.positiveCompletion = positiveAction
         controller.modalPresentationStyle = .overCurrentContext
         controller.modalTransitionStyle = .crossDissolve
