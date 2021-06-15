@@ -12,6 +12,7 @@ class ProgressContentTableViewCell: UITableViewCell  {
     
 
     @IBOutlet weak var ContentCollectionView: UICollectionView!
+    let sectionInsets = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0)
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,10 +31,17 @@ class ProgressContentTableViewCell: UITableViewCell  {
         // Configure the view for the selected state
     }
     
+    func getCellSize() -> CGSize {
+        let paddingSpace = sectionInsets.left + sectionInsets.right
+        let availableWidth = ContentCollectionView.frame.width - paddingSpace - 5
+        let itemWidth = availableWidth / 2
+        return CGSize(width: itemWidth, height: 120)
+    }
+    
 }
 
 
-extension ProgressContentTableViewCell:UICollectionViewDataSource, UICollectionViewDelegate{
+extension ProgressContentTableViewCell:UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
@@ -45,4 +53,21 @@ extension ProgressContentTableViewCell:UICollectionViewDataSource, UICollectionV
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return getCellSize()
+    }
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
 }

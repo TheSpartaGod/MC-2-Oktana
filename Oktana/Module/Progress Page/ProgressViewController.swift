@@ -69,11 +69,11 @@ extension ProgressViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 1 {
-            return 280
+            return 245
         } else if indexPath.row > 2 {
-            return 180
+            return 150
         } else {
-            return 44
+            return 70
         }
     }
     
