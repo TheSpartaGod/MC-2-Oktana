@@ -11,13 +11,13 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+  
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
       
-        
+        checkInitializeUserData()
         return true
     }
     
@@ -81,20 +81,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    func initializeUserData(){
+    func checkInitializeUserData(){
+        let context = persistentContainer.viewContext
   
         var userIsMade : Bool = false
-        
-        
-        
-        
+    
         do{
-            userIsMade = try context.fetch(User.fetchRequest()).count > 0
+           userIsMade = try context.fetch(User.fetchRequest()).count > 0
+    
         } catch{
             
         }
         if userIsMade == false{
-            
+            MovementQueue.currentUserInitialized = false
+        }
+        else{
+            MovementQueue.currentUserInitialized = true
         }
     }
 

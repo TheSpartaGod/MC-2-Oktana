@@ -23,16 +23,27 @@ class WorkoutCompleteViewController: UIViewController {
         super.viewDidLoad()
 
         configElements()
-        
+        saveWorkout()
         MovementQueue.dequeueMovementList()
         // Do any additional setup after loading the view.
     }
     func saveWorkout(){
         //create new workout object
         let newWorkout = Workout(context: self.context)
-        newWorkout.date = Date()
-        newWorkout.totalTime = Int64(MovementQueue.currentTotalTime)
-        newWorkout.totalCalories = 150 //TODO: CALCULATE CALORIES
+        //set workout object attribute
+        do{
+            newWorkout.date = Date()
+            newWorkout.totalTime = Int64(MovementQueue.currentTotalTime)
+            newWorkout.totalCalories = 150      //TODO: CALCULATE CALORIES, ONLY TEMP VALUE
+            newWorkout.avgHeartRate = 150
+            newWorkout.user = try context.fetch(User.fetchRequest()).first
+            try self.context.save()
+        } catch{
+            
+        }
+        
+        
+  
         
     }
     func configElements(){

@@ -89,10 +89,11 @@ class WorkoutModeViewController: UIViewController {
           performSegue(withIdentifier: "toNextMove", sender: nil)
         }
         else if MovementQueue.isBreak == false{
+            
             MovementQueue.isBreak = true
             performSegue(withIdentifier: "toNextMove", sender: nil)
         }
-        else if MovementQueue.currentWorkoutPosition == MovementQueue.selectedMovesList.count-1 && MovementQueue.isBreak == false{
+        else if MovementQueue.currentWorkoutPosition == MovementQueue.selectedMovesList.count-1{
             performSegue(withIdentifier: "toWorkoutComplete", sender: nil)
             
         }

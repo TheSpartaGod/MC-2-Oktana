@@ -8,7 +8,8 @@
 import Foundation
 import CoreData
 struct MovementQueue{
-    static var currentUser = User()
+    
+    static var currentUserInitialized : Bool = false
     static var selectedMoves : [[Int]] = [[],[],[],[]] // untuk dimasukkin di movement list
     static var selectedMovesList : [Int] = [] //untuk dimasukkin di workout MODE
     
