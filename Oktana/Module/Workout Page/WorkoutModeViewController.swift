@@ -30,7 +30,7 @@ class WorkoutModeViewController: UIViewController {
     @IBOutlet weak var reverseBackImage: UIImageView!
     
     //MARK: - other vars
-    var workoutTimeLeft : Int = 30 //EDIT THIS BASED ON WORKOUT TIMER, USUALLY 30SECS BUT CAN BE MORE
+    var workoutTimeLeft : Int = 5 //EDIT THIS BASED ON WORKOUT TIMER, USUALLY 30SECS BUT CAN BE MORE
     var focusedView : FocusedView!
     var skip : Bool = false
     var currentWorkoutList : [Int] = []
@@ -38,17 +38,24 @@ class WorkoutModeViewController: UIViewController {
     var workoutTime : Timer!
     var totalTime : Timer!
     
+    
     //MARK: - Actions
     
     @IBAction func onFocusedBtnClick(_ sender: Any) {
         focusedView = FocusedView(frame: .zero, viewMode: "TestEntry", activityTitleText: "Push Up", focusMessageText: "How many Push Ups did you do?", activityImage: UIImage(systemName: "hexagon.fill") ?? UIImage())
     }
     @IBAction func onExitWorkoutButtonClicked(_ sender: Any) {
-        workoutTime.invalidate()
-        totalTime.invalidate()
+        
         //dismiss(animated: true, completion: nil)
         //performSegue(withIdentifier: "toHome", sender: nil)
-        navigationController?.popToRootViewController(animated: true)
+      
+        AlertStandardViewController.showAlert(from: self, title:"Confirm Exit" , message: "Are you sure you want to abort workout and exit to the home page?" , positiveMessage: "Yes") {
+            self.workoutTime.invalidate()
+            self.totalTime.invalidate()
+            MovementQueue.dequeueMovementList()
+            self.navigationController?.popToRootViewController(animated: true)
+            
+        }
     }
     
     @IBAction func onPlayPauseButtonClicked(_ sender: Any) {
@@ -72,7 +79,8 @@ class WorkoutModeViewController: UIViewController {
     @IBAction func onSkipForwardButtonClicked(_ sender: Any) {
         workoutTime.invalidate()
         totalTime.invalidate()
-        if MovementQueue.currentWorkoutPosition < MovementQueue.selectedMovesList.count-1{
+        if MovementQueue.currentWorkoutPosition < MovementQueue.selectedMovesList.count-1 && MovementQueue.isBreak == true{
+            MovementQueue.isBreak = false
             MovementQueue.currentWorkoutPosition += 1
             self.currentWorkoutID = MovementQueue.selectedMovesList[MovementQueue.currentWorkoutPosition]
             self.removeFromParent()
@@ -80,8 +88,14 @@ class WorkoutModeViewController: UIViewController {
            
           performSegue(withIdentifier: "toNextMove", sender: nil)
         }
-        else{
+        else if MovementQueue.isBreak == false{
+            
+            MovementQueue.isBreak = true
+            performSegue(withIdentifier: "toNextMove", sender: nil)
+        }
+        else if MovementQueue.currentWorkoutPosition == MovementQueue.selectedMovesList.count-1{
             performSegue(withIdentifier: "toWorkoutComplete", sender: nil)
+            
         }
       
        
@@ -89,8 +103,16 @@ class WorkoutModeViewController: UIViewController {
     @IBAction func onReverseBackButtonClicked(_ sender: Any) {
         workoutTime.invalidate()
         totalTime.invalidate()
-        if MovementQueue.currentWorkoutPosition > 0{
+        if  MovementQueue.isBreak == false{
+            MovementQueue.isBreak = false
             MovementQueue.currentWorkoutPosition -= 1
+            self.currentWorkoutID = MovementQueue.selectedMovesList[MovementQueue.currentWorkoutPosition]
+            performSegue(withIdentifier: "toNextMove", sender: nil)
+            skip = true
+        }
+        else if  MovementQueue.isBreak == true{
+            MovementQueue.isBreak = false
+            
             self.currentWorkoutID = MovementQueue.selectedMovesList[MovementQueue.currentWorkoutPosition]
             performSegue(withIdentifier: "toNextMove", sender: nil)
             skip = true
@@ -102,7 +124,7 @@ class WorkoutModeViewController: UIViewController {
         initializeWorkoutList()
         setCircleProgressBar()
        
-        if currentWorkoutID == 0{
+        if MovementQueue.currentWorkoutPosition == 0{
             reverseBackButton.isHidden = true
             reverseBackImage.isHidden = true
         }
@@ -146,15 +168,17 @@ class WorkoutModeViewController: UIViewController {
                 //TIMER GEDENYA UDAH ABIS WAKTUNYA
                 Timer.invalidate()
                 self.totalTime.invalidate()
-                if self.skip == false && MovementQueue.currentWorkoutPosition < MovementQueue.selectedMovesList.count-1{
+                if self.skip == false && MovementQueue.currentWorkoutPosition < MovementQueue.selectedMovesList.count-1 && MovementQueue.isBreak == true{
+                    MovementQueue.isBreak = false
                     MovementQueue.currentWorkoutPosition += 1
                     self.currentWorkoutID = MovementQueue.selectedMovesList[MovementQueue.currentWorkoutPosition]
                     self.performSegue(withIdentifier: "toNextMove", sender: nil)
-               
-                    print("time has stopped")
-                  
-                }else{
+                }else if MovementQueue.currentWorkoutPosition == MovementQueue.selectedMovesList.count-1{
                     self.performSegue(withIdentifier: "toWorkoutComplete", sender: nil)
+                   
+                }else if MovementQueue.isBreak == false{
+                    MovementQueue.isBreak = true
+                    self.performSegue(withIdentifier: "toNextMove", sender: nil)
                 }
                
                 
@@ -183,8 +207,14 @@ class WorkoutModeViewController: UIViewController {
         //currentWorkoutPosition = urutan workout yang mau dijalanin
         //currentWorkoutID = ID workout yang mau dijalanin
         currentWorkoutList = MovementQueue.selectedMovesList
-        currentWorkoutID = MovementQueue.data[MovementQueue.currentWorkoutPosition].movementIDGenerate
-        activityTitleLabel.text = MovementQueue.data[MovementQueue.currentWorkoutPosition].namaMovementGenerate
+        currentWorkoutID = MovementQueue.MovementList.data[MovementQueue.currentWorkoutPosition].movementIDGenerate
+        if MovementQueue.isBreak == false{
+           
+            activityTitleLabel.text = MovementQueue.MovementList.data[MovementQueue.currentWorkoutPosition].namaMovementGenerate
+        } else{
+            activityTitleLabel.text = "Break"
+        }
+       
     }
     
     
