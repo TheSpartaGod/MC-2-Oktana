@@ -558,7 +558,6 @@
 				999468762672FE7100302000 /* FocusedView.swift in Sources */,
 				B73E1C362672121C00054685 /* ProgressPageViewController.swift in Sources */,
 				990A06FE26778AD6002B0ACF /* customLeftSegue.swift in Sources */,
-				B71903A5266FDE3200D34212 /* Movement+CoreDataClass.swift in Sources */,
 				E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */,
 				B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */,
 				B759728726768AA900A36236 /* BoardingPageViewController.swift in Sources */,

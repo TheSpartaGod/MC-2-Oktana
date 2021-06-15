@@ -6,79 +6,12 @@
 //
 
 import Foundation
-
+import CoreData
 struct MovementQueue{
-   static var data = [MovementGenerate(
-                    movementIDGenerate: 0,
-                    category: 0,
-                                 iconMovementGenerate: "",
-                                 animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                 ],
-                                 namaMovementGenerate: "Side Jab",
-                                 instructionsGenerate: [
-                                    InstructionsGenerate(instructions: "sidejab1"),
-                                    InstructionsGenerate(instructions: "sidejab2")
-                                 ],
-                                 calorieBurnGenerate: 80,
-                                 costEPGenerate: 120
-                                ),
-                        
-                                
-                MovementGenerate(
-                                movementIDGenerate: 1,
-                    category: 1,
-                                             iconMovementGenerate: "",
-                                             animationMovementGenerate: [
-                                                AnimationGenerate(animationFrame: ""),
-                                                AnimationGenerate(animationFrame: "")
-                                             ],
-                                             namaMovementGenerate: "Squat",
-                                             instructionsGenerate: [
-                                                InstructionsGenerate(instructions: "do squats 1"),
-                                                InstructionsGenerate(instructions: "do squat2 ")
-                                             ],
-                                             calorieBurnGenerate: 80,
-                                             costEPGenerate: 140
-                                            ),
-                MovementGenerate(
-                                movementIDGenerate: 2,
-                    category: 3,
-                                             iconMovementGenerate: "",
-                                             animationMovementGenerate: [
-                                                AnimationGenerate(animationFrame: ""),
-                                                AnimationGenerate(animationFrame: "")
-                                             ],
-                                             namaMovementGenerate: "Pushup",
-                                             instructionsGenerate: [
-                                                InstructionsGenerate(instructions: "do pushup 1"),
-                                                InstructionsGenerate(instructions: "do pushup2 ")
-                                             ],
-                                             calorieBurnGenerate: 80,
-                                             costEPGenerate: 140
-                                            ),
-                MovementGenerate(
-                                movementIDGenerate: 3,
-                    category: 3,
-                                             iconMovementGenerate: "",
-                                             animationMovementGenerate: [
-                                                AnimationGenerate(animationFrame: ""),
-                                                AnimationGenerate(animationFrame: "")
-                                             ],
-                                             namaMovementGenerate: "Kick",
-                                             instructionsGenerate: [
-                                                InstructionsGenerate(instructions: "do kick1"),
-                                                InstructionsGenerate(instructions: "do kick2 ")
-                                             ],
-                                             calorieBurnGenerate: 80,
-                                             costEPGenerate: 140
-                                            )
-
-                
-    ]
+    static var currentUser = User()
     static var selectedMoves : [[Int]] = [[],[],[],[]] // untuk dimasukkin di movement list
     static var selectedMovesList : [Int] = [] //untuk dimasukkin di workout MODE
+    
     static var currentWorkoutPosition : Int = 0
     static var totalTimerActive: Bool = false
     static var currentTotalTime : Int = 0

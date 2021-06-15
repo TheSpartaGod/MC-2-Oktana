@@ -11,12 +11,16 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+      
+        
         return true
     }
+    
 
     // MARK: UISceneSession Lifecycle
 
@@ -60,6 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
+    
 
     // MARK: - Core Data Saving support
 
@@ -74,6 +79,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+    func initializeUserData(){
+  
+        var userIsMade : Bool = false
+        
+        
+        
+        
+        do{
+            userIsMade = try context.fetch(User.fetchRequest()).count > 0
+        } catch{
+            
+        }
+        if userIsMade == false{
+            
         }
     }
 
