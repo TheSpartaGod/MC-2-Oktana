@@ -27,6 +27,9 @@ class WorkoutViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if CoreDataManager.shared.fetchUser() == nil{
+            performSegue(withIdentifier: "showOnboarding", sender: self)
+        }
         self.navigationController?.isNavigationBarHidden = true
         configElements()
         
@@ -34,8 +37,58 @@ class WorkoutViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func configElements(){
-
+        //MARK: ENERGY STREAK VIEW
+        streakCountLabel.text = "0"
+        energyPointLabel.text = "0"
+       
+    
+            let opUser = CoreDataManager.shared.fetchUser()
+            if opUser == nil{
+                print("nil")
+            }else{
+                streakCountLabel.text = String(opUser!.total_streaks)
+                energyPointLabel.text = String(opUser!.energy_points)
+            }
+            
         
+       
+        
+        energyStreakView.layer.cornerRadius = 5
+        energyStreakView.layer.masksToBounds = true
+        energyStreakView.backgroundColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1.00)
+       
+        //MARK: BIG START BUTTON
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
+        startWorkoutButton.layer.cornerRadius = startWorkoutButton.frame.size.width/2
+        startWorkoutButton.addGestureRecognizer(tapGestureRecognizer)
+        
+        //MARK: OTHERS
+        baseView.backgroundColor = UIColor(red: 0.18, green: 0.17, blue: 0.17, alpha: 1.00)
+        
+        mainWorkoutLabel.textColor = UIColor(red: 0.66, green: 0.87, blue: 0.30, alpha: 1.00)
+    
+        //MARK: PROGRESS BAR
+        progressBarBase.layer.cornerRadius = 5
+        progressBarFill.layer.cornerRadius = 5
+        
+        //MARK: BOTTOM CARD
+        configBottomCard()
+        checkWorkout()
+        // check apakah user pernah ngelakuin workout
+               
+      
+      //ubah menjadi lingkaran
+    
+    }
+    func checkWorkout(){
+        var hasDoneWorkouts : Bool
+        if let workouts = CoreDataManager.shared.fetchAllWorkoutData(){
+            timeCardView.cardValueLabel.text = String(workouts[workouts.count-1].totalTime)
+            calorieCardView.cardValueLabel.text = String(workouts[workouts.count-1].totalCalories)
+        }
+        
+    }
+    func configBottomCard(){
         timeCardView.cardTitleLabel.text = "Time"
         timeCardView.cardIcon.image = UIImage(systemName: "stopwatch")
         

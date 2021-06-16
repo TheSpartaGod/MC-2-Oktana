@@ -25,7 +25,22 @@ class WorkoutCompleteViewController: UIViewController {
         configElements()
         // Do any additional setup after loading the view.
     }
-    
+    func saveWorkout(){
+        //create new workout object
+        
+        if let user = CoreDataManager.shared.fetchUser() {
+            let newWorkout = CoreDataManager.shared.addWorkouttoUser(user: user, time: Int(MovementQueue.currentTotalTime), heart_rate: 150, calories: 150, date: Date())
+        } else {
+            print("error in saving workout")
+            return
+        }
+      
+        //set workout object attribute
+        
+        
+  
+        
+    }
     func configElements(){
         let (m,s) = MovementQueue.secondsToMinutesSeconds(seconds: MovementQueue.currentTotalTime)
         timeCardView.cardTitleLabel.text = "Total Time"
