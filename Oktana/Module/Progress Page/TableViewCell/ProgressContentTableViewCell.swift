@@ -9,6 +9,8 @@ import UIKit
 
 class ProgressContentTableViewCell: UITableViewCell  {
     
+    var workoutData: [Workout]?
+    
     
 
     @IBOutlet weak var ContentCollectionView: UICollectionView!
@@ -27,16 +29,15 @@ class ProgressContentTableViewCell: UITableViewCell  {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func getCellSize() -> CGSize {
         let paddingSpace = sectionInsets.left + sectionInsets.right
         let availableWidth = ContentCollectionView.frame.width - paddingSpace - 5
         let itemWidth = availableWidth / 2
-        return CGSize(width: itemWidth, height: 120)
+        return CGSize(width: itemWidth, height: 140)
     }
+     
     
 }
 
@@ -48,9 +49,66 @@ extension ProgressContentTableViewCell:UICollectionViewDataSource, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = ContentCollectionView.dequeueReusableCell(withReuseIdentifier: "contentCell", for: indexPath) as! ContentCollectionViewCell
         
-        return cell
+        switch indexPath.row {
+        case 0:
+            var total: Int = 0
+            if let data = workoutData {
+                total = data.count
+            }
+            
+            let cell = ContentCollectionView.dequeueReusableCell(withReuseIdentifier: "contentCell", for: indexPath) as! ContentCollectionViewCell
+                    cell.title = "Workout"
+                    cell.numbers = "\(total)x"
+                    cell.image = UIImage(named: "workout")
+                    return cell
+        case 1:
+            
+            var total: Float = 0
+            if let data = workoutData {
+                for workout in data {
+                    total += Float(workout.totalTime)
+                }
+                total = total/60
+            }
+            
+            let cell = ContentCollectionView.dequeueReusableCell(withReuseIdentifier: "contentCell", for: indexPath) as! ContentCollectionViewCell
+                    cell.title = "Time"
+            cell.numbers = "\(String(format: "%.1f", total))min"
+                    cell.image = UIImage(named: "time")
+                    return cell
+        case 2:
+            var total: Int = 0
+            if let data = workoutData {
+                for workout in data {
+                    total += Int(workout.totalCalories)
+                }
+            }
+            
+            let cell = ContentCollectionView.dequeueReusableCell(withReuseIdentifier: "contentCell", for: indexPath) as! ContentCollectionViewCell
+                    cell.title = "Calories"
+                    cell.numbers = "\(total) kcal"
+                    cell.image = UIImage(named: "calories")
+                    return cell
+        case 3:
+            var total: Int = 0
+            if let data = workoutData {
+                for workout in data {
+                    total += Int(workout.avgHeartRate)
+                }
+                total = total / data.count
+            }
+            
+            let cell = ContentCollectionView.dequeueReusableCell(withReuseIdentifier: "contentCell", for: indexPath) as! ContentCollectionViewCell
+                    cell.title = "Average Heart Beat"
+                    cell.numbers = "\(total)bpm"
+                    cell.image = UIImage(named: "hearrate")
+                    return cell
+        default:
+            let cell = ContentCollectionView.dequeueReusableCell(withReuseIdentifier: "contentCell", for: indexPath) as! ContentCollectionViewCell
+            return cell
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
