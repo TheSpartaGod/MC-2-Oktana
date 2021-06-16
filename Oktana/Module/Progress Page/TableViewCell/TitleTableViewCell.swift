@@ -7,13 +7,7 @@
 
 import UIKit
 
-protocol TitleTableViewCellDelegate {
-    func takeTestButtonAction()
-}
-
 class TitleTableViewCell: UITableViewCell {
-    
-    var delegate: TitleTableViewCellDelegate?
 
     @IBOutlet weak var takeTestButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
@@ -27,17 +21,6 @@ class TitleTableViewCell: UITableViewCell {
         didSet {
             takeTestButton.isHidden = isTestButtonExist
         }
-    }
-    
-    
-    @IBAction func takeTest(_ sender: Any) {
-        print("button tapper")
-        if let user = CoreDataManager.shared.fetchUser(){
-            CoreDataManager.shared.addWorkouttoUser(user: user, time: 22, heart_rate: 123, calories: 77, date: Date())
-            CoreDataManager.shared.addWorkouttoUser(user: user, time: 22, heart_rate: 123, calories: 77, date: Date())
-            CoreDataManager.shared.addFitnesstoUser(user: user, cardio: 12, upperStrength: 13, coreStrength: 14, lowerStrength: 15)
-        }
-        
     }
     
     override func awakeFromNib() {
