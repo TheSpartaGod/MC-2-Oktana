@@ -8,6 +8,24 @@
 import UIKit
 
 class ContentCollectionViewCell: UICollectionViewCell {
+    
+    var title: String?{
+        didSet {
+            titleLabel.text = title
+        }
+    }
+    
+    var numbers: String?{
+        didSet {
+            dataLabel.text = numbers
+        }
+    }
+    
+    var image: UIImage?{
+        didSet {
+            icon.image = image
+        }
+    }
 
     
     @IBOutlet weak var view: UIView!

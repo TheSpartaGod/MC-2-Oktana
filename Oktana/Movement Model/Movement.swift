@@ -27,6 +27,13 @@ struct AnimationGenerate {
     var animationFrame: String
 }
 
+struct fitnessProgressGenerate {
+    var title: String
+    var benchmark: Float
+    var currentTestData: Int?
+    var previousTestData: Int?
+}
+
 /*
  1. Jab & Straight
  2. Hook & Uppercut

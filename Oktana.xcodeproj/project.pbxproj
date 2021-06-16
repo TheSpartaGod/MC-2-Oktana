@@ -46,7 +46,6 @@
 		B737A1452670F25800DDD4A8 /* Fitness+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737A1432670F25800DDD4A8 /* Fitness+CoreDataProperties.swift */; };
 		B737A14B267118B400DDD4A8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B737A14A267118B400DDD4A8 /* HealthKit.framework */; };
 		B737A14D2671204F00DDD4A8 /* HealthKitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737A14C2671204F00DDD4A8 /* HealthKitStore.swift */; };
-		B73E1C362672121C00054685 /* ProgressPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E1C352672121C00054685 /* ProgressPageViewController.swift */; };
 		B73E1C382672539B00054685 /* SkillTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E1C372672539B00054685 /* SkillTreeViewController.swift */; };
 		B73E1C3A2672614600054685 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = B73E1C392672614600054685 /* View.xib */; };
 		B73E1C3E2672902400054685 /* AlertUnlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E1C3C2672902400054685 /* AlertUnlockViewController.swift */; };
@@ -196,7 +195,6 @@
 		B737A148267118B400DDD4A8 /* OktanaDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OktanaDebug.entitlements; sourceTree = "<group>"; };
 		B737A14A267118B400DDD4A8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B737A14C2671204F00DDD4A8 /* HealthKitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitStore.swift; sourceTree = "<group>"; };
-		B73E1C352672121C00054685 /* ProgressPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPageViewController.swift; sourceTree = "<group>"; };
 		B73E1C372672539B00054685 /* SkillTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTreeViewController.swift; sourceTree = "<group>"; };
 		B73E1C392672614600054685 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		B73E1C3C2672902400054685 /* AlertUnlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUnlockViewController.swift; sourceTree = "<group>"; };
@@ -551,7 +549,6 @@
 			isa = PBXGroup;
 			children = (
 				B7C7A195266E937B007DB473 /* Progress.storyboard */,
-				B73E1C352672121C00054685 /* ProgressPageViewController.swift */,
 				E25EAEAC2676E569001B270D /* TestCompleteView.storyboard */,
 				E256178B267150A400B96384 /* TestCompleteViewComtrollerViewController.swift */,
 				E24CA7952673134600D35810 /* ProgressViewController.swift */,
@@ -864,7 +861,6 @@
 				999468762672FE7100302000 /* FocusedView.swift in Sources */,
 				B7B5F6322677A97C00AE431C /* ProgressContentTableViewCell.swift in Sources */,
 				999468762672FE7100302000 /* FocusedView.swift in Sources */,
-				B73E1C362672121C00054685 /* ProgressPageViewController.swift in Sources */,
 				990A06FE26778AD6002B0ACF /* customLeftSegue.swift in Sources */,
 				E25617882670F37400B96384 /* LongMediumInfoCardView.swift in Sources */,
 				B7C7A14C266E7E38007DB473 /* AppDelegate.swift in Sources */,
