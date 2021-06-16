@@ -80,11 +80,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="currenTestLabel" destination="T3V-Wh-xtU" id="LNP-Y6-KXB"/>
                 <outlet property="currentTest" destination="AGY-92-qe1" id="6Gr-LF-0C6"/>
-                <outlet property="lastTestLabel" destination="aP1-pC-658" id="ZcT-ef-KD4"/>
                 <outlet property="previousTest" destination="WSS-qs-zfu" id="AnB-EN-bge"/>
-                <outlet property="titleLabel" destination="Tcc-Db-zZn" id="pDL-89-VxL"/>
                 <outlet property="view" destination="jgW-DV-0yc" id="wpF-fL-HmE"/>
             </connections>
             <point key="canvasLocation" x="168.11594202898553" y="135.26785714285714"/>

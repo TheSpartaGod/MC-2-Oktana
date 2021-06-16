@@ -193,41 +193,7 @@ struct CoreDataManager {
             for fit in fitnesses as! [Fitness] {
                 fitnessData.append(fit)
             }
-            return fitnessData.count == 0 ? nil : fitnessData
-        }catch {
-            print("Could not fetch fitness data \(error.localizedDescription)")
-            return nil
-        }
-    }
-    
-    func fetchCurrentFitnessData() -> Fitness? {
-        let context = CoreDataManager.shared.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Fitness")
-        
-        do{
-            var fitnessData: [Fitness] = []
-            let fitnesses = try context.fetch(fetchRequest)
-            for fit in fitnesses as! [Fitness] {
-                fitnessData.append(fit)
-            }
-            return fitnessData.count == 0 ? nil : fitnessData.last
-        }catch {
-            print("Could not fetch fitness data \(error.localizedDescription)")
-            return nil
-        }
-    }
-    
-    func fetchPreviousFitnessData() -> Fitness? {
-        let context = CoreDataManager.shared.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Fitness")
-        
-        do{
-            var fitnessData: [Fitness] = []
-            let fitnesses = try context.fetch(fetchRequest)
-            for fit in fitnesses as! [Fitness] {
-                fitnessData.append(fit)
-            }
-            return fitnessData.count == 1 || fitnessData.count == 0 ? nil : fitnessData[fitnessData.count - 2]
+            return fitnessData
         }catch {
             print("Could not fetch fitness data \(error.localizedDescription)")
             return nil
