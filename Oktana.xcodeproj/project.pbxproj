@@ -10,6 +10,17 @@
 		990A06FA26764C20002B0ACF /* MovementQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A06F926764C20002B0ACF /* MovementQueue.swift */; };
 		990A06FC26776E15002B0ACF /* WorkoutComplete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990A06FB26776E15002B0ACF /* WorkoutComplete.storyboard */; };
 		990A06FE26778AD6002B0ACF /* customLeftSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A06FD26778AD6002B0ACF /* customLeftSegue.swift */; };
+		991D9B2F267A0CE000D8AA82 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991D9B2D267A0CE000D8AA82 /* Interface.storyboard */; };
+		991D9B31267A0CE400D8AA82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 991D9B30267A0CE400D8AA82 /* Assets.xcassets */; };
+		991D9B38267A0CE400D8AA82 /* OktanaWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 991D9B37267A0CE400D8AA82 /* OktanaWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		991D9B3D267A0CE400D8AA82 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D9B3C267A0CE400D8AA82 /* InterfaceController.swift */; };
+		991D9B3F267A0CE400D8AA82 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D9B3E267A0CE400D8AA82 /* ExtensionDelegate.swift */; };
+		991D9B41267A0CE400D8AA82 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D9B40267A0CE400D8AA82 /* NotificationController.swift */; };
+		991D9B43267A0CE400D8AA82 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D9B42267A0CE400D8AA82 /* ComplicationController.swift */; };
+		991D9B45267A0CE500D8AA82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 991D9B44267A0CE500D8AA82 /* Assets.xcassets */; };
+		991D9B51267A0CE500D8AA82 /* OktanaWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D9B50267A0CE500D8AA82 /* OktanaWatchTests.swift */; };
+		991D9B5C267A0CE500D8AA82 /* OktanaWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D9B5B267A0CE500D8AA82 /* OktanaWatchUITests.swift */; };
+		991D9B60267A0CE500D8AA82 /* OktanaWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 991D9B2B267A0CE000D8AA82 /* OktanaWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		999468742672FC0B00302000 /* FocusedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999468732672FC0B00302000 /* FocusedView.xib */; };
 		999468762672FE7100302000 /* FocusedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999468752672FE7100302000 /* FocusedView.swift */; };
 		99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926DA266F4A4E006A210A /* WorkoutViewController.swift */; };
@@ -81,10 +92,84 @@
 		E25EAEAD2676E569001B270D /* TestCompleteView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25EAEAC2676E569001B270D /* TestCompleteView.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		991D9B39267A0CE400D8AA82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C7A140266E7E38007DB473 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 991D9B36267A0CE400D8AA82;
+			remoteInfo = "OktanaWatch Extension";
+		};
+		991D9B4D267A0CE500D8AA82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C7A140266E7E38007DB473 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 991D9B36267A0CE400D8AA82;
+			remoteInfo = "OktanaWatch Extension";
+		};
+		991D9B58267A0CE500D8AA82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C7A140266E7E38007DB473 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 991D9B2A267A0CE000D8AA82;
+			remoteInfo = OktanaWatch;
+		};
+		991D9B5E267A0CE500D8AA82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C7A140266E7E38007DB473 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 991D9B2A267A0CE000D8AA82;
+			remoteInfo = OktanaWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		991D9B61267A0CE500D8AA82 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				991D9B60267A0CE500D8AA82 /* OktanaWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		991D9B64267A0CE500D8AA82 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				991D9B38267A0CE400D8AA82 /* OktanaWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		990A06F926764C20002B0ACF /* MovementQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementQueue.swift; sourceTree = "<group>"; };
 		990A06FB26776E15002B0ACF /* WorkoutComplete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkoutComplete.storyboard; sourceTree = "<group>"; };
 		990A06FD26778AD6002B0ACF /* customLeftSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customLeftSegue.swift; sourceTree = "<group>"; };
+		991D9B2B267A0CE000D8AA82 /* OktanaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OktanaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		991D9B2E267A0CE000D8AA82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		991D9B30267A0CE400D8AA82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		991D9B32267A0CE400D8AA82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		991D9B37267A0CE400D8AA82 /* OktanaWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OktanaWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		991D9B3C267A0CE400D8AA82 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		991D9B3E267A0CE400D8AA82 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		991D9B40267A0CE400D8AA82 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		991D9B42267A0CE400D8AA82 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		991D9B44267A0CE500D8AA82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		991D9B46267A0CE500D8AA82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		991D9B47267A0CE500D8AA82 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		991D9B4C267A0CE500D8AA82 /* OktanaWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OktanaWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		991D9B50267A0CE500D8AA82 /* OktanaWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OktanaWatchTests.swift; sourceTree = "<group>"; };
+		991D9B52267A0CE500D8AA82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		991D9B57267A0CE500D8AA82 /* OktanaWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OktanaWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		991D9B5B267A0CE500D8AA82 /* OktanaWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OktanaWatchUITests.swift; sourceTree = "<group>"; };
+		991D9B5D267A0CE500D8AA82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		999468732672FC0B00302000 /* FocusedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusedView.xib; sourceTree = "<group>"; };
 		999468752672FE7100302000 /* FocusedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedView.swift; sourceTree = "<group>"; };
 		99F926DA266F4A4E006A210A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +245,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		991D9B34267A0CE400D8AA82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		991D9B49267A0CE500D8AA82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		991D9B54267A0CE500D8AA82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7C7A145266E7E38007DB473 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -171,6 +277,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		991D9B2C267A0CE000D8AA82 /* OktanaWatch */ = {
+			isa = PBXGroup;
+			children = (
+				991D9B2D267A0CE000D8AA82 /* Interface.storyboard */,
+				991D9B30267A0CE400D8AA82 /* Assets.xcassets */,
+				991D9B32267A0CE400D8AA82 /* Info.plist */,
+			);
+			path = OktanaWatch;
+			sourceTree = "<group>";
+		};
+		991D9B3B267A0CE400D8AA82 /* OktanaWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				991D9B3C267A0CE400D8AA82 /* InterfaceController.swift */,
+				991D9B3E267A0CE400D8AA82 /* ExtensionDelegate.swift */,
+				991D9B40267A0CE400D8AA82 /* NotificationController.swift */,
+				991D9B42267A0CE400D8AA82 /* ComplicationController.swift */,
+				991D9B44267A0CE500D8AA82 /* Assets.xcassets */,
+				991D9B46267A0CE500D8AA82 /* Info.plist */,
+				991D9B47267A0CE500D8AA82 /* PushNotificationPayload.apns */,
+			);
+			path = "OktanaWatch Extension";
+			sourceTree = "<group>";
+		};
+		991D9B4F267A0CE500D8AA82 /* OktanaWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				991D9B50267A0CE500D8AA82 /* OktanaWatchTests.swift */,
+				991D9B52267A0CE500D8AA82 /* Info.plist */,
+			);
+			path = OktanaWatchTests;
+			sourceTree = "<group>";
+		};
+		991D9B5A267A0CE500D8AA82 /* OktanaWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				991D9B5B267A0CE500D8AA82 /* OktanaWatchUITests.swift */,
+				991D9B5D267A0CE500D8AA82 /* Info.plist */,
+			);
+			path = OktanaWatchUITests;
+			sourceTree = "<group>";
+		};
 		99F926E4266F9199006A210A /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +425,10 @@
 			isa = PBXGroup;
 			children = (
 				B7C7A14A266E7E38007DB473 /* Oktana */,
+				991D9B2C267A0CE000D8AA82 /* OktanaWatch */,
+				991D9B3B267A0CE400D8AA82 /* OktanaWatch Extension */,
+				991D9B4F267A0CE500D8AA82 /* OktanaWatchTests */,
+				991D9B5A267A0CE500D8AA82 /* OktanaWatchUITests */,
 				B7C7A149266E7E38007DB473 /* Products */,
 				B737A149267118B400DDD4A8 /* Frameworks */,
 			);
@@ -286,6 +438,10 @@
 			isa = PBXGroup;
 			children = (
 				B7C7A148266E7E38007DB473 /* Oktana.app */,
+				991D9B2B267A0CE000D8AA82 /* OktanaWatch.app */,
+				991D9B37267A0CE400D8AA82 /* OktanaWatch Extension.appex */,
+				991D9B4C267A0CE500D8AA82 /* OktanaWatchTests.xctest */,
+				991D9B57267A0CE500D8AA82 /* OktanaWatchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -455,6 +611,76 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		991D9B2A267A0CE000D8AA82 /* OktanaWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 991D9B6C267A0CE500D8AA82 /* Build configuration list for PBXNativeTarget "OktanaWatch" */;
+			buildPhases = (
+				991D9B29267A0CE000D8AA82 /* Resources */,
+				991D9B64267A0CE500D8AA82 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				991D9B3A267A0CE400D8AA82 /* PBXTargetDependency */,
+			);
+			name = OktanaWatch;
+			productName = OktanaWatch;
+			productReference = 991D9B2B267A0CE000D8AA82 /* OktanaWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		991D9B36267A0CE400D8AA82 /* OktanaWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 991D9B6B267A0CE500D8AA82 /* Build configuration list for PBXNativeTarget "OktanaWatch Extension" */;
+			buildPhases = (
+				991D9B33267A0CE400D8AA82 /* Sources */,
+				991D9B34267A0CE400D8AA82 /* Frameworks */,
+				991D9B35267A0CE400D8AA82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OktanaWatch Extension";
+			productName = "OktanaWatch Extension";
+			productReference = 991D9B37267A0CE400D8AA82 /* OktanaWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		991D9B4B267A0CE500D8AA82 /* OktanaWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 991D9B6D267A0CE500D8AA82 /* Build configuration list for PBXNativeTarget "OktanaWatchTests" */;
+			buildPhases = (
+				991D9B48267A0CE500D8AA82 /* Sources */,
+				991D9B49267A0CE500D8AA82 /* Frameworks */,
+				991D9B4A267A0CE500D8AA82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				991D9B4E267A0CE500D8AA82 /* PBXTargetDependency */,
+			);
+			name = OktanaWatchTests;
+			productName = OktanaWatchTests;
+			productReference = 991D9B4C267A0CE500D8AA82 /* OktanaWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		991D9B56267A0CE500D8AA82 /* OktanaWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 991D9B6E267A0CE500D8AA82 /* Build configuration list for PBXNativeTarget "OktanaWatchUITests" */;
+			buildPhases = (
+				991D9B53267A0CE500D8AA82 /* Sources */,
+				991D9B54267A0CE500D8AA82 /* Frameworks */,
+				991D9B55267A0CE500D8AA82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				991D9B59267A0CE500D8AA82 /* PBXTargetDependency */,
+			);
+			name = OktanaWatchUITests;
+			productName = OktanaWatchUITests;
+			productReference = 991D9B57267A0CE500D8AA82 /* OktanaWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		B7C7A147266E7E38007DB473 /* Oktana */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7C7A15F266E7E39007DB473 /* Build configuration list for PBXNativeTarget "Oktana" */;
@@ -462,10 +688,12 @@
 				B7C7A144266E7E38007DB473 /* Sources */,
 				B7C7A145266E7E38007DB473 /* Frameworks */,
 				B7C7A146266E7E38007DB473 /* Resources */,
+				991D9B61267A0CE500D8AA82 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				991D9B5F267A0CE500D8AA82 /* PBXTargetDependency */,
 			);
 			name = Oktana;
 			productName = Oktana;
@@ -478,9 +706,23 @@
 		B7C7A140266E7E38007DB473 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					991D9B2A267A0CE000D8AA82 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					991D9B36267A0CE400D8AA82 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					991D9B4B267A0CE500D8AA82 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 991D9B36267A0CE400D8AA82;
+					};
+					991D9B56267A0CE500D8AA82 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 991D9B2A267A0CE000D8AA82;
+					};
 					B7C7A147266E7E38007DB473 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -500,11 +742,46 @@
 			projectRoot = "";
 			targets = (
 				B7C7A147266E7E38007DB473 /* Oktana */,
+				991D9B2A267A0CE000D8AA82 /* OktanaWatch */,
+				991D9B36267A0CE400D8AA82 /* OktanaWatch Extension */,
+				991D9B4B267A0CE500D8AA82 /* OktanaWatchTests */,
+				991D9B56267A0CE500D8AA82 /* OktanaWatchUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		991D9B29267A0CE000D8AA82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				991D9B31267A0CE400D8AA82 /* Assets.xcassets in Resources */,
+				991D9B2F267A0CE000D8AA82 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		991D9B35267A0CE400D8AA82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				991D9B45267A0CE500D8AA82 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		991D9B4A267A0CE500D8AA82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		991D9B55267A0CE500D8AA82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7C7A146266E7E38007DB473 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -542,6 +819,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		991D9B33267A0CE400D8AA82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				991D9B41267A0CE400D8AA82 /* NotificationController.swift in Sources */,
+				991D9B43267A0CE400D8AA82 /* ComplicationController.swift in Sources */,
+				991D9B3F267A0CE400D8AA82 /* ExtensionDelegate.swift in Sources */,
+				991D9B3D267A0CE400D8AA82 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		991D9B48267A0CE500D8AA82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				991D9B51267A0CE500D8AA82 /* OktanaWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		991D9B53267A0CE500D8AA82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				991D9B5C267A0CE500D8AA82 /* OktanaWatchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7C7A144266E7E38007DB473 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -597,7 +901,38 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		991D9B3A267A0CE400D8AA82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 991D9B36267A0CE400D8AA82 /* OktanaWatch Extension */;
+			targetProxy = 991D9B39267A0CE400D8AA82 /* PBXContainerItemProxy */;
+		};
+		991D9B4E267A0CE500D8AA82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 991D9B36267A0CE400D8AA82 /* OktanaWatch Extension */;
+			targetProxy = 991D9B4D267A0CE500D8AA82 /* PBXContainerItemProxy */;
+		};
+		991D9B59267A0CE500D8AA82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 991D9B2A267A0CE000D8AA82 /* OktanaWatch */;
+			targetProxy = 991D9B58267A0CE500D8AA82 /* PBXContainerItemProxy */;
+		};
+		991D9B5F267A0CE500D8AA82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 991D9B2A267A0CE000D8AA82 /* OktanaWatch */;
+			targetProxy = 991D9B5E267A0CE500D8AA82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		991D9B2D267A0CE000D8AA82 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				991D9B2E267A0CE000D8AA82 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		B7C7A159266E7E39007DB473 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -609,6 +944,178 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		991D9B62267A0CE500D8AA82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = OktanaWatch_Extension;
+				INFOPLIST_FILE = OktanaWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloperAcademyBinus.Oktana.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		991D9B63267A0CE500D8AA82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = OktanaWatch_Extension;
+				INFOPLIST_FILE = OktanaWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloperAcademyBinus.Oktana.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		991D9B65267A0CE500D8AA82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P289J6CTPZ;
+				INFOPLIST_FILE = "OktanaWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloperAcademyBinus.Oktana.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		991D9B66267A0CE500D8AA82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P289J6CTPZ;
+				INFOPLIST_FILE = "OktanaWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloperAcademyBinus.Oktana.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		991D9B67267A0CE500D8AA82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P289J6CTPZ;
+				INFOPLIST_FILE = OktanaWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloperAcademyBinus.Oktana.OktanaWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OktanaWatch Extension.appex/OktanaWatch Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		991D9B68267A0CE500D8AA82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P289J6CTPZ;
+				INFOPLIST_FILE = OktanaWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloperAcademyBinus.Oktana.OktanaWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OktanaWatch Extension.appex/OktanaWatch Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		991D9B69267A0CE500D8AA82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P289J6CTPZ;
+				INFOPLIST_FILE = OktanaWatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloperAcademyBinus.Oktana.OktanaWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = OktanaWatch;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		991D9B6A267A0CE500D8AA82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P289J6CTPZ;
+				INFOPLIST_FILE = OktanaWatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppleDeveloperAcademyBinus.Oktana.OktanaWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = OktanaWatch;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
 		B7C7A15D266E7E39007DB473 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -767,6 +1274,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		991D9B6B267A0CE500D8AA82 /* Build configuration list for PBXNativeTarget "OktanaWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				991D9B65267A0CE500D8AA82 /* Debug */,
+				991D9B66267A0CE500D8AA82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		991D9B6C267A0CE500D8AA82 /* Build configuration list for PBXNativeTarget "OktanaWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				991D9B62267A0CE500D8AA82 /* Debug */,
+				991D9B63267A0CE500D8AA82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		991D9B6D267A0CE500D8AA82 /* Build configuration list for PBXNativeTarget "OktanaWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				991D9B67267A0CE500D8AA82 /* Debug */,
+				991D9B68267A0CE500D8AA82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		991D9B6E267A0CE500D8AA82 /* Build configuration list for PBXNativeTarget "OktanaWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				991D9B69267A0CE500D8AA82 /* Debug */,
+				991D9B6A267A0CE500D8AA82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B7C7A143266E7E38007DB473 /* Build configuration list for PBXProject "Oktana" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
