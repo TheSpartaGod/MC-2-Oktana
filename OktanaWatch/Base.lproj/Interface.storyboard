@@ -20,7 +20,7 @@
                         </group>
                         <group width="136" height="74" alignment="center" verticalAlignment="center" id="wOe-cg-hH5">
                             <items>
-                                <button width="0.29999999999999999" height="45" alignment="center" verticalAlignment="center" backgroundImage="play.fill" catalog="system" id="iNd-c6-G1f">
+                                <button width="0.29999999999999999" height="45" alignment="center" verticalAlignment="center" backgroundImage="pause.fill" catalog="system" id="iNd-c6-G1f">
                                     <color key="backgroundColor" red="0.70438355210000003" green="0.8600926995" blue="0.38812598590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <connections>
                                         <action selector="onPlayPauseBtnClick" destination="AgC-eL-Hgc" id="od1-k6-v5A"/>
@@ -28,22 +28,41 @@
                                 </button>
                                 <button width="0.29999999999999999" height="45" alignment="right" verticalAlignment="center" backgroundImage="chevron.right" catalog="system" id="9BC-rA-Eru">
                                     <color key="backgroundColor" red="0.70438355210000003" green="0.8600926995" blue="0.38812598590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="onForwardSkipBtnClick" destination="AgC-eL-Hgc" id="LJk-A5-cgw"/>
+                                    </connections>
                                 </button>
                                 <button width="39" height="45" alignment="left" verticalAlignment="center" backgroundImage="chevron.left" catalog="system" id="HOe-43-Kin">
                                     <color key="backgroundColor" red="0.70438355210000003" green="0.8600926995" blue="0.38812598590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="onReverseBackBtnClick" destination="AgC-eL-Hgc" id="T8t-Dq-eQm"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" verticalAlignment="bottom" id="aI7-kz-aDf">
+                            <items>
+                                <label alignment="left" text="heart" id="xgC-Mp-e9N"/>
+                                <button width="34" height="31" alignment="right" verticalAlignment="center" backgroundImage="xmark.circle" catalog="system" id="2Bv-z4-wFm">
+                                    <color key="backgroundColor" red="0.70047718290000005" green="0.86009114980000001" blue="0.38812610510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="onFinishBtnClick" destination="AgC-eL-Hgc" id="hai-MA-ljq"/>
+                                    </connections>
                                 </button>
                             </items>
                         </group>
                     </items>
                     <connections>
+                        <outlet property="finishBtn" destination="2Bv-z4-wFm" id="mmm-BC-QDp"/>
                         <outlet property="forwardSkipButton" destination="9BC-rA-Eru" id="YDa-RZ-isr"/>
+                        <outlet property="heartRateLabel" destination="xgC-Mp-e9N" id="xko-RU-6gk"/>
                         <outlet property="playPauseBtn" destination="iNd-c6-G1f" id="9QC-lV-HbM"/>
                         <outlet property="reverseBackBtn" destination="HOe-43-Kin" id="iOt-7k-U8m"/>
                         <outlet property="workoutTitleLabel" destination="Rzz-MX-ZhV" id="m4Y-ig-PNN"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="363"/>
+            <point key="canvasLocation" x="220" y="359.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -80,6 +99,7 @@
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="play.fill" catalog="system" width="115" height="128"/>
+        <image name="pause.fill" catalog="system" width="119" height="128"/>
+        <image name="xmark.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

@@ -46,9 +46,9 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Root</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>Oktana watns to access your health data in order to your helath</string>
+	<string>Oktana wants access to your health data for monitoring heart rate and calories burned.</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>Oktana watns to access your health data in order to your helath</string>
+	<string>Oktana wants access to your health data for monitoring heart rate and calories burned.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

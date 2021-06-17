@@ -18,6 +18,7 @@ class WorkoutCompleteViewController: UIViewController {
    
     @IBAction func onDoneButtonClick(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
+        saveWorkout()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,12 @@ class WorkoutCompleteViewController: UIViewController {
         
         if let user = CoreDataManager.shared.fetchUser() {
             let newWorkout = CoreDataManager.shared.addWorkouttoUser(user: user, time: Int(MovementQueue.currentTotalTime), heart_rate: 150, calories: 150, date: Date())
+            let newPoint =  user.energy_points + Int64(((MovementQueue.currentTotalTime/60) * 2))
+            CoreDataManager.shared.updatePointUser(user: user, point: Int(newPoint))
+          // add energy points to user
+      
+          // let allWorkout =  CoreDataManager.shared.fetchAllWorkoutData()
+            //print(allWorkout?.count)
         } else {
             print("error in saving workout")
             return
@@ -65,7 +72,7 @@ class WorkoutCompleteViewController: UIViewController {
 
         energyCardView.cardTitleLabel.text = "Energy Point"
         energyCardView.cardIcon.image = UIImage(systemName: "bolt")
-        energyCardView.cardValueLabel.text = "+30"
+        energyCardView.cardValueLabel.text = "\((MovementQueue.currentTotalTime/60) * 2)"
         energyCardView.layer.cornerRadius = 8
         energyCardView.clipsToBounds = true
 
