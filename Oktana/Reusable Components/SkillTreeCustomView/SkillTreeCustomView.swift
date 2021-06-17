@@ -8,13 +8,14 @@
 import UIKit
 
 protocol SkillTreeCustomViewDelegate {
-    func didUnlock(name: String, icon: UIImage)
+    func didUnlock(data: MovementGenerate)
 }
 
 class SkillTreeCustomView: UIView {
     
     var delegate: SkillTreeCustomViewDelegate?
     
+    var movementData: MovementGenerate?
 
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var polygon: UIImageView!
@@ -45,21 +46,24 @@ class SkillTreeCustomView: UIView {
     
     @objc private func didTapView(_ sender: UITapGestureRecognizer){
         print("view tapped")
-        guard let nameData = movementName.text, let iconData = movementIcon.image else {
+        guard let data = movementData else {
             print("no-data on the view")
             return
         }
-        delegate?.didUnlock(name: nameData, icon: iconData)
+        delegate?.didUnlock(data: data)
 
     }
     
-    func setData(data: MovementGenerate, color: UIColor){
+    func setData(data: MovementGenerate, color: UIColor, iconColor: UIColor, icon: UIImage){
+        
+        movementData = data
         
         if let icon = UIImage(named: data.iconMovementGenerate){
             movementIcon.image = icon
         }
         movementName.text = data.namaMovementGenerate
         polygon.tintColor = color
+        movementIcon.tintColor = iconColor
+        movementIcon.image = icon
     }
-
 }

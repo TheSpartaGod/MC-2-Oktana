@@ -72,6 +72,36 @@ struct CoreDataManager {
         }
     }
     
+    func updatePointUser(user: User, point: Int) -> User? {
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        
+        do {
+            user.setValue(point, forKey: "energy_points")
+            do {
+                try context.save()
+                return user
+            } catch  {
+                print(error.localizedDescription)
+                return nil
+            }
+        }
+    }
+    
+    func updateStreaksUser(user: User, streaks: Int) -> User? {
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        
+        do {
+            user.setValue(streaks, forKey: "total_streaks")
+            do {
+                try context.save()
+                return user
+            } catch  {
+                print(error.localizedDescription)
+                return nil
+            }
+        }
+    }
+    
     // Call this function when user unlocked a movement to add movement on the list
     func addMovementtoUser(user: User, movementID: Int){
         let context = CoreDataManager.shared.persistentContainer.viewContext
@@ -193,7 +223,41 @@ struct CoreDataManager {
             for fit in fitnesses as! [Fitness] {
                 fitnessData.append(fit)
             }
-            return fitnessData
+            return fitnessData.count == 0 ? nil : fitnessData
+        }catch {
+            print("Could not fetch fitness data \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
+    func fetchCurrentFitnessData() -> Fitness? {
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Fitness")
+        
+        do{
+            var fitnessData: [Fitness] = []
+            let fitnesses = try context.fetch(fetchRequest)
+            for fit in fitnesses as! [Fitness] {
+                fitnessData.append(fit)
+            }
+            return fitnessData.count == 0 ? nil : fitnessData.last
+        }catch {
+            print("Could not fetch fitness data \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
+    func fetchPreviousFitnessData() -> Fitness? {
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Fitness")
+        
+        do{
+            var fitnessData: [Fitness] = []
+            let fitnesses = try context.fetch(fetchRequest)
+            for fit in fitnesses as! [Fitness] {
+                fitnessData.append(fit)
+            }
+            return fitnessData.count == 1 || fitnessData.count == 0 ? nil : fitnessData[fitnessData.count - 2]
         }catch {
             print("Could not fetch fitness data \(error.localizedDescription)")
             return nil
