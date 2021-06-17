@@ -7,8 +7,10 @@
 
 import UIKit
 import HealthKit
-
-class WorkoutViewController: UIViewController {
+import WatchConnectivity
+class WorkoutViewController: UIViewController, WCSessionDelegate {
+  
+    
     
     @IBOutlet var baseView: UIView!
     @IBOutlet weak var energyStreakView: UIView!
@@ -21,7 +23,11 @@ class WorkoutViewController: UIViewController {
     @IBOutlet weak var energyPointLabel: UILabel!
     @IBOutlet weak var timeCardView: MediumInfoCardView!
     @IBOutlet weak var calorieCardView: MediumInfoCardView!
+    var session : WCSession!
     @objc func didTapView(_ sender: UITapGestureRecognizer){//add gesture recognizer untuk button biar move ke workout detail
+        session.sendMessage(["Message" : "bruh"], replyHandler: nil) { (error) in
+            print(error.localizedDescription)
+        }
         performSegue(withIdentifier: "homeToDetail", sender: nil)
     }
    
@@ -122,11 +128,40 @@ class WorkoutViewController: UIViewController {
         
         startWorkoutButton.layer.cornerRadius = startWorkoutButton.frame.size.width/2
         startWorkoutButton.addGestureRecognizer(tapGestureRecognizer)
+        showWatchApp()
       //ubah menjadi lingkaran
     
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.tabBarController?.tabBar.isHidden = false
+    }
+    func showWatchApp(){
+        
+        if WCSession.isSupported() {
+            session = WCSession.default
+            session.delegate = self
+            session.activate()
+            print(session.isReachable)
+         
+        }
+      
+    }
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        DispatchQueue.main.async {
+            self.mainWorkoutLabel.text = message["pog"] as? String
+        }
+        
     }
     
     
