@@ -36,7 +36,7 @@ class StreakPointView: UIView {
     }
     
     func setData(user: User){
-        totalStreakLabel.text = "\(user.total_streaks)"
+        totalStreakLabel.text = "\(user.total_streaks) days"
         totalPointLabel.text = "\(user.energy_points)"
     }
     

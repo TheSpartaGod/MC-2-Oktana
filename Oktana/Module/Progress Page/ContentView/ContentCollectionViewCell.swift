@@ -15,6 +15,12 @@ class ContentCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    var thisweek: String?{
+        didSet {
+            thisWeekDataLabel.text = thisweek
+        }
+    }
+    
     var numbers: String?{
         didSet {
             dataLabel.text = numbers

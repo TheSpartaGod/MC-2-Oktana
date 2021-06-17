@@ -60,6 +60,7 @@ extension ProgressContentTableViewCell:UICollectionViewDataSource, UICollectionV
             let cell = ContentCollectionView.dequeueReusableCell(withReuseIdentifier: "contentCell", for: indexPath) as! ContentCollectionViewCell
                     cell.title = "Workout"
                     cell.numbers = "\(total)x"
+                    cell.thisweek = "\(total)"
                     cell.image = UIImage(named: "workout")
                     return cell
         case 1:
@@ -74,7 +75,8 @@ extension ProgressContentTableViewCell:UICollectionViewDataSource, UICollectionV
             
             let cell = ContentCollectionView.dequeueReusableCell(withReuseIdentifier: "contentCell", for: indexPath) as! ContentCollectionViewCell
                     cell.title = "Time"
-            cell.numbers = "\(String(format: "%.1f", total))min"
+                    cell.numbers = "\(String(format: "%.1f", total))min"
+                    cell.thisweek = "\(String(format: "%.1f", total))"
                     cell.image = UIImage(named: "time")
                     return cell
         case 2:
@@ -87,7 +89,8 @@ extension ProgressContentTableViewCell:UICollectionViewDataSource, UICollectionV
             
             let cell = ContentCollectionView.dequeueReusableCell(withReuseIdentifier: "contentCell", for: indexPath) as! ContentCollectionViewCell
                     cell.title = "Calories"
-                    cell.numbers = "\(total) kcal"
+                    cell.numbers = "\(total)kcal"
+                    cell.thisweek = "\(total)"
                     cell.image = UIImage(named: "calories")
                     return cell
         case 3:
@@ -100,8 +103,9 @@ extension ProgressContentTableViewCell:UICollectionViewDataSource, UICollectionV
             }
             
             let cell = ContentCollectionView.dequeueReusableCell(withReuseIdentifier: "contentCell", for: indexPath) as! ContentCollectionViewCell
-                    cell.title = "Average Heart Beat"
+                    cell.title = "Avg Heart Rate"
                     cell.numbers = "\(total)bpm"
+                    cell.thisweek = "\(total)"
                     cell.image = UIImage(named: "hearrate")
                     return cell
         default:

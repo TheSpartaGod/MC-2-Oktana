@@ -79,10 +79,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3x" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lff-aG-WCb">
-                                                <rect key="frame" x="169" y="1.5" width="18" height="17"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="18" id="af6-3M-2LW"/>
-                                                </constraints>
+                                                <rect key="frame" x="169.5" y="1.5" width="17.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

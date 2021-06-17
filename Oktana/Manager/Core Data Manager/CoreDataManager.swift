@@ -72,6 +72,36 @@ struct CoreDataManager {
         }
     }
     
+    func updatePointUser(user: User, point: Int) -> User? {
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        
+        do {
+            user.setValue(point, forKey: "energy_points")
+            do {
+                try context.save()
+                return user
+            } catch  {
+                print(error.localizedDescription)
+                return nil
+            }
+        }
+    }
+    
+    func updateStreaksUser(user: User, streaks: Int) -> User? {
+        let context = CoreDataManager.shared.persistentContainer.viewContext
+        
+        do {
+            user.setValue(streaks, forKey: "total_streaks")
+            do {
+                try context.save()
+                return user
+            } catch  {
+                print(error.localizedDescription)
+                return nil
+            }
+        }
+    }
+    
     // Call this function when user unlocked a movement to add movement on the list
     func addMovementtoUser(user: User, movementID: Int){
         let context = CoreDataManager.shared.persistentContainer.viewContext
