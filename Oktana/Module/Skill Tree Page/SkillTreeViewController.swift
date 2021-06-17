@@ -9,7 +9,9 @@ import UIKit
 
 class SkillTreeViewController: UIViewController {
     
-    
+    let movementData = Movements().data
+    let userMovement = CoreDataManager.shared.fetchAvailableMovement()
+    var movements: [MovementGenerate]? = nil
     
     @IBOutlet weak var move01: SkillTreeCustomView!
     @IBOutlet weak var move02: SkillTreeCustomView!
@@ -46,10 +48,32 @@ class SkillTreeViewController: UIViewController {
     
     func viewSetup(outlets: [SkillTreeCustomView]){
         
-        for outlet in outlets {
-            outlet.delegate = self
-            outlet.setData(data: dummyData[0], color: #colorLiteral(red: 0.6620671749, green: 0.8666118979, blue: 0.297517091, alpha: 1))
+        if let user = CoreDataManager.shared.fetchUser(){
+            CoreDataManager.shared.addMovementtoUser(user: user, movementID: 1)
         }
+        
+        
+        guard let unlockedMovement = userMovement else {
+            return
+        }
+        for unlock in unlockedMovement{
+            for move in movementData{
+                if unlock.movementId == move.movementIDGenerate{
+                    movements?.append(move)
+                }
+            }
+            
+        }
+        
+        var x = 0
+        for x in 0...7 {
+            outlets[x].delegate = self
+            outlets[x].setData(data: movementData[x])
+        }
+        
+//        for y in 0...userMovement!.count){
+//            
+//        }
     }
 }
 
