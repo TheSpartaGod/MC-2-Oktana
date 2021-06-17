@@ -37,7 +37,7 @@ class WorkoutViewController: UIViewController{
         }
         self.navigationController?.isNavigationBarHidden = true
         configElements()
-        
+        UIApplication.shared.isIdleTimerDisabled = true
 
         // Do any additional setup after loading the view.
     }
@@ -107,7 +107,18 @@ class WorkoutViewController: UIViewController{
             //Configure upper bar
             minutesLabel.text = "\(totalWorkoutAmt/60)/75 Minutes"
             progressBarFill.frame.size.width = progressBarBase.frame.size.width * (CGFloat(totalWorkoutAmt/60)/75)
-          
+            
+            let lastWorkoutDate = workouts.last?.date
+            let diffComponents = Calendar.current.dateComponents([.day], from: lastWorkoutDate!, to: now)
+            if diffComponents.day! < 1{
+                let user = CoreDataManager.shared.fetchUser()
+                let streaks = user!.total_streaks + 1
+                CoreDataManager.shared.updateStreaksUser(user: user!, streaks: Int(streaks))
+            }else{
+                let user = CoreDataManager.shared.fetchUser()
+                let streaks = 0
+                CoreDataManager.shared.updateStreaksUser(user: user!, streaks: streaks)
+            }
         }
         
     }

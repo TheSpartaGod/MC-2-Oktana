@@ -7,6 +7,7 @@
 
 import UIKit
 import WatchConnectivity
+import AVKit
 class WorkoutModeViewController: UIViewController, WCSessionDelegate{
     //MARK: - Labels
     @IBOutlet weak var totalTimerLabel: UILabel!
@@ -39,6 +40,7 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
     var totalTime : Timer!
     var currentSet : Int = 0
     var desiredSet : Int = 0
+    var player : AVPlayer!
     
     
     //MARK: - Actions
@@ -80,18 +82,20 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
         guideBackground.layer.cornerRadius = guideBackground.frame.size.width/2
         initializeWorkoutList()
         setCircleProgressBar()
+        addVideoPlayer()
         
         if MovementQueue.currentWorkoutPosition == 0{
             reverseBackButton.isHidden = true
             reverseBackImage.isHidden = true
         }
         showWatchApp()
-        session.sendMessage(["workoutTitle": activityTitleLabel.text], replyHandler: nil) { (error) in
+        session.sendMessage(["  workoutTitle": activityTitleLabel.text], replyHandler: nil) { (error) in
             print(error.localizedDescription)
         }
-        AlertTestViewController.showAlert(from: self, movementTitle: "Push Up", image: UIImage(systemName: "pause.fill")) { listValue in
+        
+       /* AlertTestViewController.showAlert(from: self, movementTitle: "Push Up", image: UIImage(systemName: "pause.fill")) { listValue in
             
-        }
+        }*/
         
         
         // Do any additional setup after loading the view.
@@ -103,10 +107,24 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
         self.tabBarController?.tabBar.isHidden = true
         workoutTimer()
         
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        let url = URL(string: "https://www.youtube.com/watch?v=NpG8iaM0Sfs&ab_channel=LetsBuildThatApp")
+       
+         let player = AVPlayer(url: url!)
+         let playerLayer = AVPlayerLayer(player: player)
+         playerLayer.frame = self.guideBackground.bounds
+         self.guideBackground.layer.addSublayer(playerLayer)
+        player.play()
+        let healthStore = HealthKitStore.shared.getHealthKitStore()
+        HealthKitStore.shared.getHeartRate()
+        
     }
     override func removeFromParent() {
         
     }
+    
     
     func setCircleProgressBar(){
         circleBar = CircularProgressBarView(frame: .zero, radius: Int(guideBackground.frame.size.width)/2) //initializes progress bar with radius a bit smaller than container
@@ -284,6 +302,13 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
             default: print("error")
             }
         }
+        
+    }
+    func addVideoPlayer(){
+        player = AVPlayer(url: URL(string:  "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=OfficialRickAstley")!)
+       let controller = AVPlayerViewController()
+        controller.player = player
+        player.play()
         
     }
     

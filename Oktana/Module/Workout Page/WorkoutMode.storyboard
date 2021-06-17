@@ -53,12 +53,17 @@
                                 <rect key="frame" x="45" y="169" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="questionmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xRp-wE-kga">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xRp-wE-kga">
                                         <rect key="frame" x="10" y="11" width="280" height="280"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="xRp-wE-kga"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pause.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wEb-3U-9gL">
                                 <rect key="frame" x="170" y="749.33333333333337" width="50" height="50"/>
