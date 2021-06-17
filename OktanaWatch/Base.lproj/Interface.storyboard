@@ -20,7 +20,7 @@
                         </group>
                         <group width="136" height="74" alignment="center" verticalAlignment="center" id="wOe-cg-hH5">
                             <items>
-                                <button width="0.29999999999999999" height="45" alignment="center" verticalAlignment="center" backgroundImage="play.fill" catalog="system" id="iNd-c6-G1f">
+                                <button width="0.29999999999999999" height="45" alignment="center" verticalAlignment="center" backgroundImage="pause.fill" catalog="system" id="iNd-c6-G1f">
                                     <color key="backgroundColor" red="0.70438355210000003" green="0.8600926995" blue="0.38812598590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <connections>
                                         <action selector="onPlayPauseBtnClick" destination="AgC-eL-Hgc" id="od1-k6-v5A"/>
@@ -28,9 +28,15 @@
                                 </button>
                                 <button width="0.29999999999999999" height="45" alignment="right" verticalAlignment="center" backgroundImage="chevron.right" catalog="system" id="9BC-rA-Eru">
                                     <color key="backgroundColor" red="0.70438355210000003" green="0.8600926995" blue="0.38812598590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="onForwardSkipBtnClick" destination="AgC-eL-Hgc" id="LJk-A5-cgw"/>
+                                    </connections>
                                 </button>
                                 <button width="39" height="45" alignment="left" verticalAlignment="center" backgroundImage="chevron.left" catalog="system" id="HOe-43-Kin">
                                     <color key="backgroundColor" red="0.70438355210000003" green="0.8600926995" blue="0.38812598590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="onReverseBackBtnClick" destination="AgC-eL-Hgc" id="T8t-Dq-eQm"/>
+                                    </connections>
                                 </button>
                             </items>
                         </group>
@@ -80,6 +86,6 @@
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="play.fill" catalog="system" width="115" height="128"/>
+        <image name="pause.fill" catalog="system" width="119" height="128"/>
     </resources>
 </document>
