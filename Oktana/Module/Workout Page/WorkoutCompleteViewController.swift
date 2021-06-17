@@ -31,6 +31,7 @@ class WorkoutCompleteViewController: UIViewController {
         
         if let user = CoreDataManager.shared.fetchUser() {
             let newWorkout = CoreDataManager.shared.addWorkouttoUser(user: user, time: Int(MovementQueue.currentTotalTime), heart_rate: 150, calories: 150, date: Date())
+            CoreDataManager.shared.P
             user.energy_points += Int64(((MovementQueue.currentTotalTime/60) * 2))// add energy points to user
             CoreDataManager.shared.saveUser()
           // let allWorkout =  CoreDataManager.shared.fetchAllWorkoutData()

@@ -89,6 +89,9 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
         session.sendMessage(["workoutTitle": activityTitleLabel.text], replyHandler: nil) { (error) in
             print(error.localizedDescription)
         }
+        AlertTestViewController.showAlert(from: self, movementTitle: "Push Up", image: UIImage(systemName: "pause.fill")) { listValue in
+            
+        }
         
         
         // Do any additional setup after loading the view.
@@ -184,9 +187,7 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
             activityTitleLabel.text = MovementQueue.MovementList.data[currentWorkoutID-1].namaMovementGenerate
             activityStatusLabel.text = "\(MovementQueue.currentWorkoutPosition+1) of \(MovementQueue.selectedMovesList.count)"
         } else if MovementQueue.isBreak != false {
-            AlertTestViewController.showAlert(from: self, movementTitle: "Push Up", image: UIImage(systemName: "pause.fill")) { AlertTestViewContro in
-                <#code#>
-            }
+           
             activityTitleLabel.text = "Break"
             activityStatusLabel.text = "Next Up: \(MovementQueue.MovementList.data[nextWorkoutID-1].namaMovementGenerate)"
         }
