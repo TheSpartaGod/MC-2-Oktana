@@ -10,7 +10,6 @@ import UIKit
 class SkillTreeViewController: UIViewController {
     
     let movementData = Movements().data
-    let userMovement = CoreDataManager.shared.fetchAvailableMovement()
     var skillTreeMovement: [MovementGenerate]? = nil
     
     @IBOutlet weak var move01: SkillTreeCustomView!
@@ -23,11 +22,6 @@ class SkillTreeViewController: UIViewController {
     @IBOutlet weak var move08: SkillTreeCustomView!
     @IBOutlet weak var userData: StreakPointView!
     
-    
-    var dummyData: [MovementGenerate] = [MovementGenerate(movementIDGenerate: 4, category: 1, iconMovementGenerate: "skill-tree-icon", animationMovementGenerate: [AnimationGenerate(animationFrame: "")], namaMovementGenerate: "jumping jack", instructionsGenerate: [InstructionsGenerate(instructions: "")], calorieBurnGenerate: 200, costEPGenerate: 20)
-    ]
-
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +43,7 @@ class SkillTreeViewController: UIViewController {
     
     func viewSetup(outlets: [SkillTreeCustomView]){
         
-        
+        let userMovement = CoreDataManager.shared.fetchAvailableMovement()
         if let unlockedMovement = userMovement {
             for x in 0...7 {
                 outlets[x].delegate = self
@@ -73,20 +67,29 @@ class SkillTreeViewController: UIViewController {
 }
 
 extension SkillTreeViewController: SkillTreeCustomViewDelegate{
-    func didUnlock(data: MovementGenerate) {
+    func didUnlock(data: MovementGenerate, _ sender: SkillTreeCustomView) {
         guard let user = CoreDataManager.shared.fetchUser() else {
             return
         }
-        AlertUnlockViewController.showAlert(from: self, title: data.namaMovementGenerate, reqEP: data.costEPGenerate, image: nil) {
-            var currentPoint = Int(user.energy_points)
-            if currentPoint >  data.costEPGenerate {
-                currentPoint = currentPoint - data.costEPGenerate
-                CoreDataManager.shared.addMovementtoUser(user: user, movementID: data.movementIDGenerate)
-                CoreDataManager.shared.updatePointUser(user: user, point: currentPoint)
-            } else {
-                print("point tidak cukup")
+        
+        if sender.polygon.tintColor == #colorLiteral(red: 0.656878829, green: 0.8667349219, blue: 0.2977412045, alpha: 1) {
+            print("udah kebuka")
+        }else{
+            AlertUnlockViewController.showAlert(from: self, title: data.namaMovementGenerate, reqEP: data.costEPGenerate, image: nil) {
+                var currentPoint = Int(user.energy_points)
+                //if currentPoint >  data.costEPGenerate {
+                    currentPoint = currentPoint - data.costEPGenerate
+                    CoreDataManager.shared.addMovementtoUser(user: user, movementID: data.movementIDGenerate)
+                    CoreDataManager.shared.updatePointUser(user: user, point: currentPoint)
+                //} else {
+                    //print("point tidak cukup")
+                //}
+                self.viewSetup(outlets: [self.move01, self.move02, self.move03, self.move04, self.move05, self.move06, self.move07, self.move08])
             }
         }
+        
+        
+        
     }
     
     
