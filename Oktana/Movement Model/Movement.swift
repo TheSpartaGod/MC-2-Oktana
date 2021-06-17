@@ -380,8 +380,7 @@ struct Movements {
                                     InstructionsGenerate(instructions: "4. Do a jab and cross, slowly lower yourself down, returning to your starting point. Inhale as you lower.")
                                 ],
                                 calorieBurnGenerate: 0,
-                                costEPGenerate: 0)
-            ]
+                                costEPGenerate: 0),
                 MovementGenerate(
                                 movementIDGenerate: 19,
                                 category: 3,
