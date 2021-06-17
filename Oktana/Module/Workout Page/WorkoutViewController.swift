@@ -8,7 +8,7 @@
 import UIKit
 import HealthKit
 import WatchConnectivity
-class WorkoutViewController: UIViewController, WCSessionDelegate {
+class WorkoutViewController: UIViewController{
   
     
     
@@ -23,11 +23,10 @@ class WorkoutViewController: UIViewController, WCSessionDelegate {
     @IBOutlet weak var energyPointLabel: UILabel!
     @IBOutlet weak var timeCardView: MediumInfoCardView!
     @IBOutlet weak var calorieCardView: MediumInfoCardView!
-    var session : WCSession!
+   
+    
     @objc func didTapView(_ sender: UITapGestureRecognizer){//add gesture recognizer untuk button biar move ke workout detail
-        session.sendMessage(["Message" : "bruh"], replyHandler: nil) { (error) in
-            print(error.localizedDescription)
-        }
+        
         performSegue(withIdentifier: "homeToDetail", sender: nil)
     }
    
@@ -38,10 +37,11 @@ class WorkoutViewController: UIViewController, WCSessionDelegate {
         }
         self.navigationController?.isNavigationBarHidden = true
         configElements()
-        
+        UIApplication.shared.isIdleTimerDisabled = true
 
         // Do any additional setup after loading the view.
     }
+    
     func configElements(){
         //MARK: ENERGY STREAK VIEW
         streakCountLabel.text = "0"
@@ -54,9 +54,11 @@ class WorkoutViewController: UIViewController, WCSessionDelegate {
             }else{
                 streakCountLabel.text = String(opUser!.total_streaks)
                 energyPointLabel.text = String(opUser!.energy_points)
+                
             }
-            
         
+            
+    
        
         
         energyStreakView.layer.cornerRadius = 5
@@ -87,10 +89,36 @@ class WorkoutViewController: UIViewController, WCSessionDelegate {
     
     }
     func checkWorkout(){
-        var hasDoneWorkouts : Bool
+        
         if let workouts = CoreDataManager.shared.fetchAllWorkoutData(){
-            timeCardView.cardValueLabel.text = String(workouts[workouts.count-1].totalTime)
+            var totalWorkoutAmt = 0
+            timeCardView.cardValueLabel.text = String(Double(workouts[workouts.count-1].totalTime/60))
             calorieCardView.cardValueLabel.text = String(workouts[workouts.count-1].totalCalories)
+            let formatter = DateComponentsFormatter()
+            let now = Date()
+            for i in workouts{
+                let diffComponents = Calendar.current.dateComponents([.day], from: i.date!, to: now)
+                if Double(diffComponents.day!) < 7{
+                    totalWorkoutAmt += Int(i.totalTime)
+                    print(totalWorkoutAmt)
+                }
+                
+            }
+            //Configure upper bar
+            minutesLabel.text = "\(totalWorkoutAmt/60)/75 Minutes"
+            progressBarFill.frame.size.width = progressBarBase.frame.size.width * (CGFloat(totalWorkoutAmt/60)/75)
+            
+            let lastWorkoutDate = workouts.last?.date
+            let diffComponents = Calendar.current.dateComponents([.day], from: lastWorkoutDate!, to: now)
+            if diffComponents.day! < 1{
+                let user = CoreDataManager.shared.fetchUser()
+                let streaks = user!.total_streaks + 1
+                CoreDataManager.shared.updateStreaksUser(user: user!, streaks: Int(streaks))
+            }else{
+                let user = CoreDataManager.shared.fetchUser()
+                let streaks = 0
+                CoreDataManager.shared.updateStreaksUser(user: user!, streaks: streaks)
+            }
         }
         
     }
@@ -99,7 +127,7 @@ class WorkoutViewController: UIViewController, WCSessionDelegate {
         timeCardView.cardIcon.image = UIImage(systemName: "stopwatch")
         
         timeCardView.cardUnitLabel.text = "min"
-        timeCardView.cardValueLabel.text = "105"
+        timeCardView.cardValueLabel.text = "0"
         timeCardView.layer.cornerRadius = 10
         timeCardView.clipsToBounds = true
         
@@ -108,7 +136,7 @@ class WorkoutViewController: UIViewController, WCSessionDelegate {
         calorieCardView.cardIcon.tintColor = UIColor(red: 1.00, green: 0.66, blue: 0.00, alpha: 1.00)
         
         calorieCardView.cardUnitLabel.text = "kcal"
-        calorieCardView.cardValueLabel.text = "720"
+        calorieCardView.cardValueLabel.text = "0"
         calorieCardView.layer.cornerRadius = 10
         calorieCardView.clipsToBounds = true
         //set color, corner radius, etc
@@ -128,41 +156,14 @@ class WorkoutViewController: UIViewController, WCSessionDelegate {
         
         startWorkoutButton.layer.cornerRadius = startWorkoutButton.frame.size.width/2
         startWorkoutButton.addGestureRecognizer(tapGestureRecognizer)
-        showWatchApp()
+       
       //ubah menjadi lingkaran
     
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
-    func showWatchApp(){
-        
-        if WCSession.isSupported() {
-            session = WCSession.default
-            session.delegate = self
-            session.activate()
-            print(session.isReachable)
-         
-        }
-      
-    }
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
-    }
-    
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        
-    }
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-        
-    }
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        DispatchQueue.main.async {
-            self.mainWorkoutLabel.text = message["pog"] as? String
-        }
-        
-    }
+   
     
     
     
