@@ -152,7 +152,6 @@
                         <outlet property="streakCountLabel" destination="O3j-a9-Lwn" id="0g6-u0-WbS"/>
                         <outlet property="timeCardView" destination="MDT-qX-0da" id="dvT-kk-XCZ"/>
                         <segue destination="oWg-fE-7Q6" kind="show" identifier="homeToDetail" id="6DY-3n-LYf"/>
-                        <segue destination="B5d-lx-Mjs" kind="presentation" identifier="showOnboarding" id="ajL-h9-xvp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrH-r8-nJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -164,16 +163,6 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="815.38461538461536" y="-556.6350710900474"/>
-        </scene>
-        <!--Boarding-->
-        <scene sceneID="dL5-MN-Ezr">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Boarding" id="B5d-lx-Mjs" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="whc-8I-E5i"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7FB-Z9-fIG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1447" y="-702"/>
         </scene>
         <!--MovementDetailView-->
         <scene sceneID="cns-K8-uwt">
