@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import youtue
 
 class SkillTreeViewController: UIViewController {
     
@@ -79,10 +78,6 @@ extension SkillTreeViewController: SkillTreeCustomViewDelegate{
             return
         }
         AlertUnlockViewController.showAlert(from: self, title: data.namaMovementGenerate, reqEP: data.costEPGenerate, image: nil) {
-            guard let user = CoreDataManager.shared.fetchUser() else {
-                return
-            }
-            
             var currentPoint = Int(user.energy_points)
             if currentPoint >  data.costEPGenerate {
                 currentPoint = currentPoint - data.costEPGenerate
@@ -91,8 +86,7 @@ extension SkillTreeViewController: SkillTreeCustomViewDelegate{
             } else {
                 print("point tidak cukup")
             }
-            
-    }
+        }
     }
     
     
