@@ -37,6 +37,7 @@
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skill-tree-icon" translatesAutoresizingMaskIntoConstraints="NO" id="c9y-vm-qBU">
                             <rect key="frame" x="44" y="13.5" width="22" height="37"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </imageView>
                     </subviews>
                     <constraints>

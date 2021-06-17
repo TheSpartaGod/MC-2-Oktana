@@ -39,9 +39,6 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4N-1x-jxG">
                                                 <rect key="frame" x="30" y="-3.5" width="37" height="37"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="37" id="BD8-gd-aqB"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -82,10 +79,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3x" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lff-aG-WCb">
-                                                <rect key="frame" x="169" y="1.5" width="18" height="17"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="18" id="af6-3M-2LW"/>
-                                                </constraints>
+                                                <rect key="frame" x="169.5" y="1.5" width="17.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -127,7 +121,7 @@
                 <outlet property="titleLabel" destination="NLO-2c-hmw" id="VI2-fm-s7B"/>
                 <outlet property="view" destination="XY6-9U-80a" id="NXl-u5-wSb"/>
             </connections>
-            <point key="canvasLocation" x="6.5217391304347831" y="138.95089285714286"/>
+            <point key="canvasLocation" x="6.5217391304347831" y="138.61607142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
