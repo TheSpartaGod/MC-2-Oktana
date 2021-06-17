@@ -18,8 +18,6 @@
 		991D9B41267A0CE400D8AA82 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D9B40267A0CE400D8AA82 /* NotificationController.swift */; };
 		991D9B43267A0CE400D8AA82 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D9B42267A0CE400D8AA82 /* ComplicationController.swift */; };
 		991D9B45267A0CE500D8AA82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 991D9B44267A0CE500D8AA82 /* Assets.xcassets */; };
-		991D9B51267A0CE500D8AA82 /* OktanaWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D9B50267A0CE500D8AA82 /* OktanaWatchTests.swift */; };
-		991D9B5C267A0CE500D8AA82 /* OktanaWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D9B5B267A0CE500D8AA82 /* OktanaWatchUITests.swift */; };
 		991D9B60267A0CE500D8AA82 /* OktanaWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 991D9B2B267A0CE000D8AA82 /* OktanaWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		999468742672FC0B00302000 /* FocusedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 999468732672FC0B00302000 /* FocusedView.xib */; };
 		999468762672FE7100302000 /* FocusedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999468752672FE7100302000 /* FocusedView.swift */; };
@@ -164,11 +162,7 @@
 		991D9B46267A0CE500D8AA82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		991D9B47267A0CE500D8AA82 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		991D9B4C267A0CE500D8AA82 /* OktanaWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OktanaWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		991D9B50267A0CE500D8AA82 /* OktanaWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OktanaWatchTests.swift; sourceTree = "<group>"; };
-		991D9B52267A0CE500D8AA82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		991D9B57267A0CE500D8AA82 /* OktanaWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OktanaWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		991D9B5B267A0CE500D8AA82 /* OktanaWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OktanaWatchUITests.swift; sourceTree = "<group>"; };
-		991D9B5D267A0CE500D8AA82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		999468732672FC0B00302000 /* FocusedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusedView.xib; sourceTree = "<group>"; };
 		999468752672FE7100302000 /* FocusedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedView.swift; sourceTree = "<group>"; };
 		99F926DA266F4A4E006A210A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
@@ -299,24 +293,6 @@
 			path = "OktanaWatch Extension";
 			sourceTree = "<group>";
 		};
-		991D9B4F267A0CE500D8AA82 /* OktanaWatchTests */ = {
-			isa = PBXGroup;
-			children = (
-				991D9B50267A0CE500D8AA82 /* OktanaWatchTests.swift */,
-				991D9B52267A0CE500D8AA82 /* Info.plist */,
-			);
-			path = OktanaWatchTests;
-			sourceTree = "<group>";
-		};
-		991D9B5A267A0CE500D8AA82 /* OktanaWatchUITests */ = {
-			isa = PBXGroup;
-			children = (
-				991D9B5B267A0CE500D8AA82 /* OktanaWatchUITests.swift */,
-				991D9B5D267A0CE500D8AA82 /* Info.plist */,
-			);
-			path = OktanaWatchUITests;
-			sourceTree = "<group>";
-		};
 		99F926E4266F9199006A210A /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,8 +401,6 @@
 				B7C7A14A266E7E38007DB473 /* Oktana */,
 				991D9B2C267A0CE000D8AA82 /* OktanaWatch */,
 				991D9B3B267A0CE400D8AA82 /* OktanaWatch Extension */,
-				991D9B4F267A0CE500D8AA82 /* OktanaWatchTests */,
-				991D9B5A267A0CE500D8AA82 /* OktanaWatchUITests */,
 				B7C7A149266E7E38007DB473 /* Products */,
 				B737A149267118B400DDD4A8 /* Frameworks */,
 			);
@@ -831,7 +805,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				991D9B51267A0CE500D8AA82 /* OktanaWatchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,7 +812,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				991D9B5C267A0CE500D8AA82 /* OktanaWatchUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

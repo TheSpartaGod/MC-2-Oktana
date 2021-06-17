@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import youtue
 
 class SkillTreeViewController: UIViewController {
     
@@ -56,7 +57,7 @@ class SkillTreeViewController: UIViewController {
                 outlets[x].setData(data: movementData[x], color: #colorLiteral(red: 0.2548763454, green: 0.2549183369, blue: 0.2548671067, alpha: 1), iconColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), icon: UIImage(named: "skill-tree-locked")!)
                 for unlocked in unlockedMovement {
                     if unlocked.movementId == movementData[x].movementIDGenerate{
-                        outlets[x].setData(data: movementData[x], color: #colorLiteral(red: 0.656878829, green: 0.8667349219, blue: 0.2977412045, alpha: 1), iconColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), icon: UIImage(named: "skill-tree-icon")!)
+                        outlets[x].setData(data: movementData[x], color: #colorLiteral(red: 0.656878829, green: 0.8667349219, blue: 0.2977412045, alpha: 1), iconColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), icon: UIImage(named: "\(movementData[x].iconMovementGenerate)")!)
                     }
                 }
             }
@@ -82,9 +83,15 @@ extension SkillTreeViewController: SkillTreeCustomViewDelegate{
                 return
             }
             
-            var currentPoint = user.energy_points
+            var currentPoint = Int(user.energy_points)
+            if currentPoint >  data.costEPGenerate {
+                currentPoint = currentPoint - data.costEPGenerate
+                CoreDataManager.shared.addMovementtoUser(user: user, movementID: data.movementIDGenerate)
+                CoreDataManager.shared.updatePointUser(user: user, point: currentPoint)
+            } else {
+                print("point tidak cukup")
+            }
             
-            CoreDataManager.shared.addMovementtoUser(user: user, movementID: data.movementIDGenerate)
     }
     }
     
