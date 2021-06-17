@@ -78,7 +78,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 1,
                                 category: 2,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Jab & cross",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -96,7 +96,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 2,
                                 category: 2,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Hook Uppercut",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -115,7 +115,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 3,
                                 category: 4,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Roundhouse kick",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -132,7 +132,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 4,
                                 category: 4,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Knee",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -148,7 +148,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 5,
                                 category: 4,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Side kick",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -165,7 +165,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 6,
                                 category: 4,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Front kick",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -181,7 +181,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 7,
                                 category: 2,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Elbow",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -198,7 +198,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 8,
                                 category: 2,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Superman Punch",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -214,7 +214,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 9,
                                 category: 1,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Jumping Jacks",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -231,7 +231,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 10,
                                 category: 1,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Mountain Climber",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -247,7 +247,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 11,
                                 category: 2,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Burpees",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -268,7 +268,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 12,
                                 category: 2,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Push Up",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -285,7 +285,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 13,
                                 category: 2,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Inchworm",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -301,7 +301,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 14,
                                 category: 2,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Plank Pushup",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -319,7 +319,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 15,
                                 category: 2,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Alternating hook",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -336,7 +336,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 16,
                                 category: 2,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Alternating Uppercut",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -352,7 +352,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 17,
                                 category: 2,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Jab Cross Hook Upper Cut",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -367,7 +367,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 18,
                                 category: 3,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "sit up jab straight",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -384,12 +384,12 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 19,
                                 category: 3,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Leg Raise",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
                                 ],
-                                namaMovementGenerate: " ",
+                                namaMovementGenerate: "Leg Raise",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Lie on your back, legs straight and together."),
                                     InstructionsGenerate(instructions: "2. Keep your legs straight and lift them all the way up to the ceiling until your butt comes off the floor."),
@@ -401,7 +401,7 @@ struct Movements {
                 MovementGenerate(
                         movementIDGenerate: 20,
                         category: 3,
-                        iconMovementGenerate: "",
+                        iconMovementGenerate: "Flutter Kicks",
                         animationMovementGenerate: [
                             AnimationGenerate(animationFrame: ""),
                             AnimationGenerate(animationFrame: "")
@@ -418,7 +418,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 21,
                                 category: 3,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Scissors",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -434,7 +434,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 22,
                                 category: 3,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Sit Up Alternating Hook",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -451,7 +451,7 @@ struct Movements {
                 MovementGenerate(
                                 movementIDGenerate: 23,
                                 category: 4,
-                                iconMovementGenerate: "",
+                                iconMovementGenerate: "Squat",
                                 animationMovementGenerate: [
                                     AnimationGenerate(animationFrame: ""),
                                     AnimationGenerate(animationFrame: "")
@@ -468,7 +468,7 @@ struct Movements {
         MovementGenerate(
                         movementIDGenerate: 24,
                         category: 4,
-                        iconMovementGenerate: "",
+                        iconMovementGenerate: "Lunges",
                         animationMovementGenerate: [
                             AnimationGenerate(animationFrame: ""),
                             AnimationGenerate(animationFrame: "")
@@ -485,7 +485,7 @@ struct Movements {
         MovementGenerate(
                                         movementIDGenerate: 25,
                                         category: 4,
-                                        iconMovementGenerate: "",
+                                        iconMovementGenerate: "Jump Squat",
                                         animationMovementGenerate: [
                                             AnimationGenerate(animationFrame: ""),
                                             AnimationGenerate(animationFrame: "")
@@ -502,7 +502,7 @@ struct Movements {
                             MovementGenerate(
                                         movementIDGenerate: 26,
                                         category: 4,
-                                        iconMovementGenerate: "",
+                                        iconMovementGenerate: "Squat Roundhouse Kick",
                                         animationMovementGenerate: [
                                             AnimationGenerate(animationFrame: ""),
                                             AnimationGenerate(animationFrame: "")
@@ -520,7 +520,7 @@ struct Movements {
                             MovementGenerate(
                                         movementIDGenerate: 27,
                                         category: 4,
-                                        iconMovementGenerate: "",
+                                        iconMovementGenerate: "Back Lunges Front Kick",
                                     animationMovementGenerate: [
                                         AnimationGenerate(animationFrame: ""),
                                         AnimationGenerate(animationFrame: "")
@@ -538,7 +538,7 @@ struct Movements {
                             MovementGenerate(
                                         movementIDGenerate: 28,
                                         category: 4,
-                                        iconMovementGenerate: "",
+                                        iconMovementGenerate: "Squat Side Kick",
                                     animationMovementGenerate: [
                                         AnimationGenerate(animationFrame: ""),
                                         AnimationGenerate(animationFrame: "")
