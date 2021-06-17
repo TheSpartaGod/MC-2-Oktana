@@ -78,6 +78,12 @@ extension SkillTreeViewController: SkillTreeCustomViewDelegate{
             return
         }
         AlertUnlockViewController.showAlert(from: self, title: data.namaMovementGenerate, reqEP: data.costEPGenerate, image: nil) {
+            guard let user = CoreDataManager.shared.fetchUser() else {
+                return
+            }
+            
+            var currentPoint = user.energy_points
+            
             CoreDataManager.shared.addMovementtoUser(user: user, movementID: data.movementIDGenerate)
     }
     }
