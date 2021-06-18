@@ -7,7 +7,7 @@
 
 import UIKit
 import WatchConnectivity
-import AVKit
+
 class WorkoutModeViewController: UIViewController, WCSessionDelegate{
     //MARK: - Labels
     @IBOutlet weak var totalTimerLabel: UILabel!
@@ -23,16 +23,14 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
     //MARK: - buttons
     @IBOutlet weak var exitWorkoutImage: UIImageView!
     @IBOutlet weak var exitWorkoutButton: UIButton!
-    @IBOutlet weak var focusedViewBtn: UIButton!
     @IBOutlet weak var skipForwardButton: UIButton!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var playPauseImage: UIImageView!//gangerti gw cara add image ke button biar gede, jadi image gw overlay button
     @IBOutlet weak var reverseBackButton: UIButton!
     @IBOutlet weak var reverseBackImage: UIImageView!
-    var session : WCSession = WCSession.default
+   
     //MARK: - other vars
     var workoutTimeLeft : Int = 15 //EDIT THIS BASED ON WORKOUT TIMER, USUALLY 30SECS BUT CAN BE MORE
-    var focusedView : FocusedView!
     var skip : Bool = false
     var currentWorkoutList : [Int] = []
     var currentWorkoutID : Int = 0
@@ -40,28 +38,20 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
     var totalTime : Timer!
     var currentSet : Int = 0
     var desiredSet : Int = 0
-    var player : AVPlayer!
-    
+    var session : WCSession!
     
     //MARK: - Actions
     
-    @IBAction func onFocusedBtnClick(_ sender: Any) {
-        focusedView = FocusedView(frame: .zero, viewMode: "TestEntry", activityTitleText: "Push Up", focusMessageText: "How many Push Ups did you do?", activityImage: UIImage(systemName: "hexagon.fill") ?? UIImage())
-    }
     @IBAction func onExitWorkoutButtonClicked(_ sender: Any) {
-        workoutTime.invalidate()
-        totalTime.invalidate()
-        //dismiss(animated: true, completion: nil)
-        //performSegue(withIdentifier: "toHome", sender: nil)
         AlertStandardViewController.showAlert(from: self, title:"Confirm Exit" , message: "Are you sure you want to abort workout and exit to the home page?" , positiveMessage: "Yes") {
             self.workoutTime.invalidate()
             self.totalTime.invalidate()
+            self.session.sendMessage(["finishWorkout" : "finishWorkout"], replyHandler: nil) { (error) in
+                print(error.localizedDescription)
+            }
             MovementQueue.dequeueMovementList()
             self.navigationController?.popToRootViewController(animated: true)
-            
         }
-        
-        
     }
     
     @IBAction func onPlayPauseButtonClicked(_ sender: Any) {
@@ -79,25 +69,33 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         guideBackground.layer.cornerRadius = guideBackground.frame.size.width/2
         initializeWorkoutList()
         setCircleProgressBar()
-        addVideoPlayer()
-        
+      
         if MovementQueue.currentWorkoutPosition == 0{
             reverseBackButton.isHidden = true
             reverseBackImage.isHidden = true
         }
-        showWatchApp()
-        session.sendMessage(["  workoutTitle": activityTitleLabel.text], replyHandler: nil) { (error) in
-            print(error.localizedDescription)
-        }
         
-       /* AlertTestViewController.showAlert(from: self, movementTitle: "Push Up", image: UIImage(systemName: "pause.fill")) { listValue in
+        connectWatch() //MARK: CREATE APPLE WATCH SESSION / CONNECT WATCH
+    
+        if session.isReachable{
+            print("sending Message to watch")
+            if MovementQueue.workoutHasStarted == false{
+                MovementQueue.workoutHasStarted = true
+                session.sendMessage(["startWorkout": "startWorkout"], replyHandler: nil) { (error) in
+                    print(error.localizedDescription)
+                }
+                
+            }
             
-        }*/
-        
-        
+            session.sendMessage(["workoutTitle": activityTitleLabel.text], replyHandler: nil) { (error) in
+                print(error.localizedDescription)
+            }
+        }
+    
         // Do any additional setup after loading the view.
     }
     
@@ -107,25 +105,8 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
         self.tabBarController?.tabBar.isHidden = true
         workoutTimer()
         
-        
     }
-    override func viewDidAppear(_ animated: Bool) {
-        let url = URL(string: "https://www.youtube.com/watch?v=NpG8iaM0Sfs&ab_channel=LetsBuildThatApp")
-       
-         let player = AVPlayer(url: url!)
-         let playerLayer = AVPlayerLayer(player: player)
-         playerLayer.frame = self.guideBackground.bounds
-         self.guideBackground.layer.addSublayer(playerLayer)
-        player.play()
-        let healthStore = HealthKitStore.shared.getHealthKitStore()
-        HealthKitStore.shared.getHeartRate()
-        
-    }
-    override func removeFromParent() {
-        
-    }
-    
-    
+   // func untuk membuat progress bar lingkaran
     func setCircleProgressBar(){
         circleBar = CircularProgressBarView(frame: .zero, radius: Int(guideBackground.frame.size.width)/2) //initializes progress bar with radius a bit smaller than container
         
@@ -135,8 +116,8 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
         
         guideBackground.addSubview(circleBar)
         
-        
     }
+    // func utk initialize workout timer
     func workoutTimer(){
         workoutTime = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true){
             (Timer) in
@@ -144,12 +125,10 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
             if self.workoutTimeLeft >= 0 && self.skip != true{
                 self.activityTimeLabel.text = "\(self.workoutTimeLeft)s"
                 self.workoutTimeLeft -= 1
-                print(self.activityTimeLabel.text!)
             }
             else{
                 //TIMER GEDENYA UDAH ABIS WAKTUNYA
                
-                print (MovementQueue.currentSet)
                 Timer.invalidate()
                 self.totalTime.invalidate()
                 if self.skip == false && MovementQueue.currentWorkoutPosition < MovementQueue.selectedMovesList.count-1 && MovementQueue.isBreak == true {
@@ -163,18 +142,21 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
                     self.performSegue(withIdentifier: "toNextMove", sender: nil)
                     
                 }else if MovementQueue.currentWorkoutPosition == MovementQueue.selectedMovesList.count-1{
-                    self.performSegue(withIdentifier: "toWorkoutComplete", sender: nil)
+                    
+                    //send message to watch bahwa workout telah selesai
+                    self.session.sendMessage(["finishWorkout": "finishWorkout"], replyHandler: nil) { (error) in
+                        print(error.localizedDescription)
+                    }
+                
                 }else if MovementQueue.isBreak == false{
                     MovementQueue.isBreak = true
                     self.performSegue(withIdentifier: "toNextMove", sender: nil)
                 }
                 
-                
             }
             
         }
         workoutTime.fire() //ngeforce timer untuk jalan langsung tanpa delay
-        
         
         totalTime = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true){
             (Timer) in
@@ -184,12 +166,11 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
                 String(format: "%0.2d:%0.2d", m, s)
             MovementQueue.currentTotalTime += 1
             
-            
         }
         self.totalTime.fire()
-        
-        
+
     }
+    // func untuk mendapatkan workout list dari MovementQueue
     func initializeWorkoutList(){
         //class viewcontroller bakalan tektokan sama class MovementQueue buat update current movement yang ditampilin
         //currentWorkoutPosition = urutan workout yang mau dijalanin
@@ -211,6 +192,7 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
         }
         
     }
+    //func untuk menghandle skip move
     func skipForwardWorkout(){
         workoutTime.invalidate()
         totalTime.invalidate()
@@ -218,8 +200,6 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
             MovementQueue.isBreak = false
             MovementQueue.currentWorkoutPosition += 1
             self.currentWorkoutID = MovementQueue.selectedMovesList[MovementQueue.currentWorkoutPosition]
-            self.removeFromParent()
-            
             performSegue(withIdentifier: "toNextMove", sender: nil)
         }
         else if MovementQueue.isBreak == false &&  MovementQueue.currentWorkoutPosition != MovementQueue.selectedMovesList.count-1{
@@ -228,9 +208,13 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
             performSegue(withIdentifier: "toNextMove", sender: nil)
         }
         else if MovementQueue.currentWorkoutPosition == MovementQueue.selectedMovesList.count-1{
-            performSegue(withIdentifier: "toWorkoutComplete", sender: nil)
+            //send message to watch bahwa workout telah selesai
+            self.session.sendMessage(["finishWorkout": "finishWorkout"], replyHandler: nil) { (error) in
+                print(error.localizedDescription)
+            }
         }
     }
+    // func untuk menghandle previous move
     func reverseBackWorkout(){
         workoutTime.invalidate()
         totalTime.invalidate()
@@ -248,6 +232,7 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
             skip = true
         }
     }
+    //func untuk menghandle play/pause workout
     func playPauseWorkout(){
         if playPauseImage.image == UIImage(systemName: "pause.fill"){
             workoutTime.invalidate()
@@ -257,7 +242,6 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
             session.sendMessage(["playPause": "play"], replyHandler: nil) { (error) in
                 print(error.localizedDescription)
             }
-            
         }
         else{
             
@@ -269,16 +253,15 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
             }
         }
     }
-    func showWatchApp(){
-        
+    //func untuk membuat connection ke apple watch
+    func connectWatch(){
         if WCSession.isSupported(){
             session = WCSession.default
             session.delegate = self
             session.activate()
-    
         }
-        
     }
+    //MARK: req func untuk handle WCSession
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
     }
@@ -290,32 +273,29 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
     func sessionDidDeactivate(_ session: WCSession) {
         
     }
+    //MARK: function untuk handle message antara phone dengan watch
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         DispatchQueue.main.async {
             //ketika button apple watch di click, ubah status workout
-            let option = message["Message"] as? String
+            if let option = message["Message"] as? String{
             switch option{
             case "paused": self.playPauseWorkout()
             case "played": self.playPauseWorkout()
             case "skipforward": self.skipForwardWorkout()
             case "reverseback": self.reverseBackWorkout()
-            default: print("error")
+            default: self.activityStatusLabel.text = option
+                }
+            }
+            //ketika mendapatkan data heart rate dan kcal dari apple watch, berarti workout udah kelar dan move ke view selanjutnya
+            if let avgHeart = message["avgHeartRate"] as? Double{
+                let kcal = message["totalKcal"] as? Double
+                MovementQueue.heartRate = Int(avgHeart)
+                MovementQueue.totalKcal = Int(kcal ?? 420)
+                self.performSegue(withIdentifier: "toWorkoutComplete", sender: self)
             }
         }
-        
     }
-    func addVideoPlayer(){
-        player = AVPlayer(url: URL(string:  "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=OfficialRickAstley")!)
-       let controller = AVPlayerViewController()
-        controller.player = player
-        player.play()
-        
-    }
-    
-    
-    
-    
-    
+
     /*
      // MARK: - Navigation
      
