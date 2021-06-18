@@ -23,6 +23,7 @@
 		999468762672FE7100302000 /* FocusedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999468752672FE7100302000 /* FocusedView.swift */; };
 		9994AE40267B5951008F1045 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9994AE3F267B5951008F1045 /* HealthKit.framework */; };
 		9994AE42267B5B90008F1045 /* HealthKitWatchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994AE41267B5B90008F1045 /* HealthKitWatchStore.swift */; };
+		9994AE44267BA75B008F1045 /* firstInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994AE43267BA75B008F1045 /* firstInterfaceController.swift */; };
 		99F926DB266F4A4E006A210A /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926DA266F4A4E006A210A /* WorkoutViewController.swift */; };
 		99F926DD266F7498006A210A /* MediumInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F926DC266F7498006A210A /* MediumInfoCardView.swift */; };
 		99F926DF266F74BF006A210A /* MediumInfoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F926DE266F74BF006A210A /* MediumInfoCardView.xib */; };
@@ -199,6 +200,7 @@
 		9994AE3E267B5951008F1045 /* OktanaWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OktanaWatch Extension.entitlements"; sourceTree = "<group>"; };
 		9994AE3F267B5951008F1045 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		9994AE41267B5B90008F1045 /* HealthKitWatchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitWatchStore.swift; sourceTree = "<group>"; };
+		9994AE43267BA75B008F1045 /* firstInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstInterfaceController.swift; sourceTree = "<group>"; };
 		99F926DA266F4A4E006A210A /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		99F926DC266F7498006A210A /* MediumInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumInfoCardView.swift; sourceTree = "<group>"; };
 		99F926DE266F74BF006A210A /* MediumInfoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediumInfoCardView.xib; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				991D9B46267A0CE500D8AA82 /* Info.plist */,
 				991D9B47267A0CE500D8AA82 /* PushNotificationPayload.apns */,
 				9994AE41267B5B90008F1045 /* HealthKitWatchStore.swift */,
+				9994AE43267BA75B008F1045 /* firstInterfaceController.swift */,
 			);
 			path = "OktanaWatch Extension";
 			sourceTree = "<group>";
@@ -925,6 +928,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9994AE44267BA75B008F1045 /* firstInterfaceController.swift in Sources */,
 				991D9B41267A0CE400D8AA82 /* NotificationController.swift in Sources */,
 				9994AE42267B5B90008F1045 /* HealthKitWatchStore.swift in Sources */,
 				991D9B43267A0CE400D8AA82 /* ComplicationController.swift in Sources */,
