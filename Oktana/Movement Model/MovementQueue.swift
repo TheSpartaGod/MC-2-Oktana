@@ -18,7 +18,10 @@ struct MovementQueue{
     static var totalTimerActive: Bool = false
     static var currentTotalTime : Int = 0
     static var currentSet : Int = 0
-    var isTest : Bool = false
+    static var workoutHasStarted : Bool = false
+    static var isTest : Bool = false
+    static var heartRate : Int = 0
+    static var totalKcal : Int = 0
     static func secondsToMinutesSeconds (seconds : Int) -> (Int, Int) {
         return ((seconds % 3600) / 60, (seconds % 3600) % 60)
     }
@@ -49,6 +52,7 @@ struct MovementQueue{
             }
             
         }
+        
      
       
         //MARK: Randomize movements
@@ -84,6 +88,12 @@ struct MovementQueue{
         MovementQueue.currentWorkoutPosition = 0
         MovementQueue.isBreak = false
         MovementQueue.currentTotalTime = 0
+        MovementQueue.workoutHasStarted = false
+        MovementQueue.isTest = false
+        MovementQueue.heartRate = 0
+        MovementQueue.totalKcal = 0
+        
+        
         
     }
     

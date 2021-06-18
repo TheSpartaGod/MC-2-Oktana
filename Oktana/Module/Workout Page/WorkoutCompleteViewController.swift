@@ -19,6 +19,7 @@ class WorkoutCompleteViewController: UIViewController {
     @IBAction func onDoneButtonClick(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
         saveWorkout()
+        MovementQueue.dequeueMovementList()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,14 +59,14 @@ class WorkoutCompleteViewController: UIViewController {
 
         heartCardView.cardTitleLabel.text = "Average Heart Rate"
         heartCardView.cardIcon.image = UIImage(systemName: "heart.fill")
-        heartCardView.cardValueLabel.text = "102"
+        heartCardView.cardValueLabel.text = "\(MovementQueue.heartRate)"
         heartCardView.cardUnitLabel.text = "bpm"
         heartCardView.layer.cornerRadius = 8
         heartCardView.clipsToBounds = true
 
         caloriesCardView.cardTitleLabel.text = "Calories"
         caloriesCardView.cardIcon.image = UIImage(systemName: "flame")
-        caloriesCardView.cardValueLabel.text = "48"
+        caloriesCardView.cardValueLabel.text = "\(MovementQueue.totalKcal)"
         caloriesCardView.cardUnitLabel.text = "kcal"
         caloriesCardView.layer.cornerRadius = 8
         caloriesCardView.clipsToBounds = true

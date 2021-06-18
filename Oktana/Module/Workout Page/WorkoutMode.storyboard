@@ -94,14 +94,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWV-N9-m5f">
-                                <rect key="frame" x="126" y="681" width="138" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="create focused view"/>
-                                <connections>
-                                    <action selector="onFocusedBtnClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a9h-Aq-a2b"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uz2-Up-PSk">
                                 <rect key="frame" x="170" y="749" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -143,7 +135,6 @@
                         <outlet property="activityTitleLabel" destination="E9q-cW-Pl7" id="fmQ-vY-aEt"/>
                         <outlet property="exitWorkoutButton" destination="gpz-kq-DiK" id="DYz-50-w21"/>
                         <outlet property="exitWorkoutImage" destination="g9y-dT-EDl" id="L9K-Xl-DZj"/>
-                        <outlet property="focusedViewBtn" destination="nWV-N9-m5f" id="THM-HR-7ef"/>
                         <outlet property="guideBackground" destination="nBn-DL-OEa" id="ZSr-IZ-QOh"/>
                         <outlet property="playPauseButton" destination="uz2-Up-PSk" id="2VN-Cs-ADf"/>
                         <outlet property="playPauseImage" destination="wEb-3U-9gL" id="6VI-42-lK2"/>
