@@ -11,7 +11,7 @@ struct MovementGenerate {
     var movementIDGenerate: Int
     var category: Int
     var iconMovementGenerate: String
-    var animationMovementGenerate: [AnimationGenerate]
+    var animationMovementGenerate: String
     var namaMovementGenerate: String
     var instructionsGenerate:[InstructionsGenerate]
     var calorieBurnGenerate: Int
@@ -21,10 +21,6 @@ struct MovementGenerate {
 
 struct InstructionsGenerate {
     var instructions: String
-}
-
-struct AnimationGenerate {
-    var animationFrame: String
 }
 
 struct fitnessProgressGenerate {
@@ -50,10 +46,7 @@ struct Movements {
                                 movementIDGenerate: 1,
                                 category: 2,
                                 iconMovementGenerate: "Jab & cross",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "1.jabCross",
                                 namaMovementGenerate: "Jab & Cross",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand in fight stance, feet slightly wider than shoulder-width apart with the left foot in front and fists protecting face."),
@@ -68,10 +61,7 @@ struct Movements {
                                 movementIDGenerate: 2,
                                 category: 2,
                                 iconMovementGenerate: "Hook Uppercut",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "2.hookUppercut",
                                 namaMovementGenerate: "Hook & Uppercut",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand in fight stance"),
@@ -87,10 +77,7 @@ struct Movements {
                                 movementIDGenerate: 3,
                                 category: 4,
                                 iconMovementGenerate: "Roundhouse kick",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "3.roundhouseKick",
                                 namaMovementGenerate: "Roundhouse Kick",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand in fight stance"),
@@ -104,10 +91,7 @@ struct Movements {
                                 movementIDGenerate: 4,
                                 category: 4,
                                 iconMovementGenerate: "Knee",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "4.knee",
                                 namaMovementGenerate: "Knee",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand in fight stance"),
@@ -120,10 +104,7 @@ struct Movements {
                                 movementIDGenerate: 5,
                                 category: 4,
                                 iconMovementGenerate: "Side kick",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "5.sideKick",
                                 namaMovementGenerate: "Side Kick",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand in fight stance"),
@@ -137,10 +118,7 @@ struct Movements {
                                 movementIDGenerate: 6,
                                 category: 4,
                                 iconMovementGenerate: "Front kick",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "6.frontKick",
                                 namaMovementGenerate: "Front Kick",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand in fight stance"),
@@ -153,10 +131,7 @@ struct Movements {
                                 movementIDGenerate: 7,
                                 category: 2,
                                 iconMovementGenerate: "Elbow",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "7.elbow",
                                 namaMovementGenerate: "Elbow",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Start in fight stance"),
@@ -170,10 +145,7 @@ struct Movements {
                                 movementIDGenerate: 8,
                                 category: 2,
                                 iconMovementGenerate: "Superman Punch",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "8.supermanPunch",
                                 namaMovementGenerate: "Superman Punch",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Start in fight stance"),
@@ -186,10 +158,7 @@ struct Movements {
                                 movementIDGenerate: 9,
                                 category: 1,
                                 iconMovementGenerate: "Jumping Jacks",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "9.jumpingJack",
                                 namaMovementGenerate: "Jumping Jack",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand upright with your legs together, arms at your sides."),
@@ -203,10 +172,7 @@ struct Movements {
                                 movementIDGenerate: 10,
                                 category: 1,
                                 iconMovementGenerate: "Mountain Climber",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "10.mountainClimber",
                                 namaMovementGenerate: "Mountain Climber",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Start from a high plank position with your hands stacked directly under your shoulders."),
@@ -219,10 +185,7 @@ struct Movements {
                                 movementIDGenerate: 11,
                                 category: 2,
                                 iconMovementGenerate: "Burpees",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "11.burpees",
                                 namaMovementGenerate: "Burpees",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Start in a squat position with your knees bent, back straight, and your feet about shoulder-width apart."),
@@ -240,10 +203,7 @@ struct Movements {
                                 movementIDGenerate: 12,
                                 category: 2,
                                 iconMovementGenerate: "Push Up",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "12.pushUp",
                                 namaMovementGenerate: "Push Up",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Get down on all fours, placing your hands slightly wider than your shoulders."),
@@ -257,10 +217,7 @@ struct Movements {
                                 movementIDGenerate: 13,
                                 category: 2,
                                 iconMovementGenerate: "Inchworm",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "13.inchWorm",
                                 namaMovementGenerate: "Inchworm",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand tall then reach your hands toward the floor in front of your feet. Allow your knees to bend slightly as needed."),
@@ -273,10 +230,7 @@ struct Movements {
                                 movementIDGenerate: 14,
                                 category: 2,
                                 iconMovementGenerate: "Plank Pushup",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "14.plankToPushUp",
                                 namaMovementGenerate: "Plank Push Up",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Start in a plank position"),
@@ -291,10 +245,7 @@ struct Movements {
                                 movementIDGenerate: 15,
                                 category: 2,
                                 iconMovementGenerate: "Alternating hook",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "15.alternatingHook",
                                 namaMovementGenerate: "Alternating Hook",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand in fight stance"),
@@ -308,10 +259,7 @@ struct Movements {
                                 movementIDGenerate: 16,
                                 category: 2,
                                 iconMovementGenerate: "Alternating Uppercut",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "16.alternatingUppercut",
                                 namaMovementGenerate: "Alternating Uppercut",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand in fight stance"),
@@ -324,10 +272,7 @@ struct Movements {
                                 movementIDGenerate: 17,
                                 category: 2,
                                 iconMovementGenerate: "Jab Cross Hook Upper Cut",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "17.jabCrossHookUppercut",
                                 namaMovementGenerate: "Jab Cross Hook Uppercut",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand in fight stance"),
@@ -339,10 +284,7 @@ struct Movements {
                                 movementIDGenerate: 18,
                                 category: 3,
                                 iconMovementGenerate: "sit up jab straight",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "18.sitUpJabCross",
                                 namaMovementGenerate: "Sit Up Jab Straight",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Lie down on your back and bend your legs to stabilize your lower body."),
@@ -356,10 +298,7 @@ struct Movements {
                                 movementIDGenerate: 19,
                                 category: 3,
                                 iconMovementGenerate: "Leg Raise",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "19.legRaises",
                                 namaMovementGenerate: "Leg Raise",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Lie on your back, legs straight and together."),
@@ -373,10 +312,7 @@ struct Movements {
                         movementIDGenerate: 20,
                         category: 3,
                         iconMovementGenerate: "Flutter Kicks",
-                        animationMovementGenerate: [
-                            AnimationGenerate(animationFrame: ""),
-                            AnimationGenerate(animationFrame: "")
-                        ],
+                        animationMovementGenerate: "20.flutterKicks",
                         namaMovementGenerate: "Flutter Kick",
                         instructionsGenerate: [
                             InstructionsGenerate(instructions: "1. Lie down on your back and place your hands under your glutes."),
@@ -390,10 +326,7 @@ struct Movements {
                                 movementIDGenerate: 21,
                                 category: 3,
                                 iconMovementGenerate: "Scissors",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "21.scissors",
                                 namaMovementGenerate: "Scissors",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Lie down on your back with your hands either at your sides or underneath your glutes for added back support."),
@@ -406,10 +339,7 @@ struct Movements {
                                 movementIDGenerate: 22,
                                 category: 3,
                                 iconMovementGenerate: "Sit Up Alternating Hook",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "22.sitUpAlternatingHook",
                                 namaMovementGenerate: "Situp Alternating Hook",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Lie face-up on the ground with your knees bent and feet flat. Place your fingertips behind your ears with your elbows pointed out."),
@@ -423,10 +353,7 @@ struct Movements {
                                 movementIDGenerate: 23,
                                 category: 4,
                                 iconMovementGenerate: "Squat",
-                                animationMovementGenerate: [
-                                    AnimationGenerate(animationFrame: ""),
-                                    AnimationGenerate(animationFrame: "")
-                                ],
+                                animationMovementGenerate: "23.squat",
                                 namaMovementGenerate: "Squat",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand straight with feet hip-width apart and your feet turned out slightly to open the hip joint "),
@@ -440,10 +367,7 @@ struct Movements {
                         movementIDGenerate: 24,
                         category: 4,
                         iconMovementGenerate: "Lunges",
-                        animationMovementGenerate: [
-                            AnimationGenerate(animationFrame: ""),
-                            AnimationGenerate(animationFrame: "")
-                        ],
+                        animationMovementGenerate: "24.lunges",
                         namaMovementGenerate: "Lunges",
                         instructionsGenerate: [
                             InstructionsGenerate(instructions: "1. Stand with your feet hip-width apart, keep your back straight, your shoulders back, and your abs tight. "),
@@ -457,10 +381,7 @@ struct Movements {
                                         movementIDGenerate: 25,
                                         category: 4,
                                         iconMovementGenerate: "Jump Squat",
-                                        animationMovementGenerate: [
-                                            AnimationGenerate(animationFrame: ""),
-                                            AnimationGenerate(animationFrame: "")
-                                        ],
+                                        animationMovementGenerate: "25.jumpSquat",
                                         namaMovementGenerate: "Jump Squat",
                                         instructionsGenerate: [
                                                 InstructionsGenerate(instructions: "1. Stand tall with your feet hip-width apart"),
@@ -474,10 +395,7 @@ struct Movements {
                                         movementIDGenerate: 26,
                                         category: 4,
                                         iconMovementGenerate: "Squat Roundhouse Kick",
-                                        animationMovementGenerate: [
-                                            AnimationGenerate(animationFrame: ""),
-                                            AnimationGenerate(animationFrame: "")
-                                ],
+                                        animationMovementGenerate: "26.squatRoundhouseKick",
                                 namaMovementGenerate: "Squat Roundhouse Kick",
                                 instructionsGenerate: [
                                     InstructionsGenerate(instructions: "1. Stand with your feet shoulder width apart and your arms in front of your chest"),
@@ -492,10 +410,7 @@ struct Movements {
                                         movementIDGenerate: 27,
                                         category: 4,
                                         iconMovementGenerate: "Back Lunges Front Kick",
-                                    animationMovementGenerate: [
-                                        AnimationGenerate(animationFrame: ""),
-                                        AnimationGenerate(animationFrame: "")
-                                        ],
+                                    animationMovementGenerate: "27.backLungesFrontKick",
                                         namaMovementGenerate: "Back Lunges Front Kick",
                                     instructionsGenerate: [
                                         InstructionsGenerate(instructions: "1. Start with feet together"),
@@ -510,10 +425,7 @@ struct Movements {
                                         movementIDGenerate: 28,
                                         category: 4,
                                         iconMovementGenerate: "Squat Side Kick",
-                                    animationMovementGenerate: [
-                                        AnimationGenerate(animationFrame: ""),
-                                        AnimationGenerate(animationFrame: "")
-                                        ],
+                                    animationMovementGenerate: "28.squatSideKick",
                                         namaMovementGenerate: "Squat Side Kick",
                                         instructionsGenerate: [
                                         InstructionsGenerate(instructions: "1. Stand with your feet shoulder-width distance apart, feet parallel. Hold your hands out in front of you for balance. Bend your knees, lowering your hips deeply into a squat, keeping weight back in your heels."),
