@@ -71,6 +71,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, ObservableO
             session.delegate = self
             session.activate()
             print("Session is reachable: \(session.isReachable)")
+            self.workoutManager.authorizeHealthKit()
         }
         //start timer yang ngeupdate data heart rate dan calorie
         Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { (Timer) in
@@ -118,7 +119,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, ObservableO
             }
             if let startMessage = (message["startWorkout"] as? String){
                 DispatchQueue.main.async {
-                    self.workoutManager.authorizeHealthKit()
+                  
                     self.workoutManager.startWorkoutSession()
                    
                     self.heartRateLabel.setText("\(self.workoutManager.heartRate) BPM")

@@ -153,6 +153,7 @@
                         <outlet property="timeCardView" destination="MDT-qX-0da" id="dvT-kk-XCZ"/>
                         <segue destination="oWg-fE-7Q6" kind="show" identifier="homeToDetail" id="6DY-3n-LYf"/>
                         <segue destination="B5d-lx-Mjs" kind="presentation" identifier="showOnboarding" id="ajL-h9-xvp"/>
+                        <segue destination="TFm-6o-6Ob" kind="show" identifier="startFitness" id="5XO-By-U8u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrH-r8-nJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -184,6 +185,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="08f-tm-uJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1608" y="-621"/>
+        </scene>
+        <!--WorkoutMode-->
+        <scene sceneID="N4H-oH-JlO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WorkoutMode" id="TFm-6o-6Ob" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UZv-hg-ymf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Koy-7V-Vtx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1478" y="-497"/>
         </scene>
     </scenes>
     <resources>

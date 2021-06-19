@@ -11,6 +11,7 @@ class SkillTreeViewController: UIViewController {
     
     let movementData = Movements().data
     var skillTreeMovement: [MovementGenerate]? = nil
+    var selectedMovement : Int = 0
     
     @IBOutlet weak var move01: SkillTreeCustomView!
     @IBOutlet weak var move02: SkillTreeCustomView!
@@ -64,7 +65,9 @@ class SkillTreeViewController: UIViewController {
         userData.setData(user: user)
         
     }
+    
 }
+    
 
 extension SkillTreeViewController: SkillTreeCustomViewDelegate{
     func didUnlock(data: MovementGenerate, _ sender: SkillTreeCustomView) {
@@ -73,7 +76,8 @@ extension SkillTreeViewController: SkillTreeCustomViewDelegate{
         }
         
         if sender.polygon.tintColor == #colorLiteral(red: 0.656878829, green: 0.8667349219, blue: 0.2977412045, alpha: 1) {
-            print("udah kebuka")
+            selectedMovement = data.movementIDGenerate
+           performSegue(withIdentifier: "showHowTo", sender: self)
         }else{
             AlertUnlockViewController.showAlert(from: self, title: data.namaMovementGenerate, reqEP: data.costEPGenerate, image: nil) {
                 var currentPoint = Int(user.energy_points)
@@ -90,6 +94,12 @@ extension SkillTreeViewController: SkillTreeCustomViewDelegate{
         
         
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showHowTo"{
+        let destinationController = segue.destination as! HowToDoViewController
+        destinationController.selectedRow = selectedMovement
+        }
     }
     
     
