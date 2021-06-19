@@ -85,6 +85,7 @@ extension SkillTreeViewController: SkillTreeCustomViewDelegate{
                     //print("point tidak cukup")
                 //}
                 self.viewSetup(outlets: [self.move01, self.move02, self.move03, self.move04, self.move05, self.move06, self.move07, self.move08])
+                self.userPointView()
             }
         }
         
