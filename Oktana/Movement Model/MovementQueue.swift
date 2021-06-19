@@ -10,8 +10,8 @@ import Foundation
 struct MovementQueue{
     static var MovementList  = Movements()
     static var isBreak : Bool = false
-    static var cardioNum : Int = 0
-    
+    static var testRecord : [Int] = []
+    //static var testNumber = 0
     static var selectedMoves : [[Int]] = [[],[],[],[]] // untuk dimasukkin di movement list
     static var selectedMovesList : [Int] = [] //untuk dimasukkin di workout MODE
     static var currentWorkoutPosition : Int = 0
@@ -75,6 +75,7 @@ struct MovementQueue{
         
     }
     static func queueFitnessList(){
+        MovementQueue.isTest = true
         var movements = CoreDataManager.shared.fetchAvailableMovement()
         selectedMoves = [[9],[12],[18],[23]]
         selectedMovesList = [9, 12, 18, 23]
@@ -92,6 +93,7 @@ struct MovementQueue{
         MovementQueue.isTest = false
         MovementQueue.heartRate = 0
         MovementQueue.totalKcal = 0
+        MovementQueue.testRecord = []
         
         
         

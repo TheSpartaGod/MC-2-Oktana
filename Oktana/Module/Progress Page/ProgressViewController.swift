@@ -27,6 +27,8 @@ class ProgressViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         progressTableView.reloadData()
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.tabBarController?.tabBar.isHidden = false
     }
 }
 
@@ -47,7 +49,7 @@ extension ProgressViewController: UITableViewDataSource, UITableViewDelegate{
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell") as! TitleTableViewCell
-            cell.title = "Progess"
+            cell.title = "Progress"
             cell.isTestButtonExist = true
             return cell
         case 1:
@@ -60,6 +62,7 @@ extension ProgressViewController: UITableViewDataSource, UITableViewDelegate{
             let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell") as! TitleTableViewCell
             cell.title = "Your Fitness"
             cell.isTestButtonExist = false
+            cell.delegate = self
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "fitnessView") as! FitnessTableViewCell
@@ -108,6 +111,17 @@ extension ProgressViewController: UITableViewDataSource, UITableViewDelegate{
         }
     }
     
+    
+    
+}
+extension ProgressViewController : TitleTableViewCellDelegate{
+    func takeTestButtonAction() {
+        AlertStandardViewController.showAlert(from: self, title: "Start Fitness Test", message: "The test will test your whole body's fitness level.\nAre you sure you are ready?", positiveMessage: "I'm Ready") {
+            MovementQueue.isTest = true
+            self.performSegue(withIdentifier: "startFitness", sender: self)
+        }
+        
+    }
     
     
 }

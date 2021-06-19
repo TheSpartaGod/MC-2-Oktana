@@ -34,6 +34,9 @@ class WorkoutViewController: UIViewController{
         super.viewDidLoad()
         if CoreDataManager.shared.fetchUser() == nil{
             performSegue(withIdentifier: "showOnboarding", sender: self)
+            /*AlertStandardViewController.showAlert(from: self, title: "Measure Your \nFitness", message: "Would you like to test your fitness level before you use our app?", positiveMessage: "Sure") {
+                MovementQueue.isTest = true
+                self.performSegue(withIdentifier: "startFitness", sender: self)            }*/
         }
         self.navigationController?.isNavigationBarHidden = true
         configElements()
@@ -162,6 +165,7 @@ class WorkoutViewController: UIViewController{
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.tabBarController?.tabBar.isHidden = false
+        configElements()
     }
    
     

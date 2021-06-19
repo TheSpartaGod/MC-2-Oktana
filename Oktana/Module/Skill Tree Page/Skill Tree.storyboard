@@ -123,11 +123,20 @@
                         <outlet property="move07" destination="u8I-6h-ns7" id="fh4-qS-sFy"/>
                         <outlet property="move08" destination="o1B-ac-x4C" id="VkT-Xt-bb1"/>
                         <outlet property="userData" destination="Evs-Os-tnx" id="VTv-eR-DKm"/>
+                        <segue destination="OuR-2Z-ppP" kind="presentation" identifier="showHowTo" id="agE-FQ-vXS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nE5-St-Crj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="837.68115942028987" y="193.52678571428569"/>
+        </scene>
+        <!--HowToDo-->
+        <scene sceneID="UjN-hi-n3L">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HowToDo" id="OuR-2Z-ppP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5df-Fq-V5L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1522" y="194"/>
         </scene>
     </scenes>
     <resources>

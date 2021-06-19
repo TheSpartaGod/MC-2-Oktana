@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 import WatchConnectivity
 
 class WorkoutModeViewController: UIViewController, WCSessionDelegate{
@@ -39,6 +40,10 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
     var currentSet : Int = 0
     var desiredSet : Int = 0
     var session : WCSession!
+    var player : AVPlayerLooper?
+    var avPlayer = AVPlayerViewController()
+  
+    var isTest = MovementQueue.isTest
     
     //MARK: - Actions
     
@@ -72,11 +77,18 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
         
         guideBackground.layer.cornerRadius = guideBackground.frame.size.width/2
         initializeWorkoutList()
-        setCircleProgressBar()
+       
       
         if MovementQueue.currentWorkoutPosition == 0{
             reverseBackButton.isHidden = true
             reverseBackImage.isHidden = true
+        }
+        if MovementQueue.isBreak == true && isTest == true{
+            AlertTestViewController.showAlert(from: self, movementTitle: "Performance Check", image: nil) { inputMsg in
+                MovementQueue.testRecord.append(Int(inputMsg) ?? 0)
+                
+            }
+           
         }
         
         connectWatch() //MARK: CREATE APPLE WATCH SESSION / CONNECT WATCH
@@ -104,7 +116,29 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
         self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = true
         workoutTimer()
+       
         
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        guard let url = Bundle.main.path(forResource: MovementQueue.MovementList.data[currentWorkoutID-1].animationMovementGenerate, ofType: "mov") else {
+            return
+            
+        }
+        
+        let player = AVQueuePlayer()
+        self.player = AVPlayerLooper(player: player, templateItem: AVPlayerItem(asset: AVAsset(url: URL(fileURLWithPath: url))))
+        avPlayer.player = player
+        avPlayer.videoGravity = .resizeAspectFill
+        avPlayer.showsPlaybackControls = false
+        avPlayer.view.frame = guideBackground.bounds
+        guideBackground.contentMode = .scaleToFill
+        self.addChild(avPlayer)
+        self.guideBackground.addSubview(avPlayer.view)
+        self.guideBackground.addSubview(UIImageView(image: UIImage(named: "frameBulet")))
+        avPlayer.player?.play()
+        avPlayer.player?.isMuted = true
+        
+        setCircleProgressBar()
     }
    // func untuk membuat progress bar lingkaran
     func setCircleProgressBar(){
@@ -144,9 +178,7 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
                 }else if MovementQueue.currentWorkoutPosition == MovementQueue.selectedMovesList.count-1{
                     
                     //send message to watch bahwa workout telah selesai
-                    self.session.sendMessage(["finishWorkout": "finishWorkout"], replyHandler: nil) { (error) in
-                        print(error.localizedDescription)
-                    }
+                    self.checkFinalStatus()
                 
                 }else if MovementQueue.isBreak == false{
                     MovementQueue.isBreak = true
@@ -188,7 +220,10 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
         } else if MovementQueue.isBreak != false {
            
             activityTitleLabel.text = "Break"
-            activityStatusLabel.text = "Next Up: \(MovementQueue.MovementList.data[nextWorkoutID-1].namaMovementGenerate)"
+            if isTest == false{
+                activityStatusLabel.text = "Next Up: \(MovementQueue.MovementList.data[nextWorkoutID-1].namaMovementGenerate)"
+            }
+            
         }
         
     }
@@ -207,12 +242,36 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
             MovementQueue.isBreak = true
             performSegue(withIdentifier: "toNextMove", sender: nil)
         }
-        else if MovementQueue.currentWorkoutPosition == MovementQueue.selectedMovesList.count-1{
+        else if MovementQueue.currentWorkoutPosition == MovementQueue.selectedMovesList.count-1 {
             //send message to watch bahwa workout telah selesai
-            self.session.sendMessage(["finishWorkout": "finishWorkout"], replyHandler: nil) { (error) in
-                print(error.localizedDescription)
-            }
+            self.checkFinalStatus()
         }
+    }
+    func checkFinalStatus(){
+        if isTest == false && MovementQueue.isBreak == false{
+            if !session.isReachable{
+                self.performSegue(withIdentifier: "toWorkoutComplete", sender: self)
+            }else{
+                self.session.sendMessage(["finishWorkout": "finishWorkout"], replyHandler: nil) { (error) in
+                    print(error.localizedDescription)
+            }
+            }
+        }else if isTest == true && MovementQueue.isBreak == false{
+            MovementQueue.isBreak = true
+            performSegue(withIdentifier: "toNextMove", sender: nil)
+        }else if isTest == true && MovementQueue.isBreak == true{
+            if !session.isReachable{
+                self.performSegue(withIdentifier: "toTestComplete", sender: self)
+            }else{
+                self.session.sendMessage(["finishWorkout": "finishWorkout"], replyHandler: nil) { (error) in
+                    print(error.localizedDescription)
+            }
+           
+                
+            
+        }
+       
+    }
     }
     // func untuk menghandle previous move
     func reverseBackWorkout(){
@@ -291,7 +350,13 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
                 let kcal = message["totalKcal"] as? Double
                 MovementQueue.heartRate = Int(avgHeart)
                 MovementQueue.totalKcal = Int(kcal ?? 420)
-                self.performSegue(withIdentifier: "toWorkoutComplete", sender: self)
+                if self.isTest == false{
+                    self.performSegue(withIdentifier: "toWorkoutComplete", sender: self)
+                } else{
+                    
+                    self.performSegue(withIdentifier: "toTestComplete", sender: self)
+                }
+                
             }
         }
     }

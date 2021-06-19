@@ -17,9 +17,10 @@ class WorkoutCompleteViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
    
     @IBAction func onDoneButtonClick(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
         saveWorkout()
         MovementQueue.dequeueMovementList()
+        navigationController?.popToRootViewController(animated: true)
+     
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +32,12 @@ class WorkoutCompleteViewController: UIViewController {
         //create new workout object
         
         if let user = CoreDataManager.shared.fetchUser() {
+            
+           
             let newWorkout = CoreDataManager.shared.addWorkouttoUser(user: user, time: Int(MovementQueue.currentTotalTime), heart_rate: 150, calories: 150, date: Date())
             let newPoint =  user.energy_points + Int64(((MovementQueue.currentTotalTime/60) * 2))
             CoreDataManager.shared.updatePointUser(user: user, point: Int(newPoint))
+            
           // add energy points to user
       
           // let allWorkout =  CoreDataManager.shared.fetchAllWorkoutData()

@@ -33,18 +33,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9z-PQ-fJ5">
                                 <rect key="frame" x="47" y="308" width="320" height="280"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqV-qz-XYl">
-                                        <rect key="frame" x="34" y="30" width="252" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqV-qz-XYl">
+                                        <rect key="frame" x="34" y="30" width="252" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="252" id="OEx-EZ-L46"/>
-                                            <constraint firstAttribute="height" constant="30" id="sKg-aR-GdL"/>
+                                            <constraint firstAttribute="height" constant="45" id="sKg-aR-GdL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                         <color key="textColor" red="0.70422822240000005" green="0.86077779529999998" blue="0.38812410829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sve-87-kLv">
-                                        <rect key="frame" x="30" y="80" width="260" height="75"/>
+                                        <rect key="frame" x="30" y="95" width="260" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="260" id="K4o-eG-OyY"/>
                                             <constraint firstAttribute="height" constant="75" id="XGM-yC-8ou"/>
@@ -54,7 +54,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8I-XH-bfz">
-                                        <rect key="frame" x="34" y="165" width="252" height="35"/>
+                                        <rect key="frame" x="34" y="180" width="252" height="35"/>
                                         <color key="backgroundColor" red="0.70422822240000005" green="0.86077779529999998" blue="0.38812410829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="RFn-ox-QHi"/>
@@ -68,7 +68,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeo-fl-G1c">
-                                        <rect key="frame" x="34" y="208" width="252" height="41"/>
+                                        <rect key="frame" x="34" y="223" width="252" height="41"/>
                                         <color key="backgroundColor" red="0.48611271379999998" green="0.47872424130000002" blue="0.46274298429999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <state key="normal" title="Maybe later">
