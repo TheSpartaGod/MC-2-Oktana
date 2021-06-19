@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import AVKit
 
 class HowToDoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
 
     @IBOutlet weak var howToStepsTableView: UITableView!
-    @IBOutlet weak var howToImage: UIImageView!
     @IBOutlet weak var movementTitle: UILabel!
+    @IBOutlet weak var videoPlayer: UIView!
+    
     var selectedRow : Int = 0
+    var player: AVPlayerLooper?
+    var avPlayer = AVPlayerViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         movementTitle.text = MovementQueue.MovementList.data[selectedRow-1].namaMovementGenerate
@@ -21,6 +26,23 @@ class HowToDoViewController: UIViewController, UITableViewDelegate, UITableViewD
         howToStepsTableView.dataSource = self
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        guard let url = Bundle.main.path(forResource: MovementQueue.MovementList.data[selectedRow-1].animationMovementGenerate, ofType: "mov") else {
+            return
+        }
+        
+        let player = AVQueuePlayer()
+        self.player = AVPlayerLooper(player: player, templateItem: AVPlayerItem(asset: AVAsset(url: URL(fileURLWithPath: url))))
+        avPlayer.player = player
+        avPlayer.view.frame = videoPlayer.bounds
+        videoPlayer.contentMode = .scaleAspectFill
+        self.addChild(avPlayer)
+        self.videoPlayer.addSubview(avPlayer.view)
+        avPlayer.player?.play()
+        avPlayer.player?.isMuted = true
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

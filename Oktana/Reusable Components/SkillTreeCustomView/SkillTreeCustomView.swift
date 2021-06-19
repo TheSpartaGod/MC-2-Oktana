@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SkillTreeCustomViewDelegate {
-    func didUnlock(data: MovementGenerate)
+    func didUnlock(data: MovementGenerate, _ sender: SkillTreeCustomView)
 }
 
 class SkillTreeCustomView: UIView {
@@ -50,7 +50,7 @@ class SkillTreeCustomView: UIView {
             print("no-data on the view")
             return
         }
-        delegate?.didUnlock(data: data)
+        delegate?.didUnlock(data: data, self)
 
     }
     
