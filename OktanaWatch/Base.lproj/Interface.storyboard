@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bG5-Hj-B0F">
     <device id="watch38"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
     </dependencies>
     <scenes>
+        <!--firstInterfaceController-->
+        <scene sceneID="fRX-BG-EKQ">
+            <objects>
+                <controller id="bG5-Hj-B0F" userLabel="firstInterfaceController" customClass="firstInterfaceController" customModule="OktanaWatch_Extension">
+                    <items>
+                        <label width="136" height="87" alignment="center" text="Waiting for Oktana to launch" textAlignment="center" numberOfLines="2" id="y9F-Vz-e0h">
+                            <fontDescription key="font" type="system" pointSize="16"/>
+                        </label>
+                        <button width="1" alignment="left" title="Cancel Workout" id="73L-WC-ESu"/>
+                    </items>
+                    <connections>
+                        <segue destination="AgC-eL-Hgc" kind="relationship" relationship="nextPage" id="fVq-pG-qFf"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-203" y="292"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
@@ -13,8 +30,14 @@
                     <items>
                         <group width="1" alignment="center" id="7JN-5U-dyk">
                             <items>
+                                <button width="34" height="31" alignment="left" backgroundImage="xmark.circle" catalog="system" id="2Bv-z4-wFm">
+                                    <color key="backgroundColor" red="0.70047718290000005" green="0.86009114980000001" blue="0.38812610510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <action selector="onFinishBtnClick" destination="AgC-eL-Hgc" id="hai-MA-ljq"/>
+                                    </connections>
+                                </button>
                                 <label alignment="center" text="Label" textAlignment="center" id="Rzz-MX-ZhV">
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
                                 </label>
                             </items>
                         </group>
@@ -40,15 +63,20 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="center" verticalAlignment="bottom" id="aI7-kz-aDf">
+                        <group width="136" height="18" alignment="center" verticalAlignment="bottom" id="aI7-kz-aDf">
                             <items>
-                                <label alignment="left" text="heart" id="xgC-Mp-e9N"/>
-                                <button width="34" height="31" alignment="right" verticalAlignment="center" backgroundImage="xmark.circle" catalog="system" id="2Bv-z4-wFm">
-                                    <color key="backgroundColor" red="0.70047718290000005" green="0.86009114980000001" blue="0.38812610510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <connections>
-                                        <action selector="onFinishBtnClick" destination="AgC-eL-Hgc" id="hai-MA-ljq"/>
-                                    </connections>
-                                </button>
+                                <imageView height="17" alignment="left" verticalAlignment="center" image="heart.fill" catalog="system" id="IT4-Iz-qte">
+                                    <color key="tintColor" red="1" green="0.051198876272916527" blue="0.05731077231948023" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                                <label height="19" alignment="left" text="0 BPM" textAlignment="right" id="xgC-Mp-e9N">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
+                                <imageView height="19" alignment="right" verticalAlignment="center" image="flame" catalog="system" id="bcQ-xf-sTX">
+                                    <color key="tintColor" red="1" green="0.63305389689514069" blue="0.1733412415525607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                                <label height="18" alignment="right" verticalAlignment="center" text="50 KCAL" id="sKW-z0-hN2">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
                             </items>
                         </group>
                     </items>
@@ -56,13 +84,21 @@
                         <outlet property="finishBtn" destination="2Bv-z4-wFm" id="mmm-BC-QDp"/>
                         <outlet property="forwardSkipButton" destination="9BC-rA-Eru" id="YDa-RZ-isr"/>
                         <outlet property="heartRateLabel" destination="xgC-Mp-e9N" id="xko-RU-6gk"/>
+                        <outlet property="kcalLabel" destination="sKW-z0-hN2" id="6bW-2V-Wgc"/>
                         <outlet property="playPauseBtn" destination="iNd-c6-G1f" id="9QC-lV-HbM"/>
                         <outlet property="reverseBackBtn" destination="HOe-43-Kin" id="iOt-7k-U8m"/>
                         <outlet property="workoutTitleLabel" destination="Rzz-MX-ZhV" id="m4Y-ig-PNN"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="359.5"/>
+            <point key="canvasLocation" x="118" y="315"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="GeH-ck-8f6">
+            <objects>
+                <controller id="bGt-d0-RMm"/>
+            </objects>
+            <point key="canvasLocation" x="392" y="315"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -79,26 +115,28 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="419" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="OktanaWatch" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="722" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
                 <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="OktanaWatch" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="722" y="345"/>
         </scene>
     </scenes>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="flame" catalog="system" width="111" height="128"/>
+        <image name="heart.fill" catalog="system" width="128" height="105"/>
         <image name="pause.fill" catalog="system" width="119" height="128"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
     </resources>

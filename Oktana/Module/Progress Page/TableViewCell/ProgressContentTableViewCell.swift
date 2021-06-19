@@ -9,7 +9,11 @@ import UIKit
 
 class ProgressContentTableViewCell: UITableViewCell  {
     
-    var workoutData: [Workout]?
+    var workoutData: [Workout]? {
+        didSet {
+            ContentCollectionView.reloadData()
+        }
+    }
     
     
 
