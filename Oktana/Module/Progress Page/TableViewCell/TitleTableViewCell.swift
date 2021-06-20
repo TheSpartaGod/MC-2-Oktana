@@ -32,11 +32,11 @@ class TitleTableViewCell: UITableViewCell {
     
     @IBAction func takeTest(_ sender: Any) {
         print("button tapper")
-        if let user = CoreDataManager.shared.fetchUser(){
-            CoreDataManager.shared.addWorkouttoUser(user: user, time: 22, heart_rate: 123, calories: 77, date: Date())
-            CoreDataManager.shared.addWorkouttoUser(user: user, time: 22, heart_rate: 123, calories: 77, date: Date())
-            CoreDataManager.shared.addFitnesstoUser(user: user, cardio: 12, upperStrength: 13, coreStrength: 14, lowerStrength: 15)
-        }
+        MovementQueue.queueFitnessList()
+        delegate?.takeTestButtonAction()
+        
+          //start test
+        
         
     }
     

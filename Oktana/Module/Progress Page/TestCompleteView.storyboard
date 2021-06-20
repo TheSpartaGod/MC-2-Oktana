@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Workout Complete View Controller-->
+        <!--Test Complete View Comtroller View Controller-->
         <scene sceneID="46d-e8-yjO">
             <objects>
-                <viewController id="cSF-mc-H4a" customClass="WorkoutCompleteViewController" customModule="Oktana" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cSF-mc-H4a" customClass="TestCompleteViewComtrollerViewController" customModule="Oktana" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sHw-Jp-sOb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,8 +20,8 @@
                                 <rect key="frame" x="80" y="104" width="230" height="230"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CHp-mY-L0x">
-                                        <rect key="frame" x="41" y="41.333333333333485" width="149" height="148"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CHp-mY-L0x">
+                                        <rect key="frame" x="-15" y="-7.5" width="260" height="245"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.6588235294" green="0.86666666670000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
@@ -43,6 +43,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="onDoneButtonClick:" destination="cSF-mc-H4a" eventType="touchUpInside" id="EZP-cg-uVZ"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwl-sA-nZY" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
                                 <rect key="frame" x="49" y="560" width="149" height="96"/>
@@ -69,19 +72,20 @@
                         <color key="backgroundColor" red="0.18039215689999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="caloriesCardView" destination="98U-wG-71P" id="JVO-4k-Ou7"/>
-                        <outlet property="checklistImage" destination="VPN-Vp-YNq" id="jSn-or-lVQ"/>
-                        <outlet property="doneButton" destination="BS4-97-VfJ" id="Ggy-0W-z3h"/>
-                        <outlet property="heartCardView" destination="kUn-re-RtE" id="PrD-W0-pnH"/>
+                        <outlet property="doneButton" destination="BS4-97-VfJ" id="PTM-Ry-7Q0"/>
+                        <outlet property="jumpJackView" destination="kUn-re-RtE" id="KrG-VC-V1F"/>
+                        <outlet property="pushUpView" destination="98U-wG-71P" id="aA6-Te-SOU"/>
+                        <outlet property="sitUpView" destination="uwl-sA-nZY" id="DgK-kd-ZMt"/>
+                        <outlet property="squatView" destination="ouX-YF-Jtw" id="Xab-CA-bNG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4FO-If-bqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="202"/>
+            <point key="canvasLocation" x="1221.7391304347827" y="201.5625"/>
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

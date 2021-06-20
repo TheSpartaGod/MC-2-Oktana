@@ -14,7 +14,6 @@
                         <label width="136" height="87" alignment="center" text="Waiting for Oktana to launch" textAlignment="center" numberOfLines="2" id="y9F-Vz-e0h">
                             <fontDescription key="font" type="system" pointSize="16"/>
                         </label>
-                        <button width="1" alignment="left" title="Cancel Workout" id="73L-WC-ESu"/>
                     </items>
                     <connections>
                         <segue destination="AgC-eL-Hgc" kind="relationship" relationship="nextPage" id="fVq-pG-qFf"/>
@@ -30,12 +29,6 @@
                     <items>
                         <group width="1" alignment="center" id="7JN-5U-dyk">
                             <items>
-                                <button width="34" height="31" alignment="left" backgroundImage="xmark.circle" catalog="system" id="2Bv-z4-wFm">
-                                    <color key="backgroundColor" red="0.70047718290000005" green="0.86009114980000001" blue="0.38812610510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <connections>
-                                        <action selector="onFinishBtnClick" destination="AgC-eL-Hgc" id="hai-MA-ljq"/>
-                                    </connections>
-                                </button>
                                 <label alignment="center" text="Label" textAlignment="center" id="Rzz-MX-ZhV">
                                     <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
                                 </label>
@@ -81,7 +74,6 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="finishBtn" destination="2Bv-z4-wFm" id="mmm-BC-QDp"/>
                         <outlet property="forwardSkipButton" destination="9BC-rA-Eru" id="YDa-RZ-isr"/>
                         <outlet property="heartRateLabel" destination="xgC-Mp-e9N" id="xko-RU-6gk"/>
                         <outlet property="kcalLabel" destination="sKW-z0-hN2" id="6bW-2V-Wgc"/>
@@ -138,6 +130,5 @@
         <image name="flame" catalog="system" width="111" height="128"/>
         <image name="heart.fill" catalog="system" width="128" height="105"/>
         <image name="pause.fill" catalog="system" width="119" height="128"/>
-        <image name="xmark.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
