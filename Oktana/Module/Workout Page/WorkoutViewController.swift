@@ -13,14 +13,13 @@ class WorkoutViewController: UIViewController{
     
     
     @IBOutlet var baseView: UIView!
-    @IBOutlet weak var energyStreakView: UIView!
+    @IBOutlet weak var energyStreakView: StreakPointView!
     @IBOutlet weak var mainWorkoutLabel: UILabel!
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var progressBarBase: UIView!
     @IBOutlet weak var progressBarFill: UIView!
     @IBOutlet weak var startWorkoutButton: UIView!
-    @IBOutlet weak var streakCountLabel: UILabel!
-    @IBOutlet weak var energyPointLabel: UILabel!
+   
     @IBOutlet weak var timeCardView: MediumInfoCardView!
     @IBOutlet weak var calorieCardView: MediumInfoCardView!
    
@@ -34,9 +33,7 @@ class WorkoutViewController: UIViewController{
         super.viewDidLoad()
         if CoreDataManager.shared.fetchUser() == nil{
             performSegue(withIdentifier: "showOnboarding", sender: self)
-            /*AlertStandardViewController.showAlert(from: self, title: "Measure Your \nFitness", message: "Would you like to test your fitness level before you use our app?", positiveMessage: "Sure") {
-                MovementQueue.isTest = true
-                self.performSegue(withIdentifier: "startFitness", sender: self)            }*/
+         
         }
         self.navigationController?.isNavigationBarHidden = true
         configElements()
@@ -47,22 +44,19 @@ class WorkoutViewController: UIViewController{
     
     func configElements(){
         //MARK: ENERGY STREAK VIEW
-        streakCountLabel.text = "0"
-        energyPointLabel.text = "0"
+        energyStreakView.totalPointLabel.text = "0"
+        energyStreakView.totalPointLabel.text = "0"
        
     
             let opUser = CoreDataManager.shared.fetchUser()
             if opUser == nil{
                 print("nil")
             }else{
-                streakCountLabel.text = String(opUser!.total_streaks)
-                energyPointLabel.text = String(opUser!.energy_points)
+                energyStreakView.totalStreakLabel.text = "\(String(opUser!.total_streaks)) days"
+                energyStreakView.totalPointLabel.text = String(opUser!.energy_points)
+               
                 
             }
-        
-            
-    
-       
         
         energyStreakView.layer.cornerRadius = 5
         energyStreakView.layer.masksToBounds = true

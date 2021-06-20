@@ -21,8 +21,9 @@ class LastBoardingPageViewController: UIViewController {
         for i in basicMovementID{
             CoreDataManager.shared.addMovementtoUser(user: CoreDataManager.shared.fetchUser()!, movementID: i)
         }//nambahin basic move ke user
-        
-        
+        if MovementQueue.demoMode == true{
+            CoreDataManager.shared.updatePointUser(user: CoreDataManager.shared.fetchUser() ?? User(), point: 1000)
+        }
         self.dismiss(animated: true, completion: nil)
     }
     

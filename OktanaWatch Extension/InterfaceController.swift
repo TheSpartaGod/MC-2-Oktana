@@ -17,7 +17,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, ObservableO
     @IBOutlet weak var forwardSkipButton: WKInterfaceButton!
     @IBOutlet weak var workoutTitleLabel: WKInterfaceLabel!
     @IBOutlet weak var heartRateLabel: WKInterfaceLabel!
-    @IBOutlet weak var finishBtn: WKInterfaceButton!
+   
     @IBOutlet weak var kcalLabel: WKInterfaceLabel!
     var isPaused : Bool = false
     var session : WCSession!
@@ -57,14 +57,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, ObservableO
             
         }
     }
-    @IBAction func onFinishBtnClick() {
-         workoutManager.session.end()
-        session.sendMessage(["Message": workoutManager.averageHeartRate], replyHandler: nil) { (error) in
-            print(error)
-        }
-    }
+    
     override func awake(withContext context: Any?) {
-        
+        super.awake(withContext: context)
         // Configure interface objects here.
         if WCSession.isSupported(){
             session = WCSession.default
