@@ -32,14 +32,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="waT-6F-CIJ" customClass="StreakPointView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="225" y="55" width="149" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.25490584970000002" green="0.2548948526" blue="0.25490233299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waT-6F-CIJ" customClass="StreakPointView" customModule="Oktana" customModuleProvider="target">
+                                <rect key="frame" x="210" y="52" width="160" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Vbo-va-Euu"/>
+                                    <constraint firstAttribute="height" constant="35" id="gMf-PX-dlx"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdF-lv-Nwl">
-                                <rect key="frame" x="28" y="51" width="134" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdF-lv-Nwl">
+                                <rect key="frame" x="16" y="52" width="134" height="41"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <color key="textColor" red="0.70047718290000005" green="0.86009114980000001" blue="0.38812610510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -52,21 +53,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This week's progress" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdU-tn-Qee">
-                                <rect key="frame" x="28" y="136" width="174" height="21"/>
+                                <rect key="frame" x="25" y="125" width="174" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/75 Minutes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsH-7D-iOK">
-                                <rect key="frame" x="241" y="135" width="107" height="21"/>
+                                <rect key="frame" x="264" y="125" width="107" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eV9-Jh-KIF">
-                                <rect key="frame" x="28" y="181" width="346" height="11"/>
+                                <rect key="frame" x="25" y="154" width="346" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jfF-UH-zXe">
@@ -90,25 +91,31 @@
                                 <color key="backgroundColor" red="0.70438355210000003" green="0.8600926995" blue="0.38812598590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Workout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mz-R3-Ut6">
-                                <rect key="frame" x="25" y="548" width="167" height="33"/>
+                                <rect key="frame" x="25" y="582" width="167" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" red="0.70047718290000005" green="0.86009114980000001" blue="0.38812610510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MDT-qX-0da" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="33" y="607" width="149" height="96"/>
+                                <rect key="frame" x="25" y="641" width="167" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qjt-Dz-Ovw" customClass="MediumInfoCardView" customModule="Oktana" customModuleProvider="target">
-                                <rect key="frame" x="208" y="607" width="149" height="96"/>
+                                <rect key="frame" x="200" y="641" width="174" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="32a-jX-kHs"/>
                         <color key="backgroundColor" red="0.18034434320000001" green="0.17254796620000001" blue="0.1725491881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="sdF-lv-Nwl" firstAttribute="leading" secondItem="32a-jX-kHs" secondAttribute="leading" constant="16" id="K9Z-A5-xXf"/>
+                            <constraint firstItem="32a-jX-kHs" firstAttribute="trailing" secondItem="waT-6F-CIJ" secondAttribute="trailing" constant="20" id="i5s-eN-8h5"/>
+                            <constraint firstItem="sdF-lv-Nwl" firstAttribute="top" secondItem="waT-6F-CIJ" secondAttribute="top" id="jTc-hd-fbv"/>
+                            <constraint firstItem="waT-6F-CIJ" firstAttribute="top" secondItem="32a-jX-kHs" secondAttribute="top" constant="8" id="oaJ-Da-OzM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Workout" image="heart.text.square.fill" catalog="system" id="u1s-EF-QeH"/>
                     <navigationItem key="navigationItem" id="kcD-ae-2Gn"/>
