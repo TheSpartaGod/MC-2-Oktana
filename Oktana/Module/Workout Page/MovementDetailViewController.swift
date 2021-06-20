@@ -13,7 +13,7 @@ class MovementDetailViewController: UIViewController ,UITableViewDelegate, UITab
     @IBOutlet weak var movementDetailTableView: UITableView!
     @IBOutlet weak var readyWorkoutButton: UIView!
     var selectedRow = 0
-    
+    var category = ["Cardio", "Upper Body", "Core Strength" ,"Lower Body"]
     @objc func didTapView(_ sender: UITapGestureRecognizer){//MOVE TO WORKOUT VIEW
         performSegue(withIdentifier: "startWorkoutMode", sender: nil)
     }
@@ -55,7 +55,7 @@ class MovementDetailViewController: UIViewController ,UITableViewDelegate, UITab
         let view = UIView()
         view.backgroundColor = UIColor(red: 0.14, green: 0.14, blue: 0.14, alpha: 1.00)
         let headerTitle = UILabel()
-        headerTitle.text = "Category" //EDIT THIS BASED ON SECTION NO.
+        headerTitle.text = category[section] //EDIT THIS BASED ON SECTION NO.
         headerTitle.frame = CGRect(x: 25, y: 5, width: 100, height: 20)
         headerTitle.textColor = .white
         view.addSubview(headerTitle)
@@ -67,7 +67,8 @@ class MovementDetailViewController: UIViewController ,UITableViewDelegate, UITab
         
         let cell = movementDetailTableView.dequeueReusableCell(withIdentifier: "MovementCell") as! MovementDetailTableViewCell
         let movementList = Movements()
-        
+        cell.moveIcon.image = UIImage(named: movementList.data[MovementQueue.selectedMoves[indexPath.section][indexPath.row]-1].iconMovementGenerate)
+        cell.moveIcon.tintColor = #colorLiteral(red: 0.7061602473, green: 0.8759058118, blue: 0.3303598464, alpha: 1)
         cell.moveNameLabel.text = movementList.data[MovementQueue.selectedMoves[indexPath.section][indexPath.row]-1].namaMovementGenerate
         return cell
     }
