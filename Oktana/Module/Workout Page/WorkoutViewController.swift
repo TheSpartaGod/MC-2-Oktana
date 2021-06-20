@@ -44,9 +44,6 @@ class WorkoutViewController: UIViewController{
     
     func configElements(){
         //MARK: ENERGY STREAK VIEW
-        energyStreakView.totalPointLabel.text = "0"
-        energyStreakView.totalPointLabel.text = "0"
-       
     
             let opUser = CoreDataManager.shared.fetchUser()
             if opUser == nil{
@@ -58,9 +55,7 @@ class WorkoutViewController: UIViewController{
                 
             }
         
-        energyStreakView.layer.cornerRadius = 5
-        energyStreakView.layer.masksToBounds = true
-        energyStreakView.backgroundColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1.00)
+        
        
         //MARK: BIG START BUTTON
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
@@ -141,10 +136,7 @@ class WorkoutViewController: UIViewController{
         baseView.backgroundColor = UIColor(red: 0.18, green: 0.17, blue: 0.17, alpha: 1.00)
         
         mainWorkoutLabel.textColor = UIColor(red: 0.66, green: 0.87, blue: 0.30, alpha: 1.00)
-        energyStreakView.backgroundColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1.00)
         
-        energyStreakView.layer.cornerRadius = 5
-        energyStreakView.layer.masksToBounds = true
         
         progressBarBase.layer.cornerRadius = 5
         progressBarFill.layer.cornerRadius = 5

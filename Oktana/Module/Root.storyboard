@@ -10,10 +10,11 @@
         <scene sceneID="pXv-rp-c28">
             <objects>
                 <tabBarController id="jlR-B9-0ue" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mrv-91-Q1v">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Mrv-91-Q1v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.70422822240000005" green="0.86077779529999998" blue="0.38812410829999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="QcR-QR-YTu" kind="relationship" relationship="viewControllers" id="5MU-Sl-Sg0"/>
