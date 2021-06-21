@@ -32,25 +32,26 @@ class WorkoutCompleteViewController: UIViewController {
         //create new workout object
         
         if let user = CoreDataManager.shared.fetchUser() {
-            
-           
-            let newWorkout = CoreDataManager.shared.addWorkouttoUser(user: user, time: Int(MovementQueue.currentTotalTime), heart_rate: 150, calories: 150, date: Date())
+            //compare dates between current and last workout
+           let now = Date()
+            let nilDate = Date(timeIntervalSince1970: 2) //nildate kalo dia belom pernah workout sebelomnya
+            let workouts = CoreDataManager.shared.fetchAllWorkoutData()
+            let lastWorkoutDate = workouts?.last?.date
+            let diffComponents = Calendar.current.dateComponents([.day], from: lastWorkoutDate ?? nilDate, to: now)
+            if lastWorkoutDate == nilDate || diffComponents.day! > 0{
+                let newStreak = user.total_streaks + 1
+                CoreDataManager.shared.updateStreaksUser(user: user, streaks: Int(newStreak))
+            }
+            let newWorkout = CoreDataManager.shared.addWorkouttoUser(user: user, time: Int(MovementQueue.currentTotalTime), heart_rate: 150, calories: 150, date:now)
+            // add energy points to user
             let newPoint =  user.energy_points + Int64(((MovementQueue.currentTotalTime/60) * 2))
             CoreDataManager.shared.updatePointUser(user: user, point: Int(newPoint))
             
-          // add energy points to user
-      
-          // let allWorkout =  CoreDataManager.shared.fetchAllWorkoutData()
-            //print(allWorkout?.count)
+           
         } else {
             print("error in saving workout")
             return
         }
-      
-        //set workout object attribute
-        
-        
-  
         
     }
     func configElements(){

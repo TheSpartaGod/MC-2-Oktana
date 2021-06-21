@@ -102,15 +102,12 @@ class WorkoutViewController: UIViewController{
             
             let lastWorkoutDate = workouts.last?.date
             let diffComponents = Calendar.current.dateComponents([.day], from: lastWorkoutDate!, to: now)
-            if diffComponents.day! < 1{
-                let user = CoreDataManager.shared.fetchUser()
-                let streaks = user!.total_streaks + 1
-                CoreDataManager.shared.updateStreaksUser(user: user!, streaks: Int(streaks))
-            }else{
+            if diffComponents.day! > 1{ // reset streak kalo difference dari last workout lebih dari 1
                 let user = CoreDataManager.shared.fetchUser()
                 let streaks = 0
-                CoreDataManager.shared.updateStreaksUser(user: user!, streaks: streaks)
+                CoreDataManager.shared.updateStreaksUser(user: user!, streaks: Int(streaks))
             }
+            
         }
         
     }
