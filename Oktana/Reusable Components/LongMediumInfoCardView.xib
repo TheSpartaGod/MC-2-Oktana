@@ -40,7 +40,7 @@
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" red="0.32941660280000001" green="0.3294029832" blue="0.32941222190000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.2551480532" green="0.25519016389999999" blue="0.25513890389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="552.89855072463774" y="466.40625"/>
         </view>

@@ -31,7 +31,7 @@ class TitleTableViewCell: UITableViewCell {
     
     
     @IBAction func takeTest(_ sender: Any) {
-        print("button tapper")
+        
         MovementQueue.queueFitnessList()
         delegate?.takeTestButtonAction()
         
