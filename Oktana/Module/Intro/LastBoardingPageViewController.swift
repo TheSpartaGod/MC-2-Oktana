@@ -16,14 +16,7 @@ class LastBoardingPageViewController: UIViewController {
     }
     
     @IBAction func startButton(_ sender: Any) {
-        CoreDataManager.shared.saveUser()
-        let basicMovementID = [9, 10, 11, 12, 13, 14, 18, 19, 20, 21, 23, 24, 25]
-        for i in basicMovementID{
-            CoreDataManager.shared.addMovementtoUser(user: CoreDataManager.shared.fetchUser()!, movementID: i)
-        }//nambahin basic move ke user
-        if MovementQueue.demoMode == true{
-            CoreDataManager.shared.updatePointUser(user: CoreDataManager.shared.fetchUser() ?? User(), point: 1000)
-        }
+        
         self.dismiss(animated: true, completion: nil)
     }
     
