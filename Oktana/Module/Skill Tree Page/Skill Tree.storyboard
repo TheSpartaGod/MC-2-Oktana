@@ -15,15 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHK-dp-pbF">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CHK-dp-pbF">
+                                <rect key="frame" x="-11" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Evs-Os-tnx" customClass="StreakPointView" customModule="Oktana" customModuleProvider="target">
-                                        <rect key="frame" x="217" y="8" width="177" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="oBj-C4-zDl"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJo-XC-0Rp" userLabel="01" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
                                         <rect key="frame" x="152" y="60" width="110" height="95"/>
                                         <constraints>
@@ -50,15 +44,19 @@
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skill Tree" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esy-Yc-RHE">
                                         <rect key="frame" x="20" y="8" width="143" height="41"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="143" id="oZx-69-6gj"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                         <color key="textColor" red="0.70047718290000005" green="0.86009114980000001" blue="0.38812610510000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VC-qM-iLR" userLabel="05" customClass="SkillTreeCustomView" customModule="Oktana" customModuleProvider="target">
                                         <rect key="frame" x="20" y="385" width="110" height="95"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Evs-Os-tnx" customClass="StreakPointView" customModule="Oktana" customModuleProvider="target">
+                                        <rect key="frame" x="234" y="8" width="160" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="lgB-Ru-3fx"/>
+                                            <constraint firstAttribute="height" constant="35" id="oBj-C4-zDl"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1803379655" green="0.17255061860000001" blue="0.1725490391" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -71,7 +69,6 @@
                                     <constraint firstItem="eJo-XC-0Rp" firstAttribute="top" secondItem="CHK-dp-pbF" secondAttribute="top" constant="60" id="AdW-4h-35e"/>
                                     <constraint firstItem="u8I-6h-ns7" firstAttribute="centerX" secondItem="7wJ-7x-uam" secondAttribute="centerX" id="CFQ-4d-W3s"/>
                                     <constraint firstItem="Www-Al-0MA" firstAttribute="top" secondItem="tuQ-d2-Lja" secondAttribute="bottom" constant="15" id="CJ7-CQ-kff"/>
-                                    <constraint firstItem="Evs-Os-tnx" firstAttribute="leading" secondItem="esy-Yc-RHE" secondAttribute="trailing" constant="54" id="DUF-Pu-hkL"/>
                                     <constraint firstItem="tuQ-d2-Lja" firstAttribute="height" secondItem="7wJ-7x-uam" secondAttribute="height" id="DeI-S3-LTm"/>
                                     <constraint firstItem="esy-Yc-RHE" firstAttribute="leading" secondItem="CHK-dp-pbF" secondAttribute="leading" constant="20" symbolic="YES" id="DgK-Az-cFK"/>
                                     <constraint firstItem="u8I-6h-ns7" firstAttribute="height" secondItem="6VC-qM-iLR" secondAttribute="height" id="E5b-YG-F5D"/>
