@@ -16,18 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZ6-Nv-duZ">
-                                <rect key="frame" x="80" y="104" width="230" height="230"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:tmX-1P-DQy:image" translatesAutoresizingMaskIntoConstraints="NO" id="L1A-PI-hlu">
-                                        <rect key="frame" x="41" y="41.333333333333485" width="149" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="0.6588235294" green="0.86666666670000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.18034434320000001" green="0.17254796620000001" blue="0.1725491881" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhj-ii-xUg">
                                 <rect key="frame" x="91" y="378" width="209" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -67,6 +55,11 @@
                                     <action selector="onDoneButtonClick:" destination="RAJ-JE-XD7" eventType="touchUpInside" id="2Uh-pq-mLS"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hfX-Ro-xbv">
+                                <rect key="frame" x="91" y="110" width="209" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.70438355210000003" green="0.8600926995" blue="0.38812598590000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jk5-A3-c9x"/>
                         <color key="backgroundColor" red="0.18039215689999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -74,7 +67,6 @@
                     <navigationItem key="navigationItem" id="DI9-P0-QsM"/>
                     <connections>
                         <outlet property="caloriesCardView" destination="q9N-2k-F26" id="dRZ-oT-vre"/>
-                        <outlet property="checklistImage" destination="kZ6-Nv-duZ" id="ujG-Yb-TsR"/>
                         <outlet property="doneButton" destination="3Zd-SP-l5Z" id="CcN-Zn-e1q"/>
                         <outlet property="energyCardView" destination="OjN-CG-jgI" id="ccc-gp-lhI"/>
                         <outlet property="heartCardView" destination="6dj-jJ-Mb5" id="6NM-0H-p7h"/>
@@ -83,11 +75,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eas-0c-JOu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="528" y="-1319"/>
+            <point key="canvasLocation" x="527.536231884058" y="-1319.1964285714284"/>
         </scene>
     </scenes>
     <resources>
-        <image name="imageView:tmX-1P-DQy:image" width="128" height="128"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

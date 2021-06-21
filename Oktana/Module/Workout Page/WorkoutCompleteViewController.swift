@@ -9,7 +9,7 @@ import UIKit
 
 class WorkoutCompleteViewController: UIViewController {
     
-    @IBOutlet weak var checklistImage: UIView!
+   
     @IBOutlet weak var timeCardView: LongMediumInfoCardView!
     @IBOutlet weak var heartCardView: MediumInfoCardView!
     @IBOutlet weak var caloriesCardView: MediumInfoCardView!
@@ -64,6 +64,7 @@ class WorkoutCompleteViewController: UIViewController {
 
         heartCardView.cardTitleLabel.text = "Average Heart Rate"
         heartCardView.cardIcon.image = UIImage(systemName: "heart.fill")
+        heartCardView.cardIcon.tintColor = #colorLiteral(red: 0.9001493454, green: 0.2962301373, blue: 0.2932987511, alpha: 1)
         heartCardView.cardValueLabel.text = "\(MovementQueue.heartRate)"
         heartCardView.cardUnitLabel.text = "bpm"
         heartCardView.layer.cornerRadius = 8
@@ -71,6 +72,7 @@ class WorkoutCompleteViewController: UIViewController {
 
         caloriesCardView.cardTitleLabel.text = "Calories"
         caloriesCardView.cardIcon.image = UIImage(systemName: "flame")
+        caloriesCardView.cardIcon.tintColor = #colorLiteral(red: 1, green: 0.6330538969, blue: 0.1733412416, alpha: 1)
         caloriesCardView.cardValueLabel.text = "\(MovementQueue.totalKcal)"
         caloriesCardView.cardUnitLabel.text = "kcal"
         caloriesCardView.layer.cornerRadius = 8
@@ -78,13 +80,12 @@ class WorkoutCompleteViewController: UIViewController {
 
         energyCardView.cardTitleLabel.text = "Energy Point"
         energyCardView.cardIcon.image = UIImage(systemName: "bolt")
-        energyCardView.cardValueLabel.text = "\((MovementQueue.currentTotalTime/60) * 2)"
+        energyCardView.cardIcon.tintColor = #colorLiteral(red: 1, green: 0.8191718459, blue: 0.005730928387, alpha: 1)
+        energyCardView.cardValueLabel.text = "+\((MovementQueue.currentTotalTime/60) * 2)"
         energyCardView.layer.cornerRadius = 8
         energyCardView.clipsToBounds = true
 
-        checklistImage.layer.cornerRadius = checklistImage.frame.size.width/2
-        checklistImage.layer.borderColor = CGColor(red: 168/255, green: 221/255, blue: 76/255, alpha: 1)
-        checklistImage.layer.borderWidth = 10
+     
         doneButton.layer.cornerRadius = 15
 
     }

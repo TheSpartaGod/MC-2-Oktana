@@ -84,7 +84,10 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
             reverseBackImage.isHidden = true
         }
         if MovementQueue.isBreak == true && isTest == true{
-            AlertTestViewController.showAlert(from: self, movementTitle: "Performance Check", image: nil) { inputMsg in
+            let movementList = Movements()
+            let imageMovement = UIImage(named: movementList.data[MovementQueue.selectedMovesList[MovementQueue.currentWorkoutPosition]-1].iconMovementGenerate)
+            AlertTestViewController.showAlert(from: self, movementTitle: "Performance Check", image: imageMovement) { inputMsg in
+                
                 MovementQueue.testRecord.append(Int(inputMsg) ?? 0)
                 
             }
@@ -113,6 +116,7 @@ class WorkoutModeViewController: UIViewController, WCSessionDelegate{
     
     override func viewWillAppear(_ animated: Bool) {
         //set tab bar and navigation bar as hidden
+       
         self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = true
         workoutTimer()

@@ -41,6 +41,11 @@
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skill-tree-icon" translatesAutoresizingMaskIntoConstraints="NO" id="4Zs-03-9EU">
                                         <rect key="frame" x="128" y="52" width="64" height="64"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="dV8-oF-bMt"/>
+                                            <constraint firstAttribute="height" constant="64" id="wTp-bY-zwE"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many repetition you can get?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh0-wa-7mY">
                                         <rect key="frame" x="67" y="196" width="186" height="51"/>
